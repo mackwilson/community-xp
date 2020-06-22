@@ -2,7 +2,7 @@
 
 CommUnity XP is an online platform for students to connect with each other and find resources about mental health. Our vision is to bridge the gap between students facing mental health issues and the resources available to them, and hopefully reduce the stigma surrounding mental illness.
 
-UXP started as a social impact project by four University of Waterloo students and alumni. Dani founded the project in early 2020, and Ben soon joined to help with the site design. Mack and Lars came aboard later to help with the information architecture and fullstack development. We are super proud of the QTPOC representation on our team, and our diverse perspectives benefit the project.
+UXP started as a social impact project by four University of Waterloo students and alumni. Dani founded the project in early 2020, and Ben soon joined to help. They pitched the project at UW's Social Impact Showcase with their first prototype. Mack and Lars came aboard later to help with the information architecture and fullstack development. We are super proud of the QTPOC representation on our team, and our diverse perspectives benefit the project.
 
 #### Connect with us!
 - Instagram: @community_xp
