@@ -14,7 +14,7 @@ UXP started as a social impact project by four University of Waterloo students a
 
 ### Dependencies
 
-- **React:** React v16.13.1, React-scripts v3.4.1. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **React:** React v16.13.1, React-scripts v3.4.1, React-Router v5.2.0, React-Bootstrap v1.0.1. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - **Node:** v8.17.0
 - **NPM:** v6.13.4
 
