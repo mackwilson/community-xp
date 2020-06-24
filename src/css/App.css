@@ -1,5 +1,17 @@
-.HomePage {
+a {
+  text-decoration: none !important;
+}
+
+.centre-text {
   text-align: center;
+}
+
+.Menu a {
+  color: #fff;
+}
+
+.Menu a:hover {
+  color: #fd79a8;
 }
 
 .App-logo {
