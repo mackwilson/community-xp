@@ -1,6 +1,7 @@
 import React from 'react';
 import PublicNavbar from '../comps/PublicNavbar.js';
 import BigHeader from '../comps/BigHeader.js';
+import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
 export default class ResourcePage extends React.Component {
@@ -9,7 +10,10 @@ export default class ResourcePage extends React.Component {
       return (
       <div className="ResourcePage">
         <PublicNavbar />
-        <BigHeader title="Resources" txt={text}/>
+        <div className="content">
+          <BigHeader title="Resources" txt={text}/>
+          <Footer />
+        </div>
       </div>
     );
   }

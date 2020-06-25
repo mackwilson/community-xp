@@ -7,7 +7,7 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 2rem;
 }
 
 .content {
@@ -26,7 +26,14 @@ a {
 
 .left-text {
   text-align: left;
-  width: 80%;
+  width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.gap-div {
+  height: 4rem;
 }
 
 .Menu a {
@@ -110,39 +117,75 @@ a {
   font-size: 30pt;
   font-weight: bold;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 6rem;
 }
 
 .BigHeader h1 {
-  font-size: calc(6vw + 20pt);
+  font-size: calc(6vw + 2rem);
   color: #fd79a8;
   font-weight: bold;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 8rem;
 }
 
 .BigHeader p {
-  font-size: calc(1vw + 10pt);
+  font-size: calc(1vw + 1rem);
   margin-top: 60px;
   color: #fff;
 }
 
+.SectionHeader {
+  background-color: rgba(253, 121, 168, 0.85);
+  padding: 4rem 0 1rem 0;
+}
+
+.SectionHeader h2 {
+  font-weight: bold;
+  font-size: calc(2vw + 2rem);
+}
+
+.SectionHeader p {
+  font-size: calc(1vw + 1rem);
+  margin-top: 2rem;
+}
+
 .card-group {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .card {
-  width: 25vw;
-  min-width: 260px !important;
-  height: 12rem;
-  margin: 10px;
+  width: 22vw;
+  min-width: 240px !important;
+  max-width: 400px !important;
+  height: 13rem;
+  margin: 1rem;
   border-radius: 0.5rem !important;
 }
 
 .card-body .card-title {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: auto;
   color: #fd79a8;
   font-size: 2rem;
 }
 
+.Footer {
+  background-color: #343a40;
+  display: block;
+  padding: 3rem 8vw 4rem 8vw;
+  margin-top: 8rem;
+}
+
+.Footer .copyright {
+  display: block;
+  width: 70%;
+  float: left;
+  color: #fff;
+}
+
+.Footer .to-top {
+  display: block;
+  width: 30%;
+  float: right;
+  text-align: right;
+}

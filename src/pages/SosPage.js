@@ -1,6 +1,7 @@
 import React from 'react';
 import PublicNavbar from '../comps/PublicNavbar.js';
 import BigHeader from '../comps/BigHeader.js';
+import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
 export default class SosPage extends React.Component {
@@ -9,7 +10,11 @@ export default class SosPage extends React.Component {
       return (
       <div className="SosPage">
         <PublicNavbar />
-        <BigHeader title="SOS Page" txt={text}/>
+        <div className="content">
+          <BigHeader title="SOS Page" txt={text}/>
+
+          <Footer />
+        </div>
       </div>
     );
   }

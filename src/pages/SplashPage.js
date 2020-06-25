@@ -3,6 +3,7 @@ import BigHeader from '../comps/BigHeader.js';
 import PublicNavbar from '../comps/PublicNavbar.js';
 import LinkCard from '../comps/LinkCard.js';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
 export default class SplashPage extends React.Component {
@@ -23,6 +24,7 @@ export default class SplashPage extends React.Component {
               <LinkCard title="Log In" link="/login" />
             </CardGroup>
           </div>
+          <Footer />
         </div>
       </div>
     );
