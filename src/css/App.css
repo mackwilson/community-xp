@@ -8,6 +8,7 @@ a {
 
 .Menu a {
   color: #fff;
+  text-align: right;
 }
 
 .Menu a:hover {

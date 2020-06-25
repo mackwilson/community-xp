@@ -9,7 +9,13 @@ export default class Menu extends React.Component {
   render() {
       return (
         <div className="Menu">
-          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+          <Navbar
+            collapseOnSelect
+            expand="md"
+            bg="dark"
+            variant="dark"
+            fixed="top"
+          >
             <Navbar.Brand>
               <Link to="/">
                 <img
