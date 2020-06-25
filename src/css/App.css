@@ -84,6 +84,11 @@ a {
   padding: 10px;
 }
 
+.nav-tabs .nav-link {
+  background-color: #343a40;
+}
+
+
 .Menu .navbar-collapse {
   margin-top: 20px;
   margin-left: auto;
