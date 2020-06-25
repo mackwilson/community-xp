@@ -8,6 +8,7 @@ import SosPage from './pages/SosPage.js';
 import SignUpPage from './pages/SignUpPage.js';
 import LogInPage from './pages/LogInPage.js';
 import ProfilePage from './pages/ProfilePage.js';
+import BlogPage from './pages/BlogPage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
 
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/signup" component={SignUpPage} />
       <Route path="/login" component={LogInPage} />
       <Route path="/profile" component={ProfilePage} />
+      <Route path="/blog" component={BlogPage} />
     </div>
   </Router>,
   document.getElementById('root')

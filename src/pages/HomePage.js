@@ -1,14 +1,15 @@
 import React from 'react';
 import '../css/App.css';
-import Header from '../comps/Header.js';
-import Menu from '../comps/Menu.js';
+import BigHeader from '../comps/BigHeader.js';
+import PublicNavbar from '../comps/PublicNavbar.js';
 
 export default class HomePage extends React.Component {
   render() {
+      const text = "Welcome to CommUnity XP! Read on to get to know more about this project, or use the navigation to explore the site."
       return (
       <div className="HomePage">
-        <Menu />
-        <Header className="centre-text"/>
+        <PublicNavbar />
+        <BigHeader title="CommUnity XP" txt={text}/>
       </div>
     );
   }
