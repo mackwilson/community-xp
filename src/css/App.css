@@ -14,7 +14,6 @@ a {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 }
 
 .content a {
@@ -27,15 +26,21 @@ a {
 
 .left-text {
   text-align: left;
+  width: 80%;
 }
 
 .Menu a {
   color: #fff;
-  text-align: right;
+  text-align: right !important;
 }
 
 .Menu a:hover {
   color: #fd79a8;
+}
+
+.navbar {
+  align-items: right;
+  text-align: right !important;
 }
 
 .sosBtn a {
@@ -72,8 +77,11 @@ a {
   padding: 10px;
 }
 
-.navbar-collapse {
+.Menu .navbar-collapse {
   margin-top: 20px;
+  margin-left: auto;
+  align-items: right;
+  text-align: right !important;
 }
 
 .App-logo {
@@ -117,5 +125,24 @@ a {
   font-size: calc(1vw + 10pt);
   margin-top: 60px;
   color: #fff;
+}
+
+.card-group {
+  justify-content: center;
+}
+
+.card {
+  width: 25vw;
+  min-width: 260px !important;
+  height: 12rem;
+  margin: 10px;
+  border-radius: 0.5rem !important;
+}
+
+.card-body .card-title {
+  margin-top: 3rem;
+  margin-bottom: auto;
+  color: #fd79a8;
+  font-size: 2rem;
 }
 

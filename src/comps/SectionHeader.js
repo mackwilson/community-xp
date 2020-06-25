@@ -1,12 +1,13 @@
 import React from 'react';
 import '../css/App.css';
 
-function SmallHeader(props) {
+function SectionHeader(props) {
   return (
-    <div className="SmallHeader">
+    <div className="SectionHeader">
       <h1>{props.title}</h1>
+      <p>
     </div>
   );
 }
 
-export default SmallHeader;
+export default SectionHeader;

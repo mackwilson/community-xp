@@ -38,7 +38,7 @@ export default class PublicNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/">
+                  <Link to="/about">
                     About
                   </Link>
                 </NavItem>

@@ -5,11 +5,13 @@ import PublicNavbar from '../comps/PublicNavbar.js';
 
 export default class HomePage extends React.Component {
   render() {
-      const text = "Welcome to CommUnity XP! Read on to get to know more about this project, or use the navigation to explore the site."
+      const text = "What is CommUnity XP? Who is behind it? Read about our vision and how we got here."
       return (
-      <div className="HomePage">
+      <div>
         <PublicNavbar />
-        <BigHeader title="CommUnity XP" txt={text}/>
+        <div className="content">
+          <BigHeader title="About" txt={text}/>
+        </div>
       </div>
     );
   }
