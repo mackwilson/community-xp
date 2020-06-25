@@ -4,8 +4,10 @@ import '../css/App.css';
 function SectionHeader(props) {
   return (
     <div className="SectionHeader">
-      <h1>{props.title}</h1>
-      <p>
+      <div className="left-text">
+        <h2>{props.title}</h2>
+        <p>{props.subtitle}</p>
+      </div>
     </div>
   );
 }
