@@ -16,9 +16,9 @@ export default class SplashPage extends React.Component {
           <BigHeader title="CommUnity XP" txt={text}/>
           <div className="centre-text">
             <CardGroup>
+              <LinkCard title="SOS" link="/sos" />
               <LinkCard title="Resources" link="/resources" />
               <LinkCard title="XP Blog" link="/blog"/>
-              <LinkCard title="SOS" link="/sos" />
               <LinkCard title="About UXP" link="/about" />
               <LinkCard title="Sign Up" link="/signup" />
               <LinkCard title="Log In" link="/login" />

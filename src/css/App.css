@@ -140,13 +140,14 @@ a {
 }
 
 .SectionHeader {
-  background-color: rgba(253, 121, 168, 0.85);
+  background-color: #343a40;
   padding: 4rem 0 1rem 0;
 }
 
 .SectionHeader h2 {
   font-weight: bold;
   font-size: calc(2vw + 2rem);
+  color: #fd79a8;
 }
 
 .SectionHeader p {

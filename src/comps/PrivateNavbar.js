@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavItem from 'react-bootstrap/NavItem';
+import {Navbar, Nav, NavItem } from 'react-bootstrap';
+// import Nav from 'react-bootstrap/Nav';
+// import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
 import logo from '../assets/uxp-logo-crop.png';
 import '../css/App.css';
@@ -58,13 +58,13 @@ export default class PrivateNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/">
-                    Log Out
+                  <Link to="/profile">
+                    Profile
                   </Link>
                 </NavItem>
                 <NavItem className="highlightNav">
-                  <Link to="/profile">
-                    Profile
+                  <Link to="/">
+                    Log Out
                   </Link>
                 </NavItem>
               </Nav>

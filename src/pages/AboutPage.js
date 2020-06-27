@@ -13,7 +13,7 @@ export default class HomePage extends React.Component {
         <PublicNavbar />
         <div className="content">
           <BigHeader title="About" txt={headerText}/>
-          <SectionHeader title="Project Vision"/>
+          <SectionHeader title="Our Vision"/>
           <div className="left-text">
             <p>This is where we explain what the project is all about. I think we should organize this into themes, perhaps we can have cards that open modals with more information about the themes.</p>
             <p>asfalksjdfkljasdhfl;aksjdlfkajsdlkfj text text text text alsdjf;laksdjfl;kasjdflk;</p>

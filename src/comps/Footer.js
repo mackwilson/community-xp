@@ -9,7 +9,7 @@ function Footer() {
           © 2020 CommUnity XP
         </div>
         <div className="to-top">
-          <a href="#header"><span class="arrow">↑</span> Top </a>
+          <a href="#header"><span>↑</span> Top </a>
         </div>
       </footer>
     </div>
