@@ -163,16 +163,30 @@ a {
   width: 22vw;
   min-width: 240px !important;
   max-width: 400px !important;
-  height: 13rem;
+  min-height: 10rem;
   margin: 1rem;
   border-radius: 0.5rem !important;
+  padding: 2rem 0.5rem;
 }
 
 .card-body .card-title {
-  margin-top: 4rem;
-  margin-bottom: auto;
+  margin-top: 0;
   color: #fd79a8;
   font-size: 2rem;
+}
+
+.card-body button {
+  margin-top: 1rem;
+}
+
+.pinkText {
+  color: #fd79a8;
+}
+
+.modalImg {
+  width: 60%;
+  display: inline;
+  margin: 0 20% 3% 20%;
 }
 
 .Footer {
