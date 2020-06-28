@@ -9,11 +9,12 @@ function LinkCard(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const image = props.img? <img className="modalImg" src={props.img} alt={props.img} /> : null;
   
   return (
     <div>
       <Card bg="dark">
-        <Card.Img variant="top" src={props.img} className="cardImage" />
+        <Card.Img variant="top" src={props.img} alt={props.alt} className="cardImage" />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-light">{props.subtitle}</Card.Subtitle>
@@ -27,7 +28,7 @@ function LinkCard(props) {
               <Modal.Title className="pinkText pl-2">{props.subtitle}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <img className="modalImg" src={props.img} alt="A member of the team!"/>
+              {image}
               {props.txt}
             </Modal.Body>
           </Modal>
