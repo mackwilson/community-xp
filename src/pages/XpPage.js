@@ -1,11 +1,19 @@
 import React from 'react';
+import PrivateNavbar from '../comps/PrivateNavbar.js';
+import BigHeader from '../comps/BigHeader.js';
+import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
 export default class XPPage extends React.Component {
   render() {
       return (
       <div className="XPPage">
-        <h1>This is the XP Page! You must be logged in for this.</h1>
+        <PrivateNavbar />
+        <div className="content">
+          <BigHeader title="XP Community" />
+          <div className="gapDiv" />
+          <Footer />
+        </div>
       </div>
     );
   }

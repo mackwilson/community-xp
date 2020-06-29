@@ -4,14 +4,96 @@ a {
 
 .centre-text {
   text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.content {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content a {
+  color: #fff;
+}
+
+.content a:hover {
+  color: #fd79a8;
+}
+
+.left-text {
+  text-align: left;
+  width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.gap-div {
+  height: 4rem;
 }
 
 .Menu a {
   color: #fff;
+  text-align: right !important;
 }
 
 .Menu a:hover {
   color: #fd79a8;
+}
+
+.navbar {
+  align-items: right;
+  text-align: right !important;
+}
+
+.sosBtn a {
+  background-color: #fd79a8;
+  color: #343a40 !important;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sosBtn a:hover {
+  background-color: #fff;
+  color: #fd79a8 !important;
+  font-weight: bold;
+  border: 1px solid #fd79a8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.highlightNav a {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.highlightNav a:hover {
+  border: 1px solid #fd79a8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-tabs .nav-link {
+  background-color: #343a40;
+}
+
+
+.Menu .navbar-collapse {
+  margin-top: 20px;
+  margin-left: auto;
+  align-items: right;
+  text-align: right !important;
 }
 
 .App-logo {
@@ -19,28 +101,116 @@ a {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.Header {
-  background-color: #282c34;
-  min-height: 100vh;
+.BigHeader {
+  background-color: #343a40;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SmallHeader {
+  background-color: #343a40;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SmallHeader h1 {
+  color: #fd79a8;
+  font-size: 30pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.BigHeader h1 {
+  font-size: calc(6vw + 2rem);
+  color: #fd79a8;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.BigHeader p {
+  font-size: calc(1vw + 1rem);
+  margin-top: 60px;
+  color: #fff;
+}
+
+.SectionHeader {
+  background-color: #343a40;
+  padding: 4rem 0 1rem 0;
+}
+
+.SectionHeader h2 {
+  font-weight: bold;
+  font-size: calc(2vw + 2rem);
+  color: #fd79a8;
+}
+
+.SectionHeader p {
+  font-size: calc(1vw + 1rem);
+  margin-top: 2rem;
+}
+
+.card-group {
+  justify-content: center !important;
+}
+
+.card {
+  width: 22vw;
+  min-width: 240px !important;
+  max-width: 400px !important;
+  min-height: 10rem;
+  margin: 1rem;
+  border-radius: 0.5rem !important;
+  padding: 2rem 0.5rem;
+}
+
+.card-body .card-title {
+  margin-top: 0;
+  color: #fd79a8;
+  font-size: 2rem;
+}
+
+.card-body button {
+  margin-top: 1rem;
+}
+
+.pinkText {
+  color: #fd79a8;
+}
+
+.modalImg {
+  width: 60%;
+  display: inline;
+  margin: 0 20% 3% 20%;
+}
+
+.modal-dialog {
+  max-width: 800px !important;
+  min-width: 250px !important;
+}
+
+.Footer {
+  background-color: #343a40;
+  display: block;
+  padding: 3rem 8vw 4rem 8vw;
+  margin-top: 8rem;
+}
+
+.Footer .copyright {
+  display: block;
+  width: 70%;
+  float: left;
+  color: #fff;
+}
+
+.Footer .to-top {
+  display: block;
+  width: 30%;
+  float: right;
+  text-align: right;
 }

@@ -1,15 +1,22 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import {Navbar, Nav, NavItem } from 'react-bootstrap';
+// import Nav from 'react-bootstrap/Nav';
+// import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
-import logo from '../assets/cuxp-logo.png';
+import logo from '../assets/uxp-logo-crop.png';
 import '../css/App.css';
 
-export default class Menu extends React.Component {
+export default class PrivateNavbar extends React.Component {
   render() {
       return (
         <div className="Menu">
-          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+          <Navbar
+            collapseOnSelect
+            expand="md"
+            bg="dark"
+            variant="dark"
+            fixed="top"
+          >
             <Navbar.Brand>
               <Link to="/">
                 <img
@@ -25,36 +32,41 @@ export default class Menu extends React.Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-                <Nav.Link>
+                <NavItem className="sosBtn">
                   <Link to="/sos">
                     SOS
                   </Link>
-                </Nav.Link>
-                <Nav.Link>
+                </NavItem>
+                <NavItem>
                   <Link to="/resources">
                     Resources
                   </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/">
+                </NavItem>
+                <NavItem>
+                  <Link to="/xp">
+                    XP
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/blog">
+                    Blog
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/about">
                     About
                   </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/signup">
-                    Sign Up
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/login">
-                    Log In
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
+                </NavItem>
+                <NavItem>
                   <Link to="/profile">
                     Profile
                   </Link>
-                </Nav.Link>
+                </NavItem>
+                <NavItem className="highlightNav">
+                  <Link to="/">
+                    Log Out
+                  </Link>
+                </NavItem>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

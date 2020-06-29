@@ -4,15 +4,14 @@ import BigHeader from '../comps/BigHeader.js';
 import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
-export default class SosPage extends React.Component {
+export default class BlogPage extends React.Component {
   render() {
-      const text = "This is the SOS page. Navigate here at any time to see suggested actions to take when you are feeling unsafe or in crisis."
+      const text = "Read on as people share and reflect on their expriences with mental health and mental illness."
       return (
-      <div className="SosPage">
+      <div className="BlogPage">
         <PublicNavbar />
         <div className="content">
-          <BigHeader title="SOS Page" txt={text}/>
-
+          <BigHeader title="XP Blog" txt={text}/>
           <Footer />
         </div>
       </div>
