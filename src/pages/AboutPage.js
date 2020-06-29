@@ -42,30 +42,45 @@ export default class AboutPage extends React.Component {
       const teamContent = [
         {
           title: "Dani",
-          subtitle: "Dani Title",
+          subtitle: "Founder & Executive Director",
           photo: dani,
           text: "(Pronouns: xx) Dani is a recent graduate from the University of Waterloo. ",
           alt: "dani"
         }, {
           title: "Ben",
-          subtitle: "Ben Title",
+          subtitle: "Director of Operations",
           photo: benny,
           alt: "benny",
           text: "(Pronouns: xx) Ben has an undergraduate degree in Peace and Conflict Studies from the University of Waterloo, and recently went back for his Masters.",
         }, {
           title: "Lars",
-          subtitle: "Lars Title",
+          subtitle: "Head of User Experience",
           photo: lars,
           alt: "lars",
           text: "(Pronouns: xx) Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo.",
         }, {
           title: "Mack",
-          subtitle: "Mack Title",
+          subtitle: "Head of Development",
           photo: mack,
           alt: "mack",
           text: "(Pronouns: xx) Mack is a recent graduate from Biomedical Engineering at the University of Waterloo. They work full time as a Software Engineer for a Silicon Valley tech startup. They have experience with full-stack development, including everything from project management, to web development, to server architecture.",
         }
-      ];   
+      ];
+      
+      const contactContent =  [
+        {
+          title: "Socials",
+          text: "Instagram: @community_xp"
+        },
+        {
+          title: "Contact",
+          text: "Looking to volunteer? Have some feedback? Email us at xyz@communityxp.ca"
+        },
+        {
+          title: "Donate",
+          text: "All donations go directly to continuing the team's great work. Donate through XYZ here: [link]"
+        }
+      ];
       
       return (
       <div>
@@ -78,13 +93,11 @@ export default class AboutPage extends React.Component {
           <div className="gap-div" />
           
           <SectionHeader title="Our Team" />
-          <CardSection txt={teamText} cards={teamContent}/>
+          <CardSection txt={teamText} cards={teamContent} />
           <div className="gap-div" />
           
           <SectionHeader title="Contact Us" />
-          <div className="left-text">
-            <p>Contact info. What contact do we want here? We should probably make a team email, and I can add the Instagram. Also maybe a Donate button?</p>
-          </div>
+          <CardSection cards={contactContent} />
           <Footer />
         </div>
       </div>
