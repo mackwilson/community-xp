@@ -10,23 +10,26 @@ import LogInPage from './pages/LogInPage.js';
 import ProfilePage from './pages/ProfilePage.js';
 import BlogPage from './pages/BlogPage.js';
 import SplashPage from './pages/SplashPage.js';
+import ScrollToTop from './comps/ScrollToTop.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
 
 
 ReactDOM.render(
   <Router>
-    <div>
-      <Route exact path="/" component={SplashPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/resources" component={ResourcePage} />
-      <Route path="/xp" component={XpPage} />
-      <Route path="/sos" component={SosPage} />
-      <Route path="/signup" component={SignUpPage} />
-      <Route path="/login" component={LogInPage} />
-      <Route path="/profile" component={ProfilePage} />
-      <Route path="/blog" component={BlogPage} />
-    </div>
+    <ScrollToTop>
+      <div>
+        <Route exact path="/" component={SplashPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/resources" component={ResourcePage} />
+        <Route path="/xp" component={XpPage} />
+        <Route path="/sos" component={SosPage} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/login" component={LogInPage} />
+        <Route path="/profile" component={ProfilePage} />
+        <Route path="/blog" component={BlogPage} />
+      </div>
+    </ScrollToTop>
   </Router>,
   document.getElementById('root')
 );
