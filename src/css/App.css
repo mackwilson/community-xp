@@ -16,6 +16,10 @@ a {
   align-items: center;
 }
 
+.dark {
+  background-color: #343a40;
+}
+
 .content a {
   color: #fff;
 }
@@ -99,6 +103,25 @@ a {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.login-box {
+  max-width: 30%;
+  min-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.login-box .form-control {
+  border: 1px solid #fd79a8;
+}
+
+.login-box .form-label {
+  margin-bottom: 0;
 }
 
 .BigHeader {
