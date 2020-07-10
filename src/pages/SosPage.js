@@ -7,17 +7,31 @@ import '../css/App.css';
 
 export default class SosPage extends React.Component {
   render() {
-      const text = "This is the SOS page. Navigate here at any time to see suggested actions to take when you are feeling unsafe or in crisis."
+      const text = "Crisis management resources all in one place when you need them."
       const teamContent = [
         {
           title: "Emergency Services",
-          text: "(Pronouns: xx) Dani is a recent graduate from <br/> the University of Waterloo. ",
+          textSubHeading: [
+            "Call 911",
+            "Call emergency mental health services"
+          ],
+          text: [
+            "Police or paramedics will be the fastest responding service if you are in need of emergent health care or crisis management. If you fear for the safety of yourself or those around you, we encourage you to call 911.",
+            "Police aren't for everyone. Your next best bet is emergency services designed specifically for mental health, crisis management and de-escalation."
+          ],
+          btnText: [null, "See options"],
+          btnLink: [null, "/resources"]
         }, {
           title: "Emergency Contacts",
-          text: "(Pronouns: xx) Ben has an undergraduate degree in Peace and Conflict Studies from the University of Waterloo, and recently went back for his Masters.",
+          text: [
+            "If you aren't in immediate danger, your personal emergency contacts can be very helpful. This can be a close friend, roommate, partner, or family member that understands what you are going through, and ideally, knows how to help you manage whatever is going on right now.",
+            "Quick Tip: Creating an account with CommUnity XP allows us to store this contact information and present it to you right here so it is easier and quicker to access."
+          ],
         }, {
           title: "Safety Plan",
-          text: "(Pronouns: xx) Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo.",
+          text: "Create an account with CommUnity XP to create your personalized safety plan with practical steps you can take to manage a crisis.",
+          btnLink: "/signup",
+          btnText: "Create Account"
         }
       ];
       return (
