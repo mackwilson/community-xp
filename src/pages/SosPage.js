@@ -3,11 +3,11 @@ import PublicNavbar from '../comps/PublicNavbar.js';
 import BigHeader from '../comps/BigHeader.js';
 import CardSection from '../comps/CardSection.js';
 import Footer from '../comps/Footer.js';
+import pageText from '../assets/text/pageText.json';
 import '../css/App.css';
 
 export default class SosPage extends React.Component {
   render() {
-      const text = "Crisis management resources all in one place when you need them."
       const teamContent = [
         {
           title: "Emergency Services",
@@ -38,7 +38,7 @@ export default class SosPage extends React.Component {
       <div className="SosPage">
         <PublicNavbar />
         <div className="content">
-          <BigHeader title="SOS Page" txt={text}/>
+          <BigHeader title="SOS Page" txt={pageText.sos.header}/>
           <CardSection cards={teamContent} />
           <Footer />
         </div>
