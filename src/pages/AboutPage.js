@@ -44,41 +44,61 @@ export default class AboutPage extends React.Component {
           title: "Dani",
           subtitle: "Founder & Executive Director",
           photo: dani,
-          text: "(Pronouns: xx) Dani is a recent graduate from the University of Waterloo. ",
+          textSubHeading: "Pronouns: she/her",
+          text: "Dani is a recent graduate from the University of Waterloo. ",
           alt: "dani"
         }, {
           title: "Ben",
           subtitle: "Director of Operations",
           photo: benny,
           alt: "benny",
-          text: "(Pronouns: xx) Ben has an undergraduate degree in Peace and Conflict Studies from the University of Waterloo, and recently went back for his Masters.",
+          textSubHeading: "Pronouns: he/they",
+          btnText: "Email Ben",
+          btnLink: "mailto:bskinner@communityxp.ca",
+          text: "Ben has an undergraduate degree in Peace and Conflict Studies from the University of Waterloo, and recently went back for his Masters. They cover the broad, vague umbrella of Operations for UXP, meaning they do anything and everything to keep the group running! This includes most of our outreach and organization, so give him a shout if you're interested in connecting for business purposes.",
         }, {
           title: "Lars",
           subtitle: "Head of User Experience",
           photo: lars,
           alt: "lars",
-          text: "(Pronouns: xx) Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo.",
+          textSubHeading: "Pronouns: he/him",
+          text: "Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo.",
         }, {
           title: "Mack",
           subtitle: "Head of Development",
           photo: mack,
           alt: "mack",
-          text: "(Pronouns: xx) Mack is a recent graduate from Biomedical Engineering at the University of Waterloo. They work full time as a Software Engineer for a Silicon Valley tech startup. They have experience with full-stack development, including everything from project management, to web development, to server architecture.",
+          btnText: [null, "Email Mack"],
+          btnLink: [null, "mailto:mwilson@communityxp.ca"],
+          textSubHeading: ["Pronouns: they/them", null],
+          text: [
+            "Mack is a recent graduate from Biomedical Engineering at the University of Waterloo. They work full time as a Software Engineer for a Silicon Valley tech startup. They have experience with full-stack development, including everything from project management, to web development, to server architecture.",
+            "Mack joined CommUnity XP in May 2020 to lead the development of the site. They work closely with Lars on the design and user experience of the web UI. Additionally, they are responsible for all server architecture, database management, deploy processes, and general IT services for the team. They are loving the energy from the entire UXP team and are super happy to be here."
+          ],
         }
       ];
       
       const contactContent =  [
         {
           title: "Socials",
-          text: "Instagram: @community_xp"
+          text: "Blah blah blah social media blah blah millennial blah blah connect with us!",
+          btnLink: "https://www.instagram.com/community_xp/",
+          btnText: "Instagram"
         },
         {
           title: "Contact",
-          text: "Looking to volunteer? Have some feedback? Email us at xyz@communityxp.ca"
+          text: "Looking to join us? Have some feedback? Just want to connect? Click the button below to email us with your info and your request!",
+          btnLink: "mailto:info@communityxp.ca",
+          btnText: "Email UXP"
         },
         {
           title: "Donate",
-          text: "All donations go directly to continuing the team's great work. Donate through XYZ here: [link]"
+          text: [
+            "We would love to accept your donation! We are funded mostly through grants and crowdfunding. However, we don't have a good donation process set up yet. Check back soon for one!",
+            "In the meantime, reach out to us and we can see if we can make something work!"
+          ],
+          btnLink: [null, "mailto:info@communityxp.ca"],
+          btnText: [null, "Email Us"]
         }
       ];
       
