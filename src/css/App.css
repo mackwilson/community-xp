@@ -116,6 +116,18 @@ a {
   padding: 2rem;
 }
 
+.signup-box {
+  max-width: 60%;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  border: 1px solid #343a40;
+}
+
 .login-box .form-control {
   border: 1px solid #fd79a8;
 }
