@@ -5,6 +5,14 @@ import Footer from '../comps/Footer.js';
 import '../css/App.css';
 
 export default class SignUpPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPageOne: true,
+      showPageTwo: false,
+      showPageThree: false
+    }
+  }
   render () {
     return (
       <div className="SignUpPage">
