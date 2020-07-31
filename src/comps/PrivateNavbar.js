@@ -3,7 +3,6 @@ import {Navbar, Nav, NavItem } from 'react-bootstrap';
 // import Nav from 'react-bootstrap/Nav';
 // import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logos/uxp-logo-crop.png';
 import '../css/App.css';
 
 export default class PrivateNavbar extends React.Component {
@@ -13,28 +12,20 @@ export default class PrivateNavbar extends React.Component {
           <Navbar
             collapseOnSelect
             expand="md"
-            bg="dark"
             variant="dark"
             fixed="top"
           >
-            <Navbar.Brand>
-              <Link to="/">
-                <img
-                  alt=""
-                  src={logo}
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                />{'  '}
-                CommUnity XP
-              </Link>
-            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <NavItem className="sosBtn">
-                  <Link to="/sos">
+                  <Link to="/sos" className="btn whiteShadow">
                     SOS
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/">
+                    Home
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -53,9 +44,9 @@ export default class PrivateNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/about">
+                  <a href="#About">
                     About
-                  </Link>
+                  </a>
                 </NavItem>
                 <NavItem>
                   <Link to="/profile">
@@ -63,7 +54,7 @@ export default class PrivateNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem className="highlightNav">
-                  <Link to="/">
+                  <Link to="/" className="btn pinkShadow">
                     Log Out
                   </Link>
                 </NavItem>

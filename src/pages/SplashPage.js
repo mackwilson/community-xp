@@ -25,6 +25,7 @@ export default class SplashPage extends React.Component {
               <LinkCard title="Log In" link="/login" />
             </CardGroup>
           </div>
+          <div className="gap-div"></div>
           <AboutPage/>
           <Footer />
         </div>

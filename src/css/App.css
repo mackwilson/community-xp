@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 a {
   text-decoration: none !important;
 }
 
-.centre-text {
-  text-align: center;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
+body {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+:focus {
+  outline: none !important;
 }
 
 .content {
@@ -16,16 +18,20 @@ a {
   align-items: center;
 }
 
-.dark {
-  background-color: #343a40;
-}
-
 .content a {
   color: #fff;
 }
 
 .content a:hover {
-  color: #fd79a8;
+  color: #FF0A91;
+}
+
+.centre-text {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
 .left-text {
@@ -40,74 +46,93 @@ a {
   height: 4rem;
 }
 
+.btn {
+  border-radius: 0 !important;
+  line-height: 15px !important;
+  padding: 10px !important;
+  position: relative;
+  transition: none !important;
+}
+
+.btn:hover {
+  top: 5px;
+  left: 5px;
+  box-shadow: 0px 0px #fff !important;
+  transition: none;
+}
+
+.whiteShadow {
+  box-shadow: 5px 5px  #fff !important;
+}
+
+.pinkShadow {
+  box-shadow: 5px 5px #FF0A91 !important;
+}
+
+.pinkText {
+  color: #FF0A91;
+}
+
+.dark {
+  background-color: #27292B !important;
+}
+
 .Menu a {
   color: #fff;
   text-align: right !important;
+  line-height: 40px;
+  vertical-align: middle;
 }
 
 .Menu a:hover {
-  color: #fd79a8;
+  color: #FF0A91;
 }
 
-.navbar {
+nav {
   align-items: right;
   text-align: right !important;
+  background-color: #27292B !important;
 }
 
 .sosBtn a {
-  background-color: #fd79a8;
-  color: #343a40 !important;
+  background-color: #FF0A91;
+  color: #27292B !important;
   font-weight: bold;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.sosBtn a:hover {
-  background-color: #fff;
-  color: #fd79a8 !important;
-  font-weight: bold;
-  border: 1px solid #fd79a8;
-  border-radius: 5px;
   padding: 10px;
 }
 
 .highlightNav a {
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.highlightNav a:hover {
-  border: 1px solid #fd79a8;
-  border-radius: 5px;
+  background-color: #fff;
+  color: #27292B;
   padding: 10px;
 }
 
 .nav-item {
   padding: 10px;
+  vertical-align: middle !important;
+  line-height: 40px;
 }
 
 .nav-tabs .nav-link {
-  background-color: #343a40;
+  background-color: #27292B;
 }
 
-
-.Menu .navbar-collapse {
-  margin-top: 20px;
+.navbar-toggler {
   margin-left: auto;
-  align-items: right;
-  text-align: right !important;
+  border-color: #27292B !important;
+  border-radius: 0 !important;
+  line-height: 40px;
+  padding: 7px 18px !important;
+  color: #fff !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-toggler:hover {
+  color: #FF0A91 !important;
 }
 
 .login-box {
   max-width: 30%;
-  min-width: 250px;
+  min-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -117,7 +142,7 @@ a {
 }
 
 .login-box .form-control {
-  border: 1px solid #fd79a8;
+  border: 1px solid #FF0A91;
 }
 
 .login-box .form-label {
@@ -125,7 +150,7 @@ a {
 }
 
 .BigHeader {
-  background-color: #343a40;
+  background-color: #27292B;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -134,14 +159,14 @@ a {
 }
 
 .SmallHeader {
-  background-color: #343a40;
+  background-color: #27292B;
   min-height: 140px;
   display: flex;
   flex-direction: column;
 }
 
 .SmallHeader h1 {
-  color: #fd79a8;
+  color: #FF0A91;
   font-size: 30pt;
   font-weight: bold;
   text-align: center;
@@ -150,7 +175,7 @@ a {
 
 .BigHeader h1 {
   font-size: calc(6vw + 2rem);
-  color: #fd79a8;
+  color: #FF0A91;
   font-weight: bold;
   text-align: center;
   margin-top: 8rem;
@@ -163,14 +188,14 @@ a {
 }
 
 .SectionHeader {
-  background-color: #343a40;
+  background-color: #27292B;
   padding: 4rem 0 1rem 0;
 }
 
 .SectionHeader h2 {
   font-weight: bold;
   font-size: calc(2vw + 2rem);
-  color: #fd79a8;
+  color: #FF0A91;
 }
 
 .SectionHeader p {
@@ -188,22 +213,26 @@ a {
   max-width: 400px !important;
   min-height: 10rem;
   margin: 1rem;
-  border-radius: 0.5rem !important;
+  border-radius: 0 !important;
   padding: 2rem 0.5rem;
+  background-color: #27292B !important;
+}
+
+.linkCard:hover {
+  top: 5px;
+  left: 5px;
+  box-shadow: 0px 0px #fff !important;
+  transition: none;
 }
 
 .card-body .card-title {
   margin-top: 0;
-  color: #fd79a8;
+  color: #FF0A91;
   font-size: 2rem;
 }
 
 .cardBtn {
   margin-top: 1rem;
-}
-
-.pinkText {
-  color: #fd79a8;
 }
 
 .modalImg {
@@ -219,7 +248,7 @@ a {
 }
 
 .Footer {
-  background-color: #343a40;
+  background-color: #27292B;
   display: block;
   padding: 3rem 8vw 4rem 8vw;
   margin-top: 8rem;

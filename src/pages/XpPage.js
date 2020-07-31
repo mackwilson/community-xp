@@ -11,7 +11,7 @@ export default class XPPage extends React.Component {
         <PrivateNavbar />
         <div className="content">
           <BigHeader title="XP Community" />
-          <div className="gapDiv" />
+          <div className="gap-div" />
           <Footer />
         </div>
       </div>
