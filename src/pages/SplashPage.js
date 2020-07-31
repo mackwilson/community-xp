@@ -4,6 +4,7 @@ import PublicNavbar from '../comps/PublicNavbar.js';
 import LinkCard from '../comps/LinkCard.js';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Footer from '../comps/Footer.js';
+import AboutPage from './AboutPage.js';
 import pageText from '../assets/text/pageText.json';
 import '../css/App.css';
 
@@ -19,11 +20,12 @@ export default class SplashPage extends React.Component {
               <LinkCard title="SOS" link="/sos" />
               <LinkCard title="Resources" link="/resources" />
               <LinkCard title="XP Blog" link="/blog"/>
-              <LinkCard title="About UXP" link="/about" />
+              <LinkCard title="About UXP" link="/#About" />
               <LinkCard title="Sign Up" link="/signup" />
               <LinkCard title="Log In" link="/login" />
             </CardGroup>
           </div>
+          <AboutPage/>
           <Footer />
         </div>
       </div>

@@ -20,7 +20,6 @@ ReactDOM.render(
     <ScrollToTop>
       <div>
         <Route exact path="/" component={SplashPage} />
-        <Route path="/about" component={AboutPage} />
         <Route path="/resources" component={ResourcePage} />
         <Route path="/xp" component={XpPage} />
         <Route path="/sos" component={SosPage} />

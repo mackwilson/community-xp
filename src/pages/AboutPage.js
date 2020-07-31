@@ -1,9 +1,7 @@
 import React from 'react';
 import BigHeader from '../comps/BigHeader.js';
-import PublicNavbar from '../comps/PublicNavbar.js';
 import SectionHeader from '../comps/SectionHeader.js';
 import CardSection from '../comps/CardSection.js';
-import Footer from '../comps/Footer.js';
 import mack from '../assets/images/mack.jpg';
 import benny from '../assets/images/benny.jpg';
 import dani from '../assets/images/dani.jpg';
@@ -31,8 +29,7 @@ export default class AboutPage extends React.Component {
       
       return (
       <div>
-        <PublicNavbar />
-        <div className="content">
+        <div className="content" id="About">
           <BigHeader title="About" txt={pageText.about.header}/>
           
           <SectionHeader title="Our Vision"/>
@@ -45,7 +42,6 @@ export default class AboutPage extends React.Component {
           
           <SectionHeader title="Contact Us" />
           <CardSection cards={cardContent.about.contact} />
-          <Footer />
         </div>
       </div>
     );
