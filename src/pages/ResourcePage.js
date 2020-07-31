@@ -4,16 +4,16 @@ import BigHeader from '../comps/BigHeader.js';
 import Footer from '../comps/Footer.js';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import pageText from '../assets/text/pageText.json';
 import '../css/App.css';
 
 export default class ResourcePage extends React.Component {
   render() {
-      const text = "One of our goals at UXP is to help you access the resources you need. This page is made for that!"
       return (
       <div className="ResourcePage">
         <PublicNavbar />
         <div className="content">
-          <BigHeader title="Resources" txt={text}/>
+          <BigHeader title="Resources" txt={pageText.resources.header}/>
           <div className="left-text">
             <Tabs defaultActiveKey="category" id="uncontrolled-tab-example">
               <Tab eventKey="category" title="By Category">

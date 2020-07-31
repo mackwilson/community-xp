@@ -3,7 +3,7 @@ import {Navbar, Nav, NavItem } from 'react-bootstrap';
 // import Nav from 'react-bootstrap/Nav';
 // import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
-import logo from '../assets/uxp-logo-crop.png';
+import logo from '../assets/logos/uxp-logo-crop.png';
 import '../css/App.css';
 
 export default class PrivateNavbar extends React.Component {
