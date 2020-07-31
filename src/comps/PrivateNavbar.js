@@ -44,7 +44,7 @@ export default class PrivateNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <a href="#About">
+                  <a href="/#About">
                     About
                   </a>
                 </NavItem>

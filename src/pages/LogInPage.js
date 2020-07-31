@@ -28,7 +28,6 @@ class LogInPage extends React.Component {
           <div className="login-box">
           <div className="centre-text">
             <p>Welcome back!</p>
-            <p>Don't have an account? <Link to="/signup" style={{"color": "black"}}>Sign up</Link> instead</p>
           </div>
           <Formik
             validationSchema={schema}
@@ -76,13 +75,16 @@ class LogInPage extends React.Component {
                   </Form.Control.Feedback>
                 </Form.Group>
                 <div className="centre-text">
-                  <Button variant="dark" type="submit">
+                  <Button variant="dark" type="submit" className="dark btn blueOutline pinkShadow">
                     Log In
                   </Button>
                 </div>
               </Form>
             )}
             </Formik>
+            <div className="centre-text">
+              <p>Don't have an account? <Link to="/signup" className="pinkText">Sign up</Link> instead</p>
+            </div>
           </div>
           <Footer />
         </div>

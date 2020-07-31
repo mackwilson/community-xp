@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:wght@400;900');
 
 a {
   text-decoration: none !important;
@@ -19,11 +19,11 @@ body {
 }
 
 .content a {
-  color: #fff;
+  color: #FF0A91;
 }
 
 .content a:hover {
-  color: #FF0A91;
+  color: #00CCF0;
 }
 
 .centre-text {
@@ -61,8 +61,8 @@ body {
   transition: none;
 }
 
-.whiteShadow {
-  box-shadow: 5px 5px  #fff !important;
+.blueShadow {
+  box-shadow: 5px 5px  #00CCF0 !important;
 }
 
 .pinkShadow {
@@ -73,19 +73,23 @@ body {
   color: #FF0A91;
 }
 
+.whiteText {
+  color: #fff;
+}
+
 .dark {
   background-color: #27292B !important;
 }
 
 .Menu a {
-  color: #fff;
+  color: #FF0A91;
   text-align: right !important;
   line-height: 40px;
   vertical-align: middle;
 }
 
 .Menu a:hover {
-  color: #FF0A91;
+  color: #00CCF0;
 }
 
 nav {
@@ -94,16 +98,18 @@ nav {
   background-color: #27292B !important;
 }
 
-.sosBtn a {
-  background-color: #FF0A91;
+.pinkFill {
+  background-color: #FF0A91 !important;
   color: #27292B !important;
-  font-weight: bold;
+  font-weight: bolder !important;
   padding: 10px;
 }
 
-.highlightNav a {
-  background-color: #fff;
-  color: #27292B;
+.blueOutline {
+  border: 0px #00CCF0 solid !important;
+  background-color: #00CCF0 !important;
+  color: #27292B !important;
+  font-weight: normal !important;
   padding: 10px;
 }
 
@@ -136,9 +142,10 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  background-color: #fff;
   border-radius: 5px;
+  border: 1px solid #FF0A91;
   padding: 2rem;
+  color: #fff;
 }
 
 .login-box .form-control {
@@ -231,7 +238,7 @@ nav {
   font-size: 2rem;
 }
 
-.cardBtn {
+.spaceTop {
   margin-top: 1rem;
 }
 
@@ -245,6 +252,33 @@ nav {
 .modal-dialog {
   max-width: 800px !important;
   min-width: 250px !important;
+}
+
+.modal-content {
+  box-shadow: 5px 5px #FF0A91;
+  border-radius: 0 !important;
+  border: 0px solid #fff !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #FF0A91 !important;
+  border-radius: 0 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8 !important;
+}
+
+.close {
+  color: #FF0A91 !important;
+  font-size: 2rem !important;
+  font-weight: normal !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.close:hover {
+  color: #00CCF0 !important;
 }
 
 .Footer {

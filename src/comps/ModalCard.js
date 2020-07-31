@@ -69,16 +69,16 @@ function ModalCard(props) {
         <Card.Body>
           <Card.Title>{o.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-light">{o.subtitle}</Card.Subtitle>
-          <Button variant="outline-light" onClick={handleShow} className="cardBtn btn whiteShadow">
+          <Button variant="outline-light" onClick={handleShow} className="spaceTop dark btn blueOutline pinkShadow">
             See More
           </Button>
 
-          <Modal show={show} onHide={handleClose} centered >
-            <Modal.Header closeButton>
-              <Modal.Title>{title}</Modal.Title>
+          <Modal show={show} onHide={handleClose} centered  >
+            <Modal.Header closeButton className="dark">
+              <Modal.Title className="whiteText">{title}</Modal.Title>
               {subtitle}
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="dark whiteText">
               {image}
               {txt}
             </Modal.Body>
@@ -100,12 +100,12 @@ function ModalCard(props) {
 */
 function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
   const subhead = subHeading 
-    ? <h5>{subHeading}</h5> 
+    ? <h5 className="pinkText">{subHeading}</h5> 
     : null;
     
   const btn = (btnText && btnLink) 
     ? <div className="centre-text">
-        <Button variant="dark" href={btnLink} target="_blank" className="cardBtn dark pinkShadow btn">
+        <Button variant="dark" href={btnLink} target="_blank" className="spaceTop dark blueOutline pinkShadow btn">
           {btnText}
         </Button>
       </div>
