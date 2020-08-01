@@ -9,6 +9,8 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 
 const schema = Yup.object({
@@ -86,8 +88,9 @@ class LogInPage extends React.Component {
                   </Row>
                   <Row className="justify-content-md-center">
                     <Col>
-                      <Button variant="dark" type="submit" className="btn-block">
-                        Log In
+                      <Button variant="dark" type="submit" className="btn-block btn blueOutline pinkShadow">
+                        <FontAwesomeIcon icon={faCheck} />
+                        {" "}Log In
                       </Button>
                     </Col>
                   </Row>
@@ -98,7 +101,7 @@ class LogInPage extends React.Component {
           <div className="login-box">
             <Row className="justify-content-md-center">
               <Col>
-                Don't have an account? <Link className="darkText" to="/signup"><Button variant="outline-dark">Sign up instead.</Button></Link>
+                Don't have an account? <Link to="/signup">Sign up instead.</Link>
               </Col>
             </Row>
           </div>

@@ -42,6 +42,11 @@ body {
   margin-top: 2rem;
 }
 
+.right-text {
+  text-align: right;
+  margin-left: auto;
+}
+
 .gap-div {
   height: 4rem;
 }
@@ -129,11 +134,11 @@ nav {
   border-radius: 0 !important;
   line-height: 40px;
   padding: 7px 18px !important;
-  color: #fff !important;
+  color: #FF0A91 !important;
 }
 
 .navbar-toggler:hover {
-  color: #FF0A91 !important;
+  color: #00CCF0 !important;
 }
 
 .login-box {
@@ -142,7 +147,6 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  border-radius: 5px;
   border: 1px solid #FF0A91;
   padding: 2rem;
   color: #fff;
@@ -154,22 +158,22 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  background-color: #fff;
-  border-radius: 5px;
   padding: 2rem;
-  border: 1px solid #343a40;
-}
-
-.login-box .form-control {
   border: 1px solid #FF0A91;
+  border-radius: 0px;
+  color: #fff;
 }
 
-.login-box .form-label {
+.form-control {
+  border: 1px solid #00CCF0 !important;
+  border-radius: 50px !important;
+  background-color: #27292B !important;
+  color: #fff !important;
+}
+
+.form-label {
   margin-bottom: 0;
-}
-
-.login-box .btn:hover {
-  color: #fd79a8;
+  color: #FF0A91;
 }
 
 .BigHeader {
