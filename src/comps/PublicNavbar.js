@@ -17,6 +17,7 @@ export default class PublicNavbar extends React.Component {
             variant="dark"
             fixed="top"
           >
+            <Navbar.Brand href="/">CommUnityXP Logo</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav">
               <FontAwesomeIcon icon={faBars} />
             </Navbar.Toggle>
@@ -25,11 +26,6 @@ export default class PublicNavbar extends React.Component {
                 <NavItem>
                   <Link className="btn blueShadow pinkFill" to="/sos">
                     SOS
-                  </Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="/">
-                    Home
                   </Link>
                 </NavItem>
                 <NavItem>

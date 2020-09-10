@@ -45,7 +45,7 @@ export default class SignUpPage extends React.Component {
       <div className="SignUpPage">
         <PublicNavbar />
         <div className="content dark">
-          <SmallHeader title="Sign Up for CommUnity XP"/>
+          <SmallHeader title="Sign Up"/>
           <div className="signup-box">
             {this.state.element}
           </div>
