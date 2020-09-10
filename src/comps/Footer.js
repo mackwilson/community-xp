@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopyright, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 
 function Footer() {
@@ -6,10 +8,10 @@ function Footer() {
     <div className="Footer">
       <footer className="site-footer">
         <div className="copyright">
-          © 2020 CommUnity XP
+          <FontAwesomeIcon icon={faCopyright} /> 2020 CommUnity XP
         </div>
         <div className="to-top">
-          <a href="#header"><span>↑</span> Top </a>
+          <a href="#header"><FontAwesomeIcon icon={faArrowUp} /> Top </a>
         </div>
       </footer>
     </div>
