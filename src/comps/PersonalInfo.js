@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 
 const schema = Yup.object({
@@ -24,7 +24,7 @@ export default class PersonalInfo extends React.Component {
     return (
       <div className="PersonalInfo">
         <Row className="justify-content-md-center">
-          <h5>We're so excited to meet you! First, the boring details.</h5>
+          <h5>Now (optionally) tell us a bit about yourself!</h5>
         </Row>
         <Formik
           validateOnChange={false} 
@@ -46,16 +46,12 @@ export default class PersonalInfo extends React.Component {
             errors,
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
-            <Row className="justify-content-md-center">
-              <h5>We're so excited to meet you! First, the boring details.</h5>
-            </Row>
             <Form.Row>
               <Form.Group as={Col} controlId="formPassword">
                 <Form.Label>Program</Form.Label>
                 <Form.Control 
                   type="program" 
                   name="program" 
-                  placeholder="Your Program" 
                   value={values.program} 
                   onChange={handleChange}
                   isInvalid={!!errors.program}
@@ -69,7 +65,6 @@ export default class PersonalInfo extends React.Component {
                 <Form.Control 
                   type="password" 
                   name="passwordConf" 
-                  placeholder="Your Year" 
                 />
               </Form.Group>
             </Form.Row>
@@ -79,7 +74,6 @@ export default class PersonalInfo extends React.Component {
                 <Form.Control 
                   type="hometown" 
                   name="hometown"
-                  placeholder="Your Hometown" 
                   value={values.hometown} 
                   onChange={handleChange}
                   isInvalid={!!errors.hometown}
@@ -93,7 +87,6 @@ export default class PersonalInfo extends React.Component {
                 <Form.Control 
                   type="country" 
                   name="country"
-                  placeholder="Country" 
                   value={values.country} 
                   onChange={handleChange}
                   isInvalid={!!errors.country}
@@ -103,17 +96,12 @@ export default class PersonalInfo extends React.Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-            <Form.Row>
-              <Form.Group id="formEmailCheckbox">
-                <Form.Check type="checkbox" label="Subscribe to email updates about CommUnityXP" />
-              </Form.Group>
-            </Form.Row>
 
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-md-center right-text">
               <Col>
-                <Button variant="dark" type="submit" className="btn-block btn blueOutline pinkShadow">
-                  <FontAwesomeIcon icon={faCheck} />
-                  {" "}Create Account
+                <Button variant="dark" type="submit" className="btn blueOutline pinkShadow">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                  {" "}Next
                 </Button>
               </Col>
             </Row>

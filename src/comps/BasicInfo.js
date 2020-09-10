@@ -46,8 +46,8 @@ export default class BasicInfo extends React.Component {
           <h5>We're so excited to meet you! First, the boring details.</h5>
         </Row>
         <Formik
-          validateOnChange={false} 
-          validationSchema={schema}
+          validateOnChange={false}
+          validationSchema={schema} 
           onSubmit={this.state.handler}
           initialValues={{
             firstName: '',
@@ -71,11 +71,10 @@ export default class BasicInfo extends React.Component {
             <Form noValidate onSubmit={handleSubmit}>
               <Form.Row>
                 <Form.Group as={Col} controlId="formFirstName">
-                  <Form.Label>First Name</Form.Label>
+                  <Form.Label>* First Name</Form.Label>
                   <Form.Control 
                     type="firstName" 
                     name="firstName" 
-                    placeholder="Enter First Name" 
                     value={values.firstName} 
                     onChange={handleChange}
                     isInvalid={!!errors.firstName}
@@ -85,11 +84,10 @@ export default class BasicInfo extends React.Component {
                   </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} controlId="formLastName">
-                  <Form.Label>LastName</Form.Label>
+                  <Form.Label>* Last Name</Form.Label>
                   <Form.Control 
                     type="lastName" 
                     name="lastName" 
-                    placeholder="Enter Last Name" 
                     value={values.lastName} 
                     onChange={handleChange}
                     isInvalid={!!errors.lastName}
@@ -101,7 +99,7 @@ export default class BasicInfo extends React.Component {
               </Form.Row>
               <Form.Row>
                 <Form.Group as={Col} controlId="formEmail">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label>* Email</Form.Label>
                   <Form.Control 
                     type="email" 
                     name="email"
@@ -117,7 +115,7 @@ export default class BasicInfo extends React.Component {
               </Form.Row>
               <Form.Row>
                 <Form.Group as={Col} controlId="formUsername">
-                  <Form.Label>Username</Form.Label>
+                  <Form.Label>* Username</Form.Label>
                   <Form.Control 
                     type="username" 
                     name="username"
@@ -133,11 +131,11 @@ export default class BasicInfo extends React.Component {
               </Form.Row>
               <Form.Row>
                 <Form.Group as={Col} controlId="formPassword">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label>* Password</Form.Label>
                   <Form.Control 
                     type="Password" 
                     name="password" 
-                    placeholder="Password" 
+                    placeholder="At least 6 characters" 
                     value={values.password} 
                     onChange={handleChange}
                     isInvalid={!!errors.password}
@@ -147,11 +145,10 @@ export default class BasicInfo extends React.Component {
                   </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} controlId="formConfirmPassword">
-                  <Form.Label>Confirm Password</Form.Label>
+                  <Form.Label>* Confirm Password</Form.Label>
                   <Form.Control 
                     type="password" 
                     name="confirmPassword" 
-                    placeholder="Confirm Password" 
                     value={values.confirmPassword} 
                     onChange={handleChange}
                     isInvalid={!!errors.confirmPassword}
@@ -180,7 +177,7 @@ export default class BasicInfo extends React.Component {
                     value={values.acceptTerms}
                     onChange={handleChange}
                     isInvalid={!!errors.acceptTerms}
-                    label="I agree to CommUnity XP Terms and Conditions" 
+                    label="* I agree to CommUnity XP Terms and Conditions" 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.acceptTerms}

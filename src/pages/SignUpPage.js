@@ -3,19 +3,18 @@ import SmallHeader from '../comps/SmallHeader.js';
 import PublicNavbar from '../comps/PublicNavbar.js';
 import Footer from '../comps/Footer.js';
 import BasicInfo from '../comps/BasicInfo.js';
+import PersonalInfo from '../comps/PersonalInfo.js';
+import SafetyInfo from '../comps/SafetyInfo.js';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 
 export default class SignUpPage extends React.Component {  
   constructor(props) {
     super(props);
     this.state = {
-      
+      element: <BasicInfo handler={this.showPersonalInfo.bind(this)} />
     }
   }
   
@@ -23,14 +22,32 @@ export default class SignUpPage extends React.Component {
     this.props.history.push('/profile');
   }
   
-  render () {
+  showPersonalInfo() {
+    this.setState({
+      element: <PersonalInfo back={this.showBasicInfo.bind(this)} handler={this.showSafetyInfo.bind(this)} />
+    });
+  }
+  
+  showBasicInfo() {
+    this.setState({
+      element: <BasicInfo handler={this.showPersonalInfo.bind(this)} />
+    });
+  }
+  
+  showSafetyInfo() {
+    this.setState({
+      element: <SafetyInfo back={this.showPersonalInfo.bind(this)} handler={this.signUp.bind(this)} />
+    });
+  }
+  
+  render() {
     return (
       <div className="SignUpPage">
         <PublicNavbar />
         <div className="content dark">
           <SmallHeader title="Sign Up for CommUnity XP"/>
           <div className="signup-box">
-            <BasicInfo />
+            {this.state.element}
           </div>
           <div className="signup-box centre-text">
             <Row className="justify-content-md-center">
