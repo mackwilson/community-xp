@@ -17,7 +17,7 @@
         "title": "Dani",
         "subtitle": "Founder & Executive Director",
         "photo": "../assets/images/dani.jpg",
-        "textSubHeading": "Pronouns: she/her",
+        "textSubHeading": "Pronouns: they/them",
         "text": "Dani is a recent graduate from the University of Waterloo. ",
         "alt": "dani"
       }, {
@@ -35,7 +35,7 @@
         "photo": "../assets/images/lars.jpg",
         "alt": "lars",
         "textSubHeading": "Pronouns: he/him",
-        "text": "Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo."
+        "text": "Lars is in his fifth and final year of Systems Design Engineering at the University of Waterloo."
       }, {
         "title": "Mack",
         "subtitle": "Head of Development",
@@ -46,7 +46,19 @@
         "textSubHeading": ["Pronouns: they/them", null],
         "text": [
           "Mack is a recent graduate from Biomedical Engineering at the University of Waterloo. They work full time as a Software Engineer for a Silicon Valley tech startup. They have experience with full-stack development, including everything from project management, to web development, to server architecture.",
-          "Mack joined CommUnity XP in May 2020 to lead the development of the site. They work closely with Lars on the design and user experience of the web UI. Additionally, they are responsible for all server architecture, database management, deploy processes, and general IT services for the team. They are loving the energy from the entire UXP team and are super happy to be here."
+          "Mack joined CommUnity XP in May 2020 to lead the development of the site. They work closely with Lars and Cash on the design and user experience of the web UI. Additionally, they are responsible for all server architecture, database management, deploy processes, and general IT services for the team. They are loving the energy from the entire UXP team and are super happy to be here."
+        ]
+      },
+      {
+        "title": "Cash",
+        "subtitle": "Lead Digital Content Designer",
+        "photo": null,
+        "alt": "Cash",
+        "btnText": ["Email Cash"],
+        "btnLink": ["mailto:cash@cloudland.ca"],
+        "textSubHeading": ["Pronouns: she/her"],
+        "text": [
+          "Cash manages, designs, and creates all digital content for CommUnity XP, from our Instagram page to our web design and more. She joined the team in August 2020 and we are so excited to have her."
         ]
       }
     ],
