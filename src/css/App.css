@@ -88,7 +88,7 @@ body {
 }
 
 .dark {
-  background-color: #27292B !important;
+  background-color: #000 !important;
 }
 
 .Menu a {
@@ -105,7 +105,7 @@ body {
 nav {
   align-items: right;
   text-align: right !important;
-  background-color: #27292B !important;
+  background-color: #000 !important;
 }
 
 .pinkFill {
