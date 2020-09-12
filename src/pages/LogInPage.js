@@ -27,9 +27,9 @@ class LogInPage extends React.Component {
     return (
       <div className="LogInPage">
         <PublicNavbar />
-        <div className="content dark">
+        <div className="content whiteText">
           <SmallHeader title="Log In" />
-          <div className="login-box">
+          <div className="login-box thinBorder pinkBorder darkFill">
             <Row className="justify-content-md-center">
               <h5>Welcome back!</h5>
             </Row>
@@ -88,7 +88,11 @@ class LogInPage extends React.Component {
                   </Row>
                   <Row className="justify-content-md-center">
                     <Col>
-                      <Button variant="dark" type="submit" className="btn-block btn blueOutline pinkShadow">
+                      <Button 
+                        variant="dark" 
+                        type="submit" 
+                        className="btn-block btn darkText blueFill pinkShadow"
+                      >
                         <FontAwesomeIcon icon={faCheck} />
                         {" "}Log In
                       </Button>
@@ -98,7 +102,7 @@ class LogInPage extends React.Component {
               )}
               </Formik>
           </div>
-          <div className="login-box">
+          <div className="login-box darkFill centre-text pinkBorder thinBorder">
             <Row className="justify-content-md-center">
               <Col>
                 Don't have an account? <Link to="/signup">Sign up instead.</Link>

@@ -4,6 +4,9 @@ a {
 
 body {
   font-family: 'Courier Prime', monospace !important;
+  background-image: linear-gradient(#85e3fd, #e7a7c3);
+  background-attachment: fixed;
+  padding-bottom: 100px;
 }
 
 :focus {
@@ -17,7 +20,7 @@ body {
 }
 
 .content a {
-  color: #FF0A91;
+  color: #FF009C;
 }
 
 .content a:hover {
@@ -52,9 +55,10 @@ body {
 .btn {
   border-radius: 20px !important;
   line-height: 15px !important;
-  padding: 10px !important;
+  padding: 10px 15px !important;
   position: relative;
   transition: none !important;
+  min-width: 80px;
 }
 
 .btn:hover {
@@ -64,63 +68,64 @@ body {
 }
 
 .blueShadow {
-  box-shadow: 0 5px  #00CCF0 !important;
+  box-shadow: 0 5px  #00C7FF !important;
 }
 
 .pinkShadow {
-  box-shadow: 0 5px #FF0A91 !important;
+  box-shadow: 0 5px #FF009C !important;
 }
 
 .pinkBorder {
-  border: 4px solid #FF0A91 !important;
+  border: 4px solid #FF009C !important;
 }
 
 .thinBorder {
   border-width: 1px !important;
 }
 
-.pinkText {
-  color: #FF0A91;
+.pinkFill {
+  background-color: #FF009C !important;
+  font-weight: 700 !important;
+  padding: 10px;
 }
 
-.whiteText {
-  color: #fff;
+.blueFill {
+  border: 0px #00C7FF solid !important;
+  background-color: #00C7FF !important;
+  font-weight: 400 !important;
+  padding: 10px;
 }
 
-.dark {
+.darkFill {
   background-color: #000 !important;
 }
 
+.pinkText {
+  color: #FF009C !important;
+}
+
+.whiteText {
+  color: #fff !important;
+}
+
+.darkText {
+  color: #000 !important;
+}
+
 .Menu a {
-  color: #FF0A91;
-  text-align: right !important;
+  color: #FF009C;
   line-height: 40px;
   vertical-align: middle;
 }
 
 .Menu a:hover {
-  color: #00CCF0;
+  color: #00C7FF;
 }
 
 nav {
   align-items: right;
   text-align: right !important;
   background-color: #000 !important;
-}
-
-.pinkFill {
-  background-color: #FF0A91 !important;
-  color: #27292B !important;
-  font-weight: 700 !important;
-  padding: 10px;
-}
-
-.blueOutline {
-  border: 0px #00CCF0 solid !important;
-  background-color: #00CCF0 !important;
-  color: #27292B !important;
-  font-weight: 400 !important;
-  padding: 10px;
 }
 
 .nav-item {
@@ -130,7 +135,7 @@ nav {
 }
 
 .nav-tabs .nav-link {
-  background-color: #27292B;
+  background-color: #000;
 }
 
 .navbar-toggler {
@@ -139,11 +144,15 @@ nav {
   border-radius: 0 !important;
   line-height: 40px;
   padding: 7px 18px !important;
-  color: #FF0A91 !important;
+  color: #FF009C !important;
 }
 
 .navbar-toggler:hover {
-  color: #00CCF0 !important;
+  color: #00C7FF !important;
+}
+
+.logo {
+  height: 100px;
 }
 
 .login-box {
@@ -152,9 +161,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  border: 1px solid #FF0A91;
   padding: 2rem;
-  color: #fff;
 }
 
 .signup-box {
@@ -164,72 +171,70 @@ nav {
   margin-right: auto;
   margin-top: 2rem;
   padding: 2rem;
-  border: 1px solid #FF0A91;
   border-radius: 0px;
-  color: #fff;
 }
 
 .form-control {
-  border: 1px solid #00CCF0 !important;
+  border: 1px solid #00C7FF !important;
   border-radius: 50px !important;
-  background-color: #27292B !important;
+  background-color: #000 !important;
   color: #fff !important;
 }
 
 .form-label {
   margin-bottom: 0;
-  color: #FF0A91;
+  color: #FF009C;
 }
 
-.BigHeader {
-  background-color: #27292B;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
+#BigHeader {
+  min-height: 400px;
   align-items: center;
   justify-content: center;
 }
 
-.SmallHeader {
-  background-color: #27292B;
+#SmallHeader {
   min-height: 140px;
+}
+
+.header {
   display: flex;
   flex-direction: column;
+  margin-top: 160px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.SmallHeader h1 {
-  color: #FF0A91;
+.header h1 {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#SmallHeader h1 {
   font-size: 30pt;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 6rem;
-  font-family: 'Press Start 2P', cursive;
 }
 
-.BigHeader h1 {
-  font-size: calc(5vw + 1rem);
-  color: #FF0A91;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 8rem;
-  font-family: 'Press Start 2P', cursive;
+#BigHeader h1 {
+  font-size: calc(4vw + 1rem);
 }
 
-.BigHeader p {
+#BigHeader p {
   font-size: calc(1vw + 1rem);
-  margin-top: 60px;
-  color: #fff;
 }
 
 .SectionHeader {
-  background-color: #27292B;
   padding: 4rem 0 1rem 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .SectionHeader h2 {
   font-weight: 700;
   font-size: calc(2vw + 2rem);
-  color: #FF0A91;
 }
 
 .SectionHeader p {
@@ -242,14 +247,12 @@ nav {
 }
 
 .card {
-  width: 22vw;
-  min-width: 240px !important;
-  max-width: 400px !important;
+  min-width: 320px !important;
+  max-width: 380px !important;
   min-height: 10rem;
   margin: 1rem;
   border-radius: 80px !important;
   padding: 2rem;
-  background-color: #27292B !important;
 }
 
 .linkCard:hover {
@@ -261,7 +264,7 @@ nav {
 
 .card-body .card-title {
   margin-top: 0;
-  color: #FF0A91;
+  color: #FF009C;
   font-size: 2rem;
 }
 
@@ -273,26 +276,30 @@ nav {
   border: 1px solid #fff;
   border-radius: 50%;
   padding: 10px;
+  margin-bottom: 1rem !important;
 }
 
 .spaceTop {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .modalImg {
-  width: 40%;
-  display: inline;
-  margin: 0 30%;
+  width: 80%;
+  max-width: 300px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-dialog {
-  max-width: 800px !important;
+  max-width: 1200px !important;
   min-width: 250px !important;
 }
 
 .modal-content {
   border-radius: 80px !important;
-  background-color: #FF0A91 !important;
+  background-color: #FF009C !important;
 }
 
 .modal-body {
@@ -305,7 +312,7 @@ nav {
 }
 
 .close {
-  color: #FF0A91 !important;
+  color: #FF009C !important;
   font-size: 2rem !important;
   font-weight: 400 !important;
   text-shadow: none !important;
@@ -313,14 +320,15 @@ nav {
 }
 
 .close:hover {
-  color: #00CCF0 !important;
+  color: #00C7FF !important;
 }
 
 .Footer {
-  background-color: #27292B;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: block;
-  padding: 3rem 8vw 4rem 8vw;
-  margin-top: 8rem;
+  padding: 20px 8vw;
 }
 
 .Footer .copyright {

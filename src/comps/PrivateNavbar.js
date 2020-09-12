@@ -12,23 +12,22 @@ export default class PrivateNavbar extends React.Component {
         <div className="Menu">
           <Navbar
             collapseOnSelect
-            expand="md"
+            expand="lg"
             variant="dark"
             fixed="top"
           >
             <Navbar.Brand href="/">
               <img
                 src={logo}
-                height="80"
-                className="d-inline-block align-top"
+                className="d-inline-block align-top logo"
                 alt="Community XP logo, a purple  retro-looking 8-bit healthbar and heart."
               />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-                <NavItem className="sosBtn">
-                  <Link to="/sos" className="btn whiteShadow">
+                <NavItem>
+                  <Link to="/sos" className="btn pinkFill blueShadow darkText">
                     SOS
                   </Link>
                 </NavItem>
@@ -57,8 +56,8 @@ export default class PrivateNavbar extends React.Component {
                     Profile
                   </Link>
                 </NavItem>
-                <NavItem className="highlightNav">
-                  <Link to="/" className="btn pinkShadow">
+                <NavItem>
+                  <Link to="/" className="btn blueFill pinkShadow darkText">
                     Log Out
                   </Link>
                 </NavItem>

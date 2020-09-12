@@ -186,7 +186,7 @@ export default class BasicInfo extends React.Component {
               </Form.Row>
               <Row className="justify-content-md-center right-text">
                 <Col>
-                  <Button variant="dark" type="submit" className="btn blueOutline pinkShadow">
+                  <Button variant="dark" type="submit" className="btn darkText blueFill pinkShadow">
                     <FontAwesomeIcon icon={faArrowRight} />
                     {" "}Next
                   </Button>

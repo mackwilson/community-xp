@@ -2,6 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import '../css/App.css';
 
 function ModalCard(props) {
@@ -37,14 +39,8 @@ function ModalCard(props) {
     ? <Card.Img variant="top" src={o.photo} alt={o.alt} className="cardImg pinkBorder" />
     : null;
     
-  const title = o.subtitle 
-    ? <Modal.Title centered className="whiteText centre-text">
-        {o.title}
-      </Modal.Title>
-    : o.title;
-    
   const modalSubtitle = o.subtitle 
-    ? <div className="card-subtitle centre-text">
+    ? <div className="card-subtitle centre-text whiteText spaceTop">
         {o.subtitle}
       </div> 
     : null;
@@ -74,21 +70,29 @@ function ModalCard(props) {
   
   return (
     <div>
-      <Card className="card pinkBorder thinBorder">
+      <Card className="card pinkBorder thinBorder darkFill">
         {cardImage}
         <Card.Body>
           <Card.Title>{o.title}</Card.Title>
           {cardSubtitle}
-          <Button variant="outline-light" onClick={handleShow} className="spaceTop dark btn blueOutline pinkShadow">
+          <Button variant="outline-light" onClick={handleShow} className="spaceTop blueFill btn darkText pinkShadow">
             Read More
           </Button>
 
           <Modal show={show} onHide={handleClose} centered>
-            <Modal.Body className="dark whiteText pinkBorder thinBorder">
-              {modalImage}
-              {title}
-              {modalSubtitle}
-              {txt}
+            <Modal.Body className="darkFill whiteText pinkBorder thinBorder">
+              <Row>
+                <Col>
+                  {modalImage}
+                  <Modal.Title centered className="pinkText centre-text modal-title h4">
+                    {o.title}
+                  </Modal.Title>
+                  {modalSubtitle}
+                </Col>
+                <Col md={7}>
+                  {txt}
+                </Col>
+              </Row>
             </Modal.Body>
           </Modal>
           
@@ -113,14 +117,14 @@ function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
     
   const btn = (btnText && btnLink) 
     ? <div className="centre-text">
-        <Button variant="dark" href={btnLink} target="_blank" className="spaceTop dark blueOutline pinkShadow btn">
+        <Button href={btnLink} target="_blank" className="spaceTop darkText blueFill pinkShadow btn">
           {btnText}
         </Button>
       </div>
     : null;
     
   return(
-    <div className="content spaceTop" key={key}>
+    <div className="content" key={key}>
       {subhead}
       <p>{text}</p>
       {btn}

@@ -14,15 +14,14 @@ export default class PublicNavbar extends React.Component {
         <div className="Menu">
           <Navbar
             collapseOnSelect
-            expand="md"
+            expand="lg"
             variant="dark"
             fixed="top"
           >
             <Navbar.Brand href="/">
               <img
                 src={logo}
-                height="80"
-                className="d-inline-block align-top"
+                className="d-inline-block align-top logo"
                 alt="Community XP logo, a purple  retro-looking 8-bit healthbar and heart."
               />
             </Navbar.Brand>
@@ -32,7 +31,7 @@ export default class PublicNavbar extends React.Component {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <NavItem>
-                  <Link className="btn blueShadow pinkFill" to="/sos">
+                  <Link className="btn blueShadow pinkFill darkText" to="/sos">
                     SOS
                   </Link>
                 </NavItem>
@@ -57,7 +56,7 @@ export default class PublicNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/login" className="btn pinkShadow blueOutline">
+                  <Link to="/login" className="btn pinkShadow blueFill darkText">
                     Log In
                   </Link>
                 </NavItem>

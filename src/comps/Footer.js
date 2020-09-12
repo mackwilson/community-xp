@@ -5,7 +5,7 @@ import '../css/App.css';
 
 function Footer() {
   return (
-    <div className="Footer">
+    <div className="Footer darkFill">
       <footer className="site-footer">
         <div className="copyright">
           <FontAwesomeIcon icon={faCopyright} /> 2020 CommUnity XP

@@ -3,8 +3,8 @@ import '../css/App.css';
 
 function SmallHeader(props) {
   return (
-    <div className="SmallHeader" id="header">
-      <h1>{props.title}</h1>
+    <div className="header darkFill" id="SmallHeader">
+      <h1 className="pinkText">{props.title}</h1>
     </div>
   );
 }
