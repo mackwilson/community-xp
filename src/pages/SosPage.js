@@ -37,11 +37,11 @@ export default class SosPage extends React.Component {
       return (
       <div className="SosPage">
         <PublicNavbar />
-        <div className="content">
-          <BigHeader title="SOS Page" txt={pageText.sos.header}/>
+        <BigHeader title="SOS Page" txt={pageText.sos.header}/>
+        <div className="width-80">
           <CardSection cards={teamContent} />
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

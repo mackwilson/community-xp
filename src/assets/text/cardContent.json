@@ -3,12 +3,15 @@
     "vision": [
       {
         "title": "Community",
-        "text": ""
+        "text": [
+          "It's in our name and its what we are all about: community -- as a feeling, a concept, and a space. At UXP, we spend a lot of time thinking about what makes a community a community. In fact, we spent months researching this abstract concept before we launched.",
+          "We hope to foster community by giving students a space (or several) dedicated to opening up about their mental health experiences. We hope to make it clear that those thoughts and stories are welcome here, to foster a sense of belonging. The peer-support and forum-based nature of the platform is intended to remind users that they are not alone. We hope you will join our CommUnity!"
+        ]
       }, {
         "title": "Accessibility",
         "text": ""
       }, {
-        "title": "Theme 3",
+        "title": "Empathy",
         "text": ""
       }
     ],

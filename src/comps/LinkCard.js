@@ -8,7 +8,7 @@ function LinkCard(props) {
     <div>
       <Link to={props.link}>
         <Card
-          className="mb-2 card linkCard pinkShadow darkFill"
+          className="mb-2 card linkCard pinkShadow pinkText greyFill"
         >
           <Card.Body>
             <Card.Title>{props.title}</Card.Title>

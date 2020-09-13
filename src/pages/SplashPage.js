@@ -13,22 +13,19 @@ export default class SplashPage extends React.Component {
       return (
       <div>
         <PublicNavbar />
-        <div className="content">
-          <BigHeader title="COMMUNITY XP" txt={pageText.splash.header}/>
-          <div className="centre-text">
-            <CardGroup>
-              <LinkCard title="SOS" link="/sos" />
-              <LinkCard title="Resources" link="/resources" />
-              <LinkCard title="XP Blog" link="/blog"/>
-              <LinkCard title="About UXP" link="/#About" />
-              <LinkCard title="Sign Up" link="/signup" />
-              <LinkCard title="Log In" link="/login" />
-            </CardGroup>
-          </div>
-          <div className="gap-div"></div>
-          <AboutPage/>
-          <Footer />
+        <BigHeader title="COMMUNITY XP" txt={pageText.splash.header}/>
+        <div className="centre-text width-80 darkText">
+          <CardGroup>
+            <LinkCard title="SOS" link="/sos" />
+            <LinkCard title="Resources" link="/resources" />
+            <LinkCard title="XP Blog" link="/blog"/>
+            <LinkCard title="About UXP" link="/#About" />
+            <LinkCard title="Sign Up" link="/signup" />
+            <LinkCard title="Log In" link="/login" />
+          </CardGroup>
         </div>
+        <AboutPage/>
+        <Footer />
       </div>
     );
   }

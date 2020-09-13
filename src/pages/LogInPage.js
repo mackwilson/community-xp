@@ -27,7 +27,7 @@ class LogInPage extends React.Component {
     return (
       <div className="LogInPage">
         <PublicNavbar />
-        <div className="content whiteText">
+        <div className="section greyFill whiteText">
           <SmallHeader title="Log In" />
           <div className="login-box thinBorder pinkBorder darkFill">
             <Row className="justify-content-md-center">
@@ -109,8 +109,8 @@ class LogInPage extends React.Component {
               </Col>
             </Row>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

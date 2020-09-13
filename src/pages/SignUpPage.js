@@ -44,7 +44,7 @@ export default class SignUpPage extends React.Component {
     return (
       <div className="SignUpPage">
         <PublicNavbar />
-        <div className="content whiteText">
+        <div className="section greyFill whiteText">
           <SmallHeader title="Sign Up"/>
           <div className="signup-box pinkBorder darkFill thinBorder">
             {this.state.element}
@@ -56,8 +56,8 @@ export default class SignUpPage extends React.Component {
               </Col>
             </Row>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }
