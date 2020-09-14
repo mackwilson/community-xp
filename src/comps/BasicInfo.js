@@ -43,7 +43,7 @@ export default class BasicInfo extends React.Component {
     return (
       <div className="BasicInfo">
         <Row className="justify-content-md-center">
-          <h5>We're so excited to meet you! First, the boring details.</h5>
+          <h6>We're so excited to meet you! First, the boring details.</h6>
         </Row>
         <Formik
           validateOnChange={false}

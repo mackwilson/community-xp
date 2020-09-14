@@ -10,7 +10,7 @@ export default class BlogPage extends React.Component {
       return (
       <div className="BlogPage">
         <PublicNavbar />
-        <BigHeader title="XP Blog" txt={pageText.blog.header}/>
+        <BigHeader title="XP Blog" subtitle={pageText.blog.header}/>
         <Footer />
       </div>
     );

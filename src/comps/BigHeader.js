@@ -5,7 +5,7 @@ function BigHeader(props) {
   return (
     <div className="header section greyFill" id="BigHeader">
       <h1 className="centre-text pinkText">{props.title}</h1>
-      <p className="centre-text whiteText">{props.txt}</p>
+      <h6 className="centre-text whiteText">{props.subtitle}</h6>
     </div>
   );
 }

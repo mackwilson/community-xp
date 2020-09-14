@@ -12,8 +12,8 @@ export default class ResourcePage extends React.Component {
       return (
       <div className="ResourcePage">
         <PublicNavbar />
-        <BigHeader title="Resources" txt={pageText.resources.header}/>
-        <div className="left-text">
+        <BigHeader title="Resources" subtitle={pageText.resources.header}/>
+        <div className="left-text section">
           <Tabs defaultActiveKey="category" id="uncontrolled-tab-example">
             <Tab eventKey="category" title="By Category">
               <p className="left-text">Resources by category </p>

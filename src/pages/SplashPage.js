@@ -13,7 +13,7 @@ export default class SplashPage extends React.Component {
       return (
       <div>
         <PublicNavbar />
-        <BigHeader title="COMMUNITY XP" txt={pageText.splash.header}/>
+        <BigHeader title="COMMUNITY XP" subtitle={pageText.splash.header}/>
         <div className="centre-text width-80 darkText">
           <CardGroup>
             <LinkCard title="SOS" link="/sos" />

@@ -1,13 +1,48 @@
-a {
-  text-decoration: none !important;
+#root {
+  position: relative;
+  min-height: 100vh;
+  bottom: 0;
+  padding-bottom: 150px;
+  padding-top: 50px;
 }
 
 body {
   font-family: 'Courier Prime', monospace !important;
   background-image: linear-gradient(#85e3fd, #e7a7c3);
   background-attachment: fixed;
-  padding-bottom: 100px;
-  padding-top: 100px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 60pt !important;
+  margin-bottom: 30px !important;
+  font-family: 'Press Start 2P', cursive;
+  word-break: break-word;
+}
+
+h2 {
+  font-size: 30pt !important;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px !important;
+}
+
+h3 {
+  font-size: 50pt !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-size: 34pt !important;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  font-size: 20pt !important;
 }
 
 :focus {
@@ -205,38 +240,12 @@ nav {
   flex-direction: column;
 }
 
-.header h1 {
-  font-weight: 700;
-  margin-bottom: 30px;
-  font-family: 'Press Start 2P', cursive;
-}
-
-
-#BigHeader h1 {
-  font-size: calc(4vw + 1rem);
-}
-
-#BigHeader p {
-  font-size: calc(1vw + 1rem);
-}
-
-
-.SectionHeader h2 {
-  font-weight: 700;
-  font-size: calc(2vw + 2rem);
-}
-
-.SectionHeader p {
-  font-size: calc(1vw + 1rem);
-  margin-top: 2rem;
-}
-
 .card-group {
   justify-content: center !important;
 }
 
 .card {
-  min-width: 320px !important;
+  min-width: 340px !important;
   max-width: 380px !important;
   min-height: 10rem;
   margin: 1rem;
@@ -312,7 +321,7 @@ nav {
 }
 
 .Footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   display: block;

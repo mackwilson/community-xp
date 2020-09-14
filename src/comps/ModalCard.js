@@ -79,7 +79,7 @@ function ModalCard(props) {
             Read More
           </Button>
 
-          <Modal show={show} onHide={handleClose} centered>
+          <Modal show={show} close onHide={handleClose} centered>
             <Modal.Body className="darkFill whiteText pinkBorder thinBorder">
               <Row>
                 <Col>

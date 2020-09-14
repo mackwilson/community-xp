@@ -29,7 +29,7 @@ export default class AboutPage extends React.Component {
       
       return (
       <div id="About">
-        <BigHeader title="About" txt={pageText.about.header}/>
+        <BigHeader title="About" subtitle={pageText.about.header}/>
         
         <div className="section greyFill whiteText">
           <SectionHeader title="Our Vision"/>

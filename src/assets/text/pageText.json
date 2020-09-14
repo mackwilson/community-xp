@@ -1,25 +1,24 @@
 {
   "about": {
-    "header": "What is CommUnity XP? Who is behind it? Read about our vision and how we got here.",
+    "header": "Who are we and how did we get here?",
     "vision": [
       "This is where we explain what the project is all about. I think we should organize this into themes, perhaps we can have cards that open modals with more information about the themes.",
       "asfalksjdfkljasdhfl;aksjdlfkajsdlkfj text text text text alsdjf;laksdjfl;kasjdflk;"
     ],
     "team": [
-      "Our team started working together throughout early 2020. Dani originally developed the idea and founded the project, and Ben soon joined on to do outreach, design, and web development.",
-      "After realizing how great the idea was, Mack, Lars, and Cash soon joined on and put their experience with UX research, full-stack development, and design to work.",
-      "The small but mighty team got to work making the UXP site a reality. Mental health is a cause close to all of our hearts, and we are all extremely passionate, talented, and diverse. Click the buttons below to read more about each team member!"
+      "In early 2020, Dani developed the idea and enlisted Ben to help with outreach, design, and web development. Throughout Summer 2020, Lars, Mack and Cash all joined to work on the UX research, development, and content design.",
+      "This small but mighty team is extremely motivated, passionate, and talented. Mental health is a cause close to all of our hearts. Click the cards below to read more!"
     ],
     "contact": []
   },
   "blog": {
-    "header": "Read on as people share and reflect on their expriences with mental health and mental illness."
+    "header": "Insights, experiences, and opinions."
   },
   "resources": {
-    "header": "One of our goals at UXP is to help you access the resources you need. This page is made for that!"
+    "header": "Browse by category or get recommendations!"
   },
   "sos": {
-    "header": "Crisis management resources all in one place when you need them."
+    "header": "Crisis management quicklinks."
   },
   "splash": {
     "header": "Striving for better mental health experiences for all."
