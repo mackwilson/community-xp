@@ -31,7 +31,7 @@ class LogInPage extends React.Component {
           <SmallHeader title="Log In" />
           <div className="login-box thinBorder pinkBorder darkFill">
             <Row className="justify-content-md-center">
-              <h5>Welcome back!</h5>
+              <div className="h8">Welcome back!</div>
             </Row>
             <Formik
               validationSchema={schema}

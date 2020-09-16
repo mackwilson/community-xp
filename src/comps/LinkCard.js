@@ -1,20 +1,29 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 import '../css/App.css';
 
 function LinkCard(props) {
+  const cardSubtitle = props.subtitle 
+    ? <Card.Subtitle className="mb-2 text-light h8 spaceTop">{props.subtitle}</Card.Subtitle>
+    : null;
+    
   return (
     <div>
-      <Link to={props.link}>
-        <Card
-          className="mb-2 card linkCard pinkShadow pinkText greyFill"
-        >
-          <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
-          </Card.Body>
-        </Card>
-      </Link>
+      <Card
+        className="mb-2 card linkCard pinkText greyFill"
+      >
+        <Card.Body>
+          <Card.Title className="h7">{props.title}</Card.Title>
+          {cardSubtitle}
+          <Link to={props.link}>
+            <Button className="spaceTop darkText blueFill pinkShadow btn">
+              Read More
+            </Button>
+          </Link>
+        </Card.Body>
+      </Card>
     </div>
   );
 }

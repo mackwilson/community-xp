@@ -40,13 +40,13 @@ function ModalCard(props) {
     : null;
     
   const modalSubtitle = o.subtitle 
-    ? <div className="card-subtitle centre-text whiteText spaceTop">
+    ? <div className="centre-text whiteText spaceTop h9">
         {o.subtitle}
       </div> 
     : null;
     
   const cardSubtitle = o.subtitle 
-    ? <Card.Subtitle className="mb-2 text-light">{o.subtitle}</Card.Subtitle>
+    ? <Card.Subtitle className="mb-2 text-light h9">{o.subtitle}</Card.Subtitle>
     : null;
     
   let txt = [];
@@ -70,21 +70,22 @@ function ModalCard(props) {
   
   return (
     <div>
-      <Card className="card pinkBorder pinkText thinBorder greyFill">
+      <Card className="card pinkBorder thinBorder pinkText greyFill">
         {cardImage}
         <Card.Body>
-          <Card.Title>{o.title}</Card.Title>
+          <Card.Title className="h7">{o.title}</Card.Title>
           {cardSubtitle}
           <Button variant="outline-light" onClick={handleShow} className="spaceTop blueFill btn darkText pinkShadow">
             Read More
           </Button>
 
-          <Modal show={show} close onHide={handleClose} centered>
-            <Modal.Body className="darkFill whiteText pinkBorder thinBorder">
+          <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton />
+            <Modal.Body className="darkFill whiteText">
               <Row>
                 <Col>
                   {modalImage}
-                  <Modal.Title centered className="pinkText centre-text modal-title h4">
+                  <Modal.Title centered className="pinkText centre-text h7">
                     {o.title}
                   </Modal.Title>
                   {modalSubtitle}
@@ -112,7 +113,7 @@ function ModalCard(props) {
 */
 function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
   const subhead = subHeading 
-    ? <h5 className="pinkText">{subHeading}</h5> 
+    ? <p className="pinkText">{subHeading}</p> 
     : null;
     
   const btn = (btnText && btnLink) 

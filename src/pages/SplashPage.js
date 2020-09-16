@@ -16,12 +16,12 @@ export default class SplashPage extends React.Component {
         <BigHeader title="COMMUNITY XP" subtitle={pageText.splash.header}/>
         <div className="centre-text width-80 darkText">
           <CardGroup>
-            <LinkCard title="SOS" link="/sos" />
-            <LinkCard title="Resources" link="/resources" />
-            <LinkCard title="XP Blog" link="/blog"/>
-            <LinkCard title="About UXP" link="/#About" />
-            <LinkCard title="Sign Up" link="/signup" />
-            <LinkCard title="Log In" link="/login" />
+            <LinkCard title="SOS" link="/sos" subtitle={pageText.splash.tidbits.sos}/>
+            <LinkCard title="Resources" link="/resources" subtitle={pageText.splash.tidbits.resources}/>
+            <LinkCard title="XP Blog" link="/blog" subtitle={pageText.splash.tidbits.blog}/>
+            <LinkCard title="About UXP" link="/#About" subtitle={pageText.splash.tidbits.about}/>
+            <LinkCard title="Sign Up" link="/signup" subtitle={pageText.splash.tidbits.signup}/>
+            <LinkCard title="Log In" link="/login" subtitle={pageText.splash.tidbits.login}/>
           </CardGroup>
         </div>
         <AboutPage/>

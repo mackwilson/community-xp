@@ -3,7 +3,7 @@
   min-height: 100vh;
   bottom: 0;
   padding-bottom: 150px;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 body {
@@ -41,8 +41,25 @@ h6 {
   text-align: center;
 }
 
+.h7 {
+  font-size: 26pt !important;
+}
+
+.h8 {
+  font-size: 16pt !important;
+  font-style: italic;
+}
+
+.h9 {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 10px !important;
+  font-size: 16pt !important;
+}
+
 p {
-  font-size: 20pt !important;
+  font-size: 16pt !important;
 }
 
 :focus {
@@ -227,7 +244,6 @@ nav {
 #BigHeader {
   align-items: center;
   justify-content: center;
-  margin-top: 150px !important;
 }
 
 #SmallHeader {
@@ -253,16 +269,16 @@ nav {
   padding: 2rem;
 }
 
-.linkCard:hover {
+/* .linkCard:hover {
   top: 5px;
   left: 5px;
   box-shadow: 0px 0px #fff !important;
   transition: none;
-}
+} */
 
 .card-body .card-title {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 24pt;
 }
 
 .cardImg {
@@ -270,10 +286,7 @@ nav {
 }
 
 .card-subtitle {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 10px;
-  margin-bottom: 1rem !important;
+  
 }
 
 .spaceTop {
@@ -296,24 +309,30 @@ nav {
 
 .modal-content {
   border-radius: 80px !important;
-  background-color: #FF009C !important;
+  background-color: #000 !important;
+  border: 1px solid #FF009C !important;
 }
 
 .modal-body {
   border-radius: 80px !important;
-  padding: 3rem !important;
+  padding: 3% !important;
 }
 
-.modal-backdrop.show {
-  opacity: 0.8 !important;
+.modal-header {
+  margin: 0;
+  height: 20px;
+  padding: 0 !important;
+  border: 0px solid #000 !important;
 }
 
 .close {
   color: #FF009C !important;
-  font-size: 2rem !important;
+  font-size: 50pt !important;
   font-weight: 400 !important;
   text-shadow: none !important;
+  padding: 40px !important;
   opacity: 1 !important;
+  z-index: 100;
 }
 
 .close:hover {

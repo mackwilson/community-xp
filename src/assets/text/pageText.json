@@ -1,10 +1,7 @@
 {
   "about": {
     "header": "Who are we and how did we get here?",
-    "vision": [
-      "This is where we explain what the project is all about. I think we should organize this into themes, perhaps we can have cards that open modals with more information about the themes.",
-      "asfalksjdfkljasdhfl;aksjdlfkajsdlkfj text text text text alsdjf;laksdjfl;kasjdflk;"
-    ],
+    "vision": "",
     "team": [
       "In early 2020, Dani developed the idea and enlisted Ben to help with outreach, design, and web development. Throughout Summer 2020, Lars, Mack and Cash all joined to work on the UX research, development, and content design.",
       "This small but mighty team is extremely motivated, passionate, and talented. Mental health is a cause close to all of our hearts. Click the cards below to read more!"
@@ -21,6 +18,14 @@
     "header": "Crisis management quicklinks."
   },
   "splash": {
-    "header": "Striving for better mental health experiences for all."
+    "header": "Striving for better mental health experiences for all.",
+    "tidbits": {
+      "sos": "Crisis management quicklinks",
+      "resources": "Find the right resources for you!",
+      "about": "Meet the UXP team!",
+      "blog": "Insights, experiences, and opinions",
+      "signup": "Nice to meet you!",
+      "login": "Welcome back!"
+    }
   }
 }
