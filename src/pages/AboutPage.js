@@ -28,18 +28,20 @@ export default class AboutPage extends React.Component {
       }
       
       return (
-      <div>
-        <div className="content" id="About">
-          <BigHeader title="About" txt={pageText.about.header}/>
-          
+      <div id="About">
+        <BigHeader title="About" subtitle={pageText.about.header}/>
+        
+        <div className="section greyFill whiteText">
           <SectionHeader title="Our Vision"/>
           <CardSection txt={pageText.about.vision} cards={cardContent.about.vision} />
-          <div className="gap-div" />
-          
-          <SectionHeader title="Our Team" />
+        </div>
+        
+        <div className="section greyFill whiteText">
+          <SectionHeader title="Meet the Team!" />
           <CardSection txt={pageText.about.team} cards={cardContent.about.team} />
-          <div className="gap-div" />
-          
+        </div>
+        
+        <div className="section greyFill">
           <SectionHeader title="Contact Us" />
           <CardSection cards={cardContent.about.contact} />
         </div>

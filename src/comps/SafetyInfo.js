@@ -137,7 +137,7 @@ export default class SafetyInfo extends React.Component {
           
               <Row className="justify-content-md-center">
                 <Col>
-                  <Button variant="dark" type="submit" className="btn-block btn blueOutline pinkShadow">
+                  <Button variant="dark" type="submit" className="btn-block btn blueFill pinkShadow">
                     <FontAwesomeIcon icon={faCheck} />
                     {" "}Create Account
                   </Button>

@@ -3,12 +3,15 @@
     "vision": [
       {
         "title": "Community",
-        "text": ""
+        "text": [
+          "It's in our name and its what we are all about: community -- as a feeling, a concept, and a space. At UXP, we spend a lot of time thinking about what makes a community a community. In fact, we spent months researching this abstract concept before we launched.",
+          "We hope to foster community by giving students a space (or several) dedicated to opening up about their mental health experiences. We hope to make it clear that those thoughts and stories are welcome here, to foster a sense of belonging. The peer-support and forum-based nature of the platform is intended to remind users that they are not alone. We hope you will join our CommUnity!"
+        ]
       }, {
         "title": "Accessibility",
         "text": ""
       }, {
-        "title": "Theme 3",
+        "title": "Empathy",
         "text": ""
       }
     ],
@@ -17,7 +20,7 @@
         "title": "Dani",
         "subtitle": "Founder & Executive Director",
         "photo": "../assets/images/dani.jpg",
-        "textSubHeading": "Pronouns: she/her",
+        "textSubHeading": "Pronouns: they/them",
         "text": "Dani is a recent graduate from the University of Waterloo. ",
         "alt": "dani"
       }, {
@@ -35,7 +38,7 @@
         "photo": "../assets/images/lars.jpg",
         "alt": "lars",
         "textSubHeading": "Pronouns: he/him",
-        "text": "Lars is in his fifth and final year in Systems Design Engineering at the University of Waterloo."
+        "text": "Lars is in his fifth and final year of Systems Design Engineering at the University of Waterloo."
       }, {
         "title": "Mack",
         "subtitle": "Head of Development",
@@ -45,8 +48,20 @@
         "btnLink": [null, "mailto:mwilson@communityxp.ca"],
         "textSubHeading": ["Pronouns: they/them", null],
         "text": [
-          "Mack is a recent graduate from Biomedical Engineering at the University of Waterloo. They work full time as a Software Engineer for a Silicon Valley tech startup. They have experience with full-stack development, including everything from project management, to web development, to server architecture.",
-          "Mack joined CommUnity XP in May 2020 to lead the development of the site. They work closely with Lars on the design and user experience of the web UI. Additionally, they are responsible for all server architecture, database management, deploy processes, and general IT services for the team. They are loving the energy from the entire UXP team and are super happy to be here."
+          "Mack is a recent Engineering graduate from the University of Waterloo. They work full time as a back-end Software Engineer for a tech startup.",
+          "Mack joined CommUnity XP in May 2020 to lead the tech side of the site. They are responsible for web development, architecture, and system administration, and work closely with Lars and Cash to incorporate the visual and UX design of the site. They are loving the energy from the entire UXP team and are super happy to be here!"
+        ]
+      },
+      {
+        "title": "Cash",
+        "subtitle": "Lead Digital Content Designer",
+        "photo": null,
+        "alt": "Cash",
+        "btnText": ["Email Cash"],
+        "btnLink": ["mailto:cash@cloudland.ca"],
+        "textSubHeading": ["Pronouns: she/her"],
+        "text": [
+          "Cash manages, designs, and creates all digital content for CommUnity XP, from our Instagram page to our web design and more. She joined the team in August 2020 and we are so excited to have her."
         ]
       }
     ],

@@ -1,44 +1,98 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:wght@400;900');
+#root {
+  position: relative;
+  min-height: 100vh;
+  bottom: 0;
+  padding-bottom: 150px;
+  padding-top: 100px;
+}
+
+body {
+  font-family: 'Courier Prime', monospace !important;
+  background-image: linear-gradient(#85e3fd, #e7a7c3);
+  background-attachment: fixed;
+}
 
 a {
   text-decoration: none !important;
 }
 
-body {
-  font-family: 'Roboto Mono', monospace !important;
+h1 {
+  font-size: 60pt !important;
+  margin-bottom: 30px !important;
+  font-family: 'Press Start 2P', cursive;
+  word-break: break-word;
+}
+
+h2 {
+  font-size: 30pt !important;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px !important;
+}
+
+h3 {
+  font-size: 50pt !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-size: 34pt !important;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+
+.h7 {
+  font-size: 26pt !important;
+}
+
+.h8 {
+  font-size: 16pt !important;
+  font-style: italic; /* design spec doesnt have this */
+}
+
+.h9 {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 10px !important;
+  font-size: 16pt !important;
+}
+
+p {
+  font-size: 16pt !important;
 }
 
 :focus {
   outline: none !important;
 }
 
-.content {
-  width: 100%;
+.section {
+  margin: 50px 10%;
+  padding: 30px 60px;
   justify-content: center;
   align-items: center;
+  border-radius: 120px;
 }
 
-.content a {
-  color: #FF0A91;
+.section a {
+  color: #FF009C;
 }
 
-.content a:hover {
+.section a:hover {
   color: #00CCF0;
+}
+
+.width-80 {
+  margin: 0 10% 100px 10%;
 }
 
 .centre-text {
   text-align: center;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 2rem;
 }
 
 .left-text {
   text-align: left;
-  width: 80% !important;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 2rem;
 }
 
@@ -52,70 +106,83 @@ body {
 }
 
 .btn {
-  border-radius: 0 !important;
+  border-radius: 20px !important;
   line-height: 15px !important;
-  padding: 10px !important;
+  padding: 10px 15px !important;
   position: relative;
   transition: none !important;
+  min-width: 80px;
 }
 
 .btn:hover {
   top: 5px;
-  left: 5px;
   box-shadow: 0px 0px #fff !important;
   transition: none;
 }
 
 .blueShadow {
-  box-shadow: 5px 5px  #00CCF0 !important;
+  box-shadow: 0 5px  #00C7FF;
 }
 
 .pinkShadow {
-  box-shadow: 5px 5px #FF0A91 !important;
+  box-shadow: 0 5px #FF009C;
+}
+
+.pinkBorder {
+  border: 4px solid #FF009C !important;
+}
+
+.thinBorder {
+  border-width: 1px !important;
+}
+
+.pinkFill {
+  background-color: #FF009C !important;
+  font-weight: 700 !important;
+  padding: 10px;
+}
+
+.blueFill {
+  border: 0px #00C7FF solid !important;
+  background-color: #00C7FF !important;
+  font-weight: 400 !important;
+  padding: 10px;
+}
+
+.darkFill {
+  background-color: #000 !important;
+}
+
+.greyFill {
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .pinkText {
-  color: #FF0A91;
+  color: #FF009C !important;
 }
 
 .whiteText {
-  color: #fff;
+  color: #fff !important;
 }
 
-.dark {
-  background-color: #27292B !important;
+.darkText {
+  color: #000 !important;
 }
 
 .Menu a {
-  color: #FF0A91;
-  text-align: right !important;
+  color: #FF009C;
   line-height: 40px;
   vertical-align: middle;
 }
 
 .Menu a:hover {
-  color: #00CCF0;
+  color: #00C7FF;
 }
 
 nav {
   align-items: right;
   text-align: right !important;
-  background-color: #27292B !important;
-}
-
-.pinkFill {
-  background-color: #FF0A91 !important;
-  color: #27292B !important;
-  font-weight: bolder !important;
-  padding: 10px;
-}
-
-.blueOutline {
-  border: 0px #00CCF0 solid !important;
-  background-color: #00CCF0 !important;
-  color: #27292B !important;
-  font-weight: normal !important;
-  padding: 10px;
+  background-color: #000 !important;
 }
 
 .nav-item {
@@ -125,109 +192,68 @@ nav {
 }
 
 .nav-tabs .nav-link {
-  background-color: #27292B;
+  background-color: #000;
 }
 
 .navbar-toggler {
   margin-left: auto;
-  border-color: #27292B !important;
+  border-color: #FF009C !important;
   border-radius: 0 !important;
   line-height: 40px;
   padding: 7px 18px !important;
-  color: #FF0A91 !important;
+  color: #FF009C !important;
 }
 
 .navbar-toggler:hover {
-  color: #00CCF0 !important;
+  color: #00C7FF !important;
+}
+
+.logo {
+  height: 100px;
 }
 
 .login-box {
-  max-width: 35%;
+  max-width: 45%;
   min-width: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
-  border: 1px solid #FF0A91;
   padding: 2rem;
-  color: #fff;
 }
 
 .signup-box {
-  max-width: 60%;
+  max-width: 80%;
   min-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
   padding: 2rem;
-  border: 1px solid #FF0A91;
   border-radius: 0px;
-  color: #fff;
 }
 
 .form-control {
-  border: 1px solid #00CCF0 !important;
+  border: 1px solid #00C7FF !important;
   border-radius: 50px !important;
-  background-color: #27292B !important;
+  background-color: #000 !important;
   color: #fff !important;
 }
 
 .form-label {
   margin-bottom: 0;
-  color: #FF0A91;
+  color: #FF009C;
 }
 
-.BigHeader {
-  background-color: #27292B;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
+#BigHeader {
   align-items: center;
   justify-content: center;
 }
 
-.SmallHeader {
-  background-color: #27292B;
-  min-height: 140px;
+#SmallHeader {
+  font-size: 30pt;
+  padding-top: 0;
+}
+
+.header {
   display: flex;
   flex-direction: column;
-}
-
-.SmallHeader h1 {
-  color: #FF0A91;
-  font-size: 30pt;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 6rem;
-}
-
-.BigHeader h1 {
-  font-size: calc(6vw + 2rem);
-  color: #FF0A91;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 8rem;
-}
-
-.BigHeader p {
-  font-size: calc(1vw + 1rem);
-  margin-top: 60px;
-  color: #fff;
-}
-
-.SectionHeader {
-  background-color: #27292B;
-  padding: 4rem 0 1rem 0;
-}
-
-.SectionHeader h2 {
-  font-weight: bold;
-  font-size: calc(2vw + 2rem);
-  color: #FF0A91;
-}
-
-.SectionHeader p {
-  font-size: calc(1vw + 1rem);
-  margin-top: 2rem;
 }
 
 .card-group {
@@ -235,77 +261,98 @@ nav {
 }
 
 .card {
-  width: 22vw;
-  min-width: 240px !important;
-  max-width: 400px !important;
+  min-width: 340px !important;
+  max-width: 380px !important;
   min-height: 10rem;
   margin: 1rem;
-  border-radius: 0 !important;
-  padding: 2rem 0.5rem;
-  background-color: #27292B !important;
+  border-radius: 80px !important;
+  padding: 2rem;
 }
 
-.linkCard:hover {
+/* .linkCard:hover {
   top: 5px;
   left: 5px;
   box-shadow: 0px 0px #fff !important;
   transition: none;
-}
+} */
 
 .card-body .card-title {
   margin-top: 0;
-  color: #FF0A91;
-  font-size: 2rem;
+  font-size: 24pt;
+}
+
+.cardImg {
+  border-radius: 60px !important;
+}
+
+.card-subtitle {
+  
 }
 
 .spaceTop {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .modalImg {
-  width: 60%;
-  display: inline;
-  margin: 0 20% 3% 20%;
-  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-dialog {
-  max-width: 800px !important;
+  max-width: 1200px !important;
   min-width: 250px !important;
 }
 
 .modal-content {
-  box-shadow: 5px 5px #FF0A91;
-  border-radius: 0 !important;
-  border: 0px solid #fff !important;
+  border-radius: 80px !important;
+  background-color: #000 !important;
+  border: 1px solid #FF009C !important;
+}
+
+.modal-body {
+  border-radius: 80px !important;
+  padding: 3% !important;
 }
 
 .modal-header {
-  border-bottom: 1px solid #FF0A91 !important;
-  border-radius: 0 !important;
-}
-
-.modal-backdrop.show {
-  opacity: 0.8 !important;
+  margin: 0;
+  height: 20px;
+  padding: 0 !important;
+  border: 0px solid #000 !important;
 }
 
 .close {
-  color: #FF0A91 !important;
-  font-size: 2rem !important;
-  font-weight: normal !important;
+  color: #FF009C !important;
+  font-size: 50pt !important;
+  font-weight: 400 !important;
   text-shadow: none !important;
+  padding: 40px !important;
   opacity: 1 !important;
+  z-index: 100;
 }
 
 .close:hover {
-  color: #00CCF0 !important;
+  color: #00C7FF !important;
 }
 
 .Footer {
-  background-color: #27292B;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: block;
-  padding: 3rem 8vw 4rem 8vw;
-  margin-top: 8rem;
+  padding: 20px 8vw;
+}
+
+.Footer a {
+  color: #FF009C;
+}
+
+.Footer a:hover {
+  color: #00CCF0;
 }
 
 .Footer .copyright {

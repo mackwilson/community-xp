@@ -44,20 +44,20 @@ export default class SignUpPage extends React.Component {
     return (
       <div className="SignUpPage">
         <PublicNavbar />
-        <div className="content dark">
-          <SmallHeader title="Sign Up for CommUnity XP"/>
-          <div className="signup-box">
+        <div className="section greyFill whiteText">
+          <SmallHeader title="Sign Up"/>
+          <div className="signup-box pinkBorder darkFill thinBorder">
             {this.state.element}
           </div>
-          <div className="signup-box centre-text">
+          <div className="signup-box centre-text darkFill pinkBorder thinBorder">
             <Row className="justify-content-md-center">
               <Col>
                 Already have an account? <Link to="/login">Log in instead!</Link>
               </Col>
             </Row>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

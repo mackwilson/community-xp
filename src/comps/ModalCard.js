@@ -2,6 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import '../css/App.css';
 
 function ModalCard(props) {
@@ -29,18 +31,22 @@ function ModalCard(props) {
   */
   const o = props.options;
   
-  const image = o.photo 
-    ? <img className="modalImg" src={o.photo} alt={o.alt} /> 
+  const modalImage = o.photo 
+    ? <img className="cardImg modalImg pinkBorder" src={o.photo} alt={o.alt} /> 
     : null;
     
-  const title = o.subtitle 
-    ? o.title + ":" 
-    : o.title;
+  const cardImage = o.photo 
+    ? <Card.Img variant="top" src={o.photo} alt={o.alt} className="cardImg pinkBorder" />
+    : null;
     
-  const subtitle = o.subtitle 
-    ? <Modal.Title className="pinkText pl-2">
+  const modalSubtitle = o.subtitle 
+    ? <div className="centre-text whiteText spaceTop h9">
         {o.subtitle}
-      </Modal.Title> 
+      </div> 
+    : null;
+    
+  const cardSubtitle = o.subtitle 
+    ? <Card.Subtitle className="mb-2 text-light h9">{o.subtitle}</Card.Subtitle>
     : null;
     
   let txt = [];
@@ -64,23 +70,30 @@ function ModalCard(props) {
   
   return (
     <div>
-      <Card className="card pinkShadow">
-        <Card.Img variant="top" src={o.photo} alt={o.alt} className="cardImage" />
+      <Card className="card pinkBorder thinBorder pinkText greyFill">
+        {cardImage}
         <Card.Body>
-          <Card.Title>{o.title}</Card.Title>
-          <Card.Subtitle className="mb-2 text-light">{o.subtitle}</Card.Subtitle>
-          <Button variant="outline-light" onClick={handleShow} className="spaceTop dark btn blueOutline pinkShadow">
-            See More
+          <Card.Title className="h7">{o.title}</Card.Title>
+          {cardSubtitle}
+          <Button variant="outline-light" onClick={handleShow} className="spaceTop blueFill btn darkText pinkShadow">
+            Read More
           </Button>
 
-          <Modal show={show} onHide={handleClose} centered  >
-            <Modal.Header closeButton className="dark">
-              <Modal.Title className="whiteText">{title}</Modal.Title>
-              {subtitle}
-            </Modal.Header>
-            <Modal.Body className="dark whiteText">
-              {image}
-              {txt}
+          <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton />
+            <Modal.Body className="darkFill whiteText">
+              <Row>
+                <Col>
+                  {modalImage}
+                  <Modal.Title centered className="pinkText centre-text h7">
+                    {o.title}
+                  </Modal.Title>
+                  {modalSubtitle}
+                </Col>
+                <Col md={7}>
+                  {txt}
+                </Col>
+              </Row>
             </Modal.Body>
           </Modal>
           
@@ -100,12 +113,12 @@ function ModalCard(props) {
 */
 function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
   const subhead = subHeading 
-    ? <h5 className="pinkText">{subHeading}</h5> 
+    ? <p className="pinkText">{subHeading}</p> 
     : null;
     
   const btn = (btnText && btnLink) 
     ? <div className="centre-text">
-        <Button variant="dark" href={btnLink} target="_blank" className="spaceTop dark blueOutline pinkShadow btn">
+        <Button href={btnLink} target="_blank" className="spaceTop darkText blueFill pinkShadow btn">
           {btnText}
         </Button>
       </div>

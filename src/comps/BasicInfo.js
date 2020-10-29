@@ -43,7 +43,7 @@ export default class BasicInfo extends React.Component {
     return (
       <div className="BasicInfo">
         <Row className="justify-content-md-center">
-          <h5>We're so excited to meet you! First, the boring details.</h5>
+          <div className="h8">We're so excited to meet you! First, the boring details.</div>
         </Row>
         <Formik
           validateOnChange={false}
@@ -186,7 +186,7 @@ export default class BasicInfo extends React.Component {
               </Form.Row>
               <Row className="justify-content-md-center right-text">
                 <Col>
-                  <Button variant="dark" type="submit" className="btn blueOutline pinkShadow">
+                  <Button variant="dark" type="submit" className="btn darkText blueFill pinkShadow">
                     <FontAwesomeIcon icon={faArrowRight} />
                     {" "}Next
                   </Button>

@@ -99,7 +99,7 @@ export default class PersonalInfo extends React.Component {
 
             <Row className="justify-content-md-center right-text">
               <Col>
-                <Button variant="dark" type="submit" className="btn blueOutline pinkShadow">
+                <Button variant="dark" type="submit" className="btn blueFill pinkShadow">
                   <FontAwesomeIcon icon={faArrowRight} />
                   {" "}Next
                 </Button>

@@ -9,10 +9,8 @@ export default class Profile extends React.Component {
     return (
       <div className="Profile">
         <PrivateNavbar />
-        <div className="content">
-          <SmallHeader title="My Profile" />
-          <Footer />
-        </div>
+        <SmallHeader title="My Profile" />
+        <Footer />
       </div>
     );
   }

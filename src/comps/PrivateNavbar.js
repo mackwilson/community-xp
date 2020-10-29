@@ -4,6 +4,7 @@ import {Navbar, Nav, NavItem } from 'react-bootstrap';
 // import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
 import '../css/App.css';
+import logo from '../assets/logos/healthbar-cropped.png';
 
 export default class PrivateNavbar extends React.Component {
   render() {
@@ -11,21 +12,23 @@ export default class PrivateNavbar extends React.Component {
         <div className="Menu">
           <Navbar
             collapseOnSelect
-            expand="md"
+            expand="lg"
             variant="dark"
             fixed="top"
           >
+            <Navbar.Brand href="/">
+              <img
+                src={logo}
+                className="d-inline-block align-top logo"
+                alt="Community XP logo, a purple  retro-looking 8-bit healthbar and heart."
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-                <NavItem className="sosBtn">
-                  <Link to="/sos" className="btn whiteShadow">
-                    SOS
-                  </Link>
-                </NavItem>
                 <NavItem>
-                  <Link to="/">
-                    Home
+                  <Link to="/sos" className="btn pinkFill blueShadow darkText">
+                    SOS
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -53,8 +56,8 @@ export default class PrivateNavbar extends React.Component {
                     Profile
                   </Link>
                 </NavItem>
-                <NavItem className="highlightNav">
-                  <Link to="/" className="btn pinkShadow">
+                <NavItem>
+                  <Link to="/" className="btn blueFill pinkShadow darkText">
                     Log Out
                   </Link>
                 </NavItem>
