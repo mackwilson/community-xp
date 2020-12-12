@@ -31,17 +31,17 @@ export default class AboutPage extends React.Component {
       <div id="About">
         <BigHeader title="About" subtitle={pageText.about.header}/>
         
-        <div className="section greyFill whiteText">
+        <div className="section">
           <SectionHeader title="Our Vision"/>
           <CardSection txt={pageText.about.vision} cards={cardContent.about.vision} />
         </div>
         
-        <div className="section greyFill whiteText">
+        <div className="section">
           <SectionHeader title="Meet the Team!" />
           <CardSection txt={pageText.about.team} cards={cardContent.about.team} />
         </div>
         
-        <div className="section greyFill">
+        <div className="section">
           <SectionHeader title="Contact Us" />
           <CardSection cards={cardContent.about.contact} />
         </div>
