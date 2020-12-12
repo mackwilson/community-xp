@@ -70,7 +70,7 @@ function ModalCard(props) {
   
   return (
     <div>
-      <Card className="card pinkBorder thinBorder pinkText greyFill">
+      <Card className="card pinkBorder thinBorder pinkText noFill">
         {cardImage}
         <Card.Body>
           <Card.Title className="h7">{o.title}</Card.Title>

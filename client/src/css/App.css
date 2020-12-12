@@ -157,6 +157,10 @@ p {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
+.noFill {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
 .pinkText {
   color: #FF009C !important;
 }
@@ -182,7 +186,7 @@ p {
 nav {
   align-items: right;
   text-align: right !important;
-  background-color: #000 !important;
+  background-color: none !important;
 }
 
 .nav-item {
