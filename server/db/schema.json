@@ -1,0 +1,604 @@
+{
+  "id": {
+    "type": "serial",
+    "required": true,
+    "default": "next_int()",
+    "category": "metadata",
+    "description": "primary key, incremented id"
+  },
+  "created_at": {
+    "type": "timestamp",
+    "required": true,
+    "default": "now()",
+    "category": "metadata",
+    "description": "timestamp of when the record was created in the DB (EST)"
+  },
+  "updated_at": {
+    "type": "timestamp",
+    "required": false,
+    "category": "metadata",
+    "pretty_name": "Last Updated",
+    "description": "timestamp of last update of the record in the DB (EST)"
+  },
+  "resource_name": {
+    "type": "string",
+    "required": true,
+    "category": "General",
+    "pretty_name": "Name",
+    "description": "title of the resource"
+  },
+  "organization": {
+    "type": "string",
+    "required": false,
+    "category": "General",
+    "pretty_name": "Organization",
+    "description": "organization the resource belongs to"
+  },
+  "resource_type": {
+    "type": "enum",
+    "required": true,
+    "default": "Unknown",
+    "category": "General",
+    "pretty_name": "Type",
+    "description": "the type of the resource",
+    "enum": [
+      "Helpline",
+      "Shelter",
+      "Support Centre",
+      "Counselling Services",
+      "Medical Centre",
+      "Resource Bank",
+      "Rehabilitation Centre",
+      "Other",
+      "Unknown"
+    ]
+  },
+  "address_street": {
+    "type": "string",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "Address",
+    "description": "address of the resource's physical location, if available"
+  },
+  "address_city": {
+    "type": "string",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "City",
+    "description": "city that the physical resource is located, if available"
+  },
+  "phone_general": {
+    "type": "string",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "Phone",
+    "description": "phone number for general inquiries and information"
+  },
+  "phone_support": {
+    "type": "string",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "Support Line Phone",
+    "description": "phone number for crisis management or other emergent or immediate support"
+  },
+  "email": {
+    "type": "string",
+    "required": false,
+    "default": "",
+    "category": "Contact",
+    "pretty_name": "Email",
+    "description": "email address for contact"
+  },
+  "website": {
+    "type": "string",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "Website",
+    "description": "website URL"
+  },
+  "open_247": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "General",
+    "pretty_name": "Open 24-7",
+    "description": "has services that are open 24 hours, 7 days a week"
+  },
+  "hours": {
+    "type": "json",
+    "required": false,
+    "category": "Contact",
+    "pretty_name": "Hours",
+    "description": "a JSON string of days of the week and corresponding hours"
+  },
+  "short_term": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Short Term Services",
+    "description": "services for single use or for less than a month at a time"
+  },
+  "long_term": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Long Term Services",
+    "description": "services for repeated use or for more than a month at a time"
+  },
+  "individual": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Individual Support",
+    "description": "services provided to individuals"
+  },
+  "group_support": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Group Support",
+    "description": "services provided to groups"
+  },
+  "free_access": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Free Services",
+    "description": "offers free services"
+  },
+  "paid_access": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Format",
+    "pretty_name": "Paid Services",
+    "description": "offers paid services"
+  },
+  "in_person": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "In Person",
+    "description": "has in-person services"
+  },
+  "by_phone": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "By Phone",
+    "description": "has services accessible by phone"
+  },
+  "video": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "By Video Call",
+    "description": "has services over video call"
+  },
+  "live_chat": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "By Live Chat",
+    "description": "has services via live online or SMS chat"
+  },
+  "online": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "Online",
+    "description": "has services offered online"
+  },
+  "drop_in": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "Drop In",
+    "description": "drop ins welcome"
+  },
+  "appointment": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "By Appointment",
+    "description": "services require appointment"
+  },
+  "by_referral": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "How to Access",
+    "pretty_name": "By Referral",
+    "description": "services require a referral"
+  },
+  "children": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Children Under 18",
+    "description": "has services for children under 18 years old"
+  },
+  "youth": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Youth 16-25",
+    "description": "has services for youth aged 16-25"
+  },
+  "adult": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Adults Over 18",
+    "description": "has services for adults over 18 years of age"
+  },
+  "families": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Families",
+    "description": "has services for families including parents and guardians and children or wards"
+  },
+  "post_secondary": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Post Secondary Students",
+    "description": "has services for post secondary students (16+)"
+  },
+  "all_ages": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "All Ages",
+    "description": "services are not specific to an age group, and are designed for all ages"
+  },
+  "queer": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "LGBQ+",
+    "description": "has services designed for Queer, Gay, Lesbian, and Bisexual people"
+  },
+  "trans": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Transgender",
+    "description": "has services deisgned for Transgender or 2-spirit people"
+  },
+  "non_binary": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Non Binary",
+    "description": "has services designed for non-binary, 2-spirit, gender fluid, or gender non-conforming people"
+  },
+  "women": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Women",
+    "description": "has services designed for cisgender women"
+  },
+  "men": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Men",
+    "description": "has services designed for cisgender men"
+  },
+  "all_genders": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "All Genders",
+    "description": "services are not specific to a gender, and are designed for all genders"
+  },
+  "black": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Black People",
+    "description": "has services designed specifically for Black folks"
+  },
+  "indigenous": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Indigenous Peoples",
+    "description": "has services designed specifically for Indigenous peoples"
+  },
+  "immigrant": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Immigrants",
+    "description": "has services designed for immigrants or newcomers to Canada"
+  },
+  "neurodiv": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Neurodivergent Folks",
+    "description": "has services designed for neurodivergent people"
+  },
+  "disabled": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Target Audience",
+    "pretty_name": "Disabled Folks",
+    "description": "has services designed for people with disabilities"
+  },
+  "queer_friendly": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Inclusivity",
+    "pretty_name": "Queer Friendly",
+    "description": "explicitly welcomes and will accomodate queer, gay, lesbian, and bisexual people"
+  },
+  "trans_friendly": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Inclusivity",
+    "pretty_name": "Trans+ Friendly",
+    "description": "explicitly welcomes and will accomodate queer, gay, lesbian, and bisexual people"
+  },
+  "bipoc_friendly": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Inclusivity",
+    "pretty_name": "BIPOC Friendly",
+    "description": "explicitly welcomes and will accomodate Black & Indigenous People of Colour"
+  },
+  "disability_friendly": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Inclusivity",
+    "pretty_name": "Disability Friendly",
+    "description": "explicitly welcomes and will accomodate people with disabilities"
+  },
+  "ndiv_friendly": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Inclusivity",
+    "pretty_name": "Neurodivergent Friendly",
+    "description": "explicitly welcomes and will accomodate neurodivergent people"
+  },
+  "interpreter": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Interpreter",
+    "description": "an interpreter is available"
+  },
+  "nurse": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Nurse",
+    "description": "a nurse or medical practitioner is available"
+  },
+  "psychologist": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Psychologist",
+    "description": "a psychologist is available"
+  },
+  "sw": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Social Worker",
+    "description": "a social worker is available"
+  },
+  "psychotherapist": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Psychotherapist",
+    "description": "a psychotherapist is available"
+  },
+  "ot": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Staff Available",
+    "pretty_name": "Occupational Therapist",
+    "description": "an occupational therapist (OT) is available"
+  },
+  "shelter": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Emergency Shelter",
+    "description": "offers emergency shelter services"
+  },
+  "housing": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Housing",
+    "description": "offers housing assistance"
+  },
+  "food": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Food",
+    "description": "offers food such as groceries or meals"
+  },
+  "hygeine": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Hygeine",
+    "description": "offers hygeine assistance such as showers or cleaning products"
+  },
+  "counseling": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Counseling",
+    "description": "offers counselling services"
+  },
+  "recreation": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Recreation",
+    "description": "offers recreational services"
+  },
+  "peer_support": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Peer Support",
+    "description": "offers peer support services"
+  },
+  "resource_bank": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Resource Bank",
+    "description": "offers a collection of other resources"
+  },
+  "crisis": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Crisis Support",
+    "description": "offers crisis and emergency intervention, support, and assistance"
+  },
+  "medical": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Medical Assistance",
+    "description": "offers medical support, procedures, and assistance"
+  },
+  "referrals": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Referrals",
+    "description": "offers referrals to other resources"
+  },
+  "outreach": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Services Available",
+    "pretty_name": "Outreach & Advocacy",
+    "description": "offers outreach and advocacy efforts"
+  },
+  "employment": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Supports & Specializations",
+    "pretty_name": "Employment",
+    "description": "offers specialized support for finding and keeping employment"
+  },
+  "legal": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Supports & Specializations",
+    "pretty_name": "Legal",
+    "description": "offers specialized support for legal issues and advice"
+  },
+  "abuse": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Supports & Specializations",
+    "pretty_name": "Abuse",
+    "description": "offers specialized support for physical, emotional, or sexual abuse, assault, and violence"
+  },
+  "trauma": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Supports & Specializations",
+    "pretty_name": "Trauma",
+    "description": "offers specialized support for trauma, grief, and loss"
+  },
+  "addiction": {
+    "type": "boolean",
+    "required": true,
+    "default": false,
+    "category": "Supports & Specializations",
+    "pretty_name": "Addiction",
+    "description": "offers specialized support for addiction and substance use or abuse"
+  },
+  "religions": {
+    "type": "string[]",
+    "required": false,
+    "default": "",
+    "category": "Supports & Specializations",
+    "pretty_name": "Religions",
+    "description": "offers services centred in the listed religions"
+  },
+  "languages": {
+    "type": "string[]",
+    "required": true,
+    "default": [
+      "English"
+    ],
+    "category": "Supports & Specializations",
+    "pretty_name": "Languages",
+    "description": "offers services available or interpreted in the listed languages"
+  }
+}
