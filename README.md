@@ -39,26 +39,36 @@ In `src` there are five folders and the `index.js` file. The folders are as foll
 
 
 ## Server
+`cd server`
+
+### Available Scripts
+* `npm start` (Simply runs `node app.js`)
+
+### Environment Variables
+The following environment variables are passed to the server on startup:
+* `RESOURCE_DB_HOST`: defaults to localhost
+* `RESOURCE_DB_USER`: defaults to `postgres`
+* `RESOURCE_DB_PWD`: defaults to null, required if the DB has a password
+* `RESOURCE_DB_PORT`: defaults to 5432, not required
+* `RESOURCE_DB_NAME`: defaults to `resources`
+
+In order to set these so `process.env` can find them, you can use fancy env plugins like dotenv, or you can just run the following to export them to your RC file:
+
+```
+echo 'export <VAR_NAME>=<val>' >> ~/.<rc_file>
+```
 
 ### Running Locally
-First `cd server`.
-
 **Using local Postgres DB:**
-1. Install postgres and start local server
-2. Create a `resources` db and table (tooling available in the `/db` subdirectory)
-3. Use the connection settings in the `/db/resourceModel.js` pgPool
-4. Start the server with `node app.js`, or simply use the provided npm script, `npm start`
+1. Install [postgres](https://www.postgresql.org/download/) and start local server
+2. Using a postgres [client](https://dbeaver.io/download/), create a `resources` db and table. Use the `/db/create_schema.sql` file to help you. 
+3. Set the above environment variables if the defaults are not correct
+4. Start the server with `npm start`
 
-**Using the AWS RDS dev DB:**
-1. Get the required DB credentials from Mack 
-2. Set the creds to the environment variables used in the following step in your bashrc or zshrc, like this (repeat for each): 
-  ```
-  echo 'export RESOURCE_DB_PWD=<pwd>' >> ~/.zshrc
-  ```
-3. Start the server locally with the necessary env variables with `npm run dev`, which passes the env vars as arguments, like this:
-  ```
-  RESOURCE_DB_HOST="$RESOURCE_DB_HOST" RESOURCE_DB_USER="RESOURCE_DB_USER" RESOURCE_DB_PWD="$RESOURCE_DB_PWD" node app.js
-  ```
+**Using the live dev DB:**
+1. Get the required DB credentials from Mack. *Do not share these creds or commit them to code.*
+2. Set the creds to the environment variables above
+3. Start the server with `npm start`
 
 ### API Endpoints
 

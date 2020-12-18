@@ -1,15 +1,16 @@
 const { Pool, Client } = require('pg');
+const config = require('../config/config');
 
 const obj = {};
 let pool;
 
 obj.init= function () {
   pool = new Pool({
-    user: process.env.RESOURCE_DB_USER,
-    host: process.env.RESOURCE_DB_HOST,
-    database: 'resources',
-    port: 5431,
-    password: process.env.RESOURCE_DB_PWD
+    user: config.resources.user,
+    host: config.resources.host,
+    database: config.resources.database,
+    port: config.resources.port,
+    password: config.resources.password
   });
 }
 
