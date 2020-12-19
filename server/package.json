@@ -1,0 +1,21 @@
+{
+  "name": "uxp-api",
+  "version": "1.0.0",
+  "description": "CommUnity XP backend API.",
+  "main": "app.js",
+  "repository": "https://github.com/mackwilson/community-xp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "RESOURCE_DB_HOST=\"$RESOURCE_DB_HOST\" RESOURCE_DB_USER=\"$RESOURCE_DB_USER\" RESOURCE_DB_PWD=\"$RESOURCE_DB_PWD\" node app.js"
+  },
+  "author": "Mack Wilson @mackwilson",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.809.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "pg": "^8.5.1"
+  }
+}
