@@ -10,15 +10,9 @@ CommUnity XP is an online platform for students to connect with each other and f
 
 ## Client
 
-### Dependencies
-
-- **React:** React v16.13.1, React-scripts v3.4.1, React-Router v5.2.0, React-Bootstrap v1.0.1. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- **Node:** v8.17.0
-- **NPM:** v6.13.4
-
 ### Available Scripts
 
-First `cd client`.
+First `cd client && npm install`.
 
 In the project directory, you can run:
 
@@ -37,12 +31,23 @@ In `src` there are five folders and the `index.js` file. The folders are as foll
 - `test`: Test files and fixtures go here. Empty and useless at the moment.
 
 
+### Dependencies
+
+- **React:** React v16.13.1, React-scripts v3.4.1, React-Router v5.2.0, React-Bootstrap v1.0.1. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Node:** 8.17
+- **NPM:** 6
+
 
 ## Server
-`cd server`
+
+### Install Dependencies
+`cd server && npm install`
+
+Runs on Node JS 12 with Express.
 
 ### Available Scripts
-* `npm start` (Simply runs `node app.js`)
+* `npm start`: Simply runs `node app.js`
+* `npm run deploy`: Runs the deploy script
 
 ### Environment Variables
 The following environment variables are passed to the server on startup:
@@ -70,12 +75,28 @@ echo 'export <VAR_NAME>=<val>' >> ~/.<rc_file>
 2. Set the creds to the environment variables above
 3. Start the server with `npm start`
 
+### Deploying
+
+This express server is deployed (currently only to development stage) using AWS Lambda, AWS API-Gateway, and the Serverless Framework. 
+
+**How to deploy:**
+1. Make your local changes to `app.local.js` and test that that works. *DO NOT edit the last 6 lines of this file, after the comment about this. DO NOT make changes to `app.js`, as they will be overridden by deploy.*
+2. When ready to deploy, make sure you have globally installed the serverless framework: `npm -g install serverless`. Confirm by running `sls -v`. 
+3. Run the deploy script with `npm run deploy` from the `/server` directory. That's it - serverless takes care of the rest.
+4. The serverless deploy will print out an endpoint to your terminal. Use this to test - this is the live server! 
+
+**Making Changes**
+* `/scripts/deploy.sh` is the Bash file that prepares the file to deploy, and executes the serverless command
+* `serverless.yml` in the top level handles the configuration of the serverless deployment to AWS Lambda
+* AWS Console will have tools to make other changes such as permissions, API keys, roles, logs, etc. 
+
+
 ### API Endpoints
 
 1. GET `/ping`: for healthcheck, should return 200
-2. GET `/api/resources/all`: fetch JSON array of all the resources
-3. GET `/api/resource/id?id=<#>`: fetch resource JSON with specific id
-4. GET `/api/resource/name?name=<abcd>`: fetch resource JSON with specific name
+2. GET `/v1/resource/all`: fetch JSON array of all the resources
+3. GET `/v1/resource/id`, Query Param integer `id`: fetch resource JSON with specific id
+4. GET `/v1/resource/name`, Query Param string `name`: fetch resource JSON with specific name
 
 No insert or update, can do those manually with psql queries for now.
 
