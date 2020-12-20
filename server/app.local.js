@@ -58,4 +58,10 @@ app.get('/v1/resource/name', function(req, res) {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-module.exports.server = sls(app);
+/* 
+- - - - - - - - - - DO NOT EDIT BELOW - - - - - - - - - - - 
+Deploy script removes these lines for serverless.
+*/
+app.listen(port, function() {
+	console.log('server running in port ' + port);
+});
