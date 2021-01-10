@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
-import logo from '../assets/logos/healthbar-cropped.png';
+import logo from '../assets/logos/heart.png';
 
 export default class PublicNavbar extends React.Component {
   render() {
@@ -17,12 +17,13 @@ export default class PublicNavbar extends React.Component {
             expand="lg"
             variant="dark"
             fixed="top"
+            className="darkFill"
           >
             <Navbar.Brand href="/">
               <img
                 src={logo}
                 className="d-inline-block align-top logo"
-                alt="Community XP logo, a purple  retro-looking 8-bit healthbar and heart."
+                alt="Community XP logo, a purple retro-looking 8-bit heart."
               />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -30,11 +31,6 @@ export default class PublicNavbar extends React.Component {
             </Navbar.Toggle>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
-                <NavItem>
-                  <Link className="btn blueShadow pinkFill darkText" to="/sos">
-                    SOS
-                  </Link>
-                </NavItem>
                 <NavItem>
                   <a href="/#About">
                     About
@@ -56,7 +52,7 @@ export default class PublicNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/login" className="btn pinkShadow blueFill darkText">
+                  <Link to="/login" className="btn blueShadow pinkFill ">
                     Log In
                   </Link>
                 </NavItem>

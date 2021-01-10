@@ -174,7 +174,7 @@ p {
 }
 
 .Menu a {
-  color: #FF009C;
+  color: #FFFFFF;
   line-height: 40px;
   vertical-align: middle;
 }
@@ -182,6 +182,8 @@ p {
 .Menu a:hover {
   color: #00C7FF;
 }
+
+
 
 nav {
   align-items: right;
@@ -213,7 +215,7 @@ nav {
 }
 
 .logo {
-  height: 100px;
+  height: 45px;
 }
 
 .login-box {
@@ -290,7 +292,7 @@ nav {
 }
 
 .card-subtitle {
-  
+
 }
 
 .spaceTop {
