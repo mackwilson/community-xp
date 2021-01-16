@@ -16,14 +16,13 @@ function formatResources(list) {
 }
 
 // Returns a resource formatted into the React/HTML object we want
-// TODO: Update to whatever we want.
+// TODO: Update to formatting we want, or separate component.
 // NOTE: These elements are all rendered as a list, so they all need a unique key.
 function createResourceElement(resource) {
   return (
     <div key={resource.id}>
       <h4>{resource.resource_name}</h4>
-      <p> -> {resource.resource_type}{resource.open_247 ? ', 24/7' : ''} </p>
-      <p>{"\n"}</p>
+      <p> -> {resource.resource_type}{resource.open_247 ? ', Open 24/7' : ''} </p>
     </div>
   );
 }
@@ -39,6 +38,7 @@ export default class ResourcePage extends React.Component {
     super(props);
     this.state = {
       resources: [],
+      isError: false, // error fetching
       isFetching: true // TODO: Instead of text we can have some loading animations
     };
   }
@@ -48,10 +48,14 @@ export default class ResourcePage extends React.Component {
   }
   
   fetchResources() {
-    this.setState({...this.state, isFetching: true});
+    this.setState({...this.state, isFetching: true, isError: false});
     // Get resources (async), wait for response, and update state with response
     model.getAllResources().then(data => {
-      this.setState({resources: data, isFetching: false});
+      if (data.ok) {
+        this.setState({resources: data.resources, isFetching: false});
+      } else {
+        this.setState({...this.state, isFetching: false, isError: true});
+      }
     });
   }
   
@@ -62,7 +66,8 @@ export default class ResourcePage extends React.Component {
         <PublicNavbar />
         <BigHeader title="Resources" subtitle={pageText.resources.header}/>
         <div className="left-text section">
-          <p>{this.state.isFetching ? 'Fetching users...' : ''}</p>
+          <p>{this.state.isFetching ? 'Fetching resources...' : ''}</p>
+          <p>{this.state.isError ? 'Error fetching resources, please try again later.' : ''}</p>
           {formattedResources}
         </div>
         <Footer />

@@ -37,9 +37,15 @@ const model = {
           "x-api-key": apiKey
         }
       });
-      return res.data.data;
+      return {
+        resources: res.data.data, 
+        ok: true
+      };
     } catch (err) {
-      return {};
+      console.error("Error fetching: "+ err);
+      return {
+        ok: false
+      };
     }
   }
 };
