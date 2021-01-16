@@ -46,7 +46,7 @@ In `src` there are five folders and the `index.js` file. The folders are as foll
 Runs on Node JS 12 with Express.
 
 ### Available Scripts
-* `npm start`: Simply runs `node app.js`
+* `npm start`: Simply runs `node app.js` (no hot reload for now)
 * `npm run deploy`: Runs the deploy script
 
 ### Environment Variables
@@ -95,12 +95,12 @@ This express server is deployed (currently only to development stage) using AWS 
 
 1. GET `/ping`: for healthcheck, should return 200
 2. GET `/v1/resource/all`: fetch JSON array of all the resources
-3. GET `/v1/resource/id`, Query Param integer `id`: fetch resource JSON with specific id
-4. GET `/v1/resource/name`, Query Param string `name`: fetch resource JSON with specific name
+3. GET `/v1/resource/id/:id`: fetch resource JSON by integer `id`
+4. GET `/v1/resource/name/:name`: fetch resource JSON by string `name`
 
 No insert or update, can do those manually with psql queries for now.
 
 
 ### Authentication
 
-Coming soon.
+Requires API Key provided by the UXP team. 

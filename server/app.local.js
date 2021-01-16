@@ -38,20 +38,30 @@ app.get('/v1/resource/all', function(req, res) {
   });
 });
 
-app.get('/v1/resource/id', function(req, res) {
-  model.getResourceById(req.query.id).then(function(result) {
-    http.sendResponse(res, "Success", 200, result);
+app.get('/v1/resource/id/:id', function(req, res) {
+  console.info("GET " + req.originalUrl);
+  model.getResourceById(req.params.id).then(function(result) {
+    if (result) {
+      http.sendResponse(res, "Success", 200, result);
+    } else {
+      http.sendResponse(res, "Could not find resource with id: " + req.params.id, 404)
+    }
   }).catch(function(ex) {
-    console.error(ex);
+    console.error("GET " + req.originalUrl + " --> " + ex);
     http.sendResponse(res, "Server Error", 500);
   });
 });
 
-app.get('/v1/resource/name', function(req, res) {
-  model.getResourceByName(req.query.name).then(function(result) {
-    http.sendResponse(res, "Success", 200, result);
+app.get('/v1/resource/name/:name', function(req, res) {
+  console.info("GET " + req.originalUrl);
+  model.getResourceByName(req.params.name).then(function(result) {
+    if (result) {
+      http.sendResponse(res, "Success", 200, result);
+    } else {
+      http.sendResponse(res, "Could not find resource with name: " + req.params.name, 404)
+    }
   }).catch(function(ex) {
-    console.error(ex);
+    console.error("GET " + req.originalUrl + " --> " + ex);
     http.sendResponse(res, "Server Error", 500);
   });
 });
