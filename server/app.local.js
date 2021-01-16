@@ -30,6 +30,7 @@ app.get('/ping', function(req, res) {
 });
 
 app.get('/v1/resource/all', function(req, res) {
+  console.info("GET " + req.originalUrl);
   model.getAllResources().then(function(results) {
     http.sendResponse(res, "Success", 200, results);
   }).catch(function(ex) {
