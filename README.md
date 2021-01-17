@@ -20,6 +20,9 @@ In the project directory, you can run:
 
 - `npm run build`: Builds an optimized/minified bundle of React and the app, located in the the `build` folder. Ready for [deployment](https://facebook.github.io/create-react-app/docs/deployment)!
 
+### Environment Variables
+* `API_HOST`: defaults to `localhost:8000` where the server should be running if you are planning to test client-server functions
+* `API_KEY`: default is unset. only necessary if you are working with the live dev server. ignore for local development. 
 
 ### File Structure
 

@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const server = process.env.API_HOST;
-const server = "http://localhost:8000";
+const server = process.env.API_HOST || "http://localhost:8000";
 const apiKey = process.env.API_KEY;
 
 const basePath = "/v1";
