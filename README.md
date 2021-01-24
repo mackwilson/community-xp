@@ -20,6 +20,9 @@ In the project directory, you can run:
 
 - `npm run build`: Builds an optimized/minified bundle of React and the app, located in the the `build` folder. Ready for [deployment](https://facebook.github.io/create-react-app/docs/deployment)!
 
+### Environment Variables
+* `API_HOST`: defaults to `localhost:8000` where the server should be running if you are planning to test client-server functions
+* `API_KEY`: default is unset. only necessary if you are working with the live dev server. ignore for local development. 
 
 ### File Structure
 
@@ -46,7 +49,7 @@ In `src` there are five folders and the `index.js` file. The folders are as foll
 Runs on Node JS 12 with Express.
 
 ### Available Scripts
-* `npm start`: Simply runs `node app.js`
+* `npm start`: Simply runs `node app.js` (no hot reload for now)
 * `npm run deploy`: Runs the deploy script
 
 ### Environment Variables
@@ -95,12 +98,12 @@ This express server is deployed (currently only to development stage) using AWS 
 
 1. GET `/ping`: for healthcheck, should return 200
 2. GET `/v1/resource/all`: fetch JSON array of all the resources
-3. GET `/v1/resource/id`, Query Param integer `id`: fetch resource JSON with specific id
-4. GET `/v1/resource/name`, Query Param string `name`: fetch resource JSON with specific name
+3. GET `/v1/resource/id/:id`: fetch resource JSON by integer `id`
+4. GET `/v1/resource/name/:name`: fetch resource JSON by string `name`
 
 No insert or update, can do those manually with psql queries for now.
 
 
 ### Authentication
 
-Coming soon.
+Requires API Key provided by the UXP team. 
