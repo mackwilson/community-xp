@@ -2,6 +2,8 @@ import React from 'react';
 import BigHeader from '../comps/BigHeader.js';
 import SectionHeader from '../comps/SectionHeader.js';
 import CardSection from '../comps/CardSection.js';
+import PublicNavbar from '../comps/PublicNavbar.js';
+
 import mack from '../assets/images/mack.jpg';
 import benny from '../assets/images/benny.jpg';
 import dani from '../assets/images/dani.jpg';
@@ -28,7 +30,8 @@ export default class AboutPage extends React.Component {
       }
       
       return (
-      <div id="About">
+      <div className="AboutPage">
+        <PublicNavbar />
         <BigHeader title="About" subtitle={pageText.about.header}/>
         
         <div className="section">

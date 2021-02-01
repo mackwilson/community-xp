@@ -31,12 +31,7 @@ export default class PublicNavbar extends React.Component {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <NavItem>
-                  <Link className="btn blueShadow pinkFill darkText" to="/sos">
-                    SOS
-                  </Link>
-                </NavItem>
-                <NavItem>
-                  <a href="/#About">
+                  <a href="/about">
                     About
                   </a>
                 </NavItem>
