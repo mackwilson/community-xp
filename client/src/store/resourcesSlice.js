@@ -80,9 +80,11 @@ export const resourcesSlice = createSlice({
 /* - - - - - - - - - - ACTIONS - - - - - - - - - - -
 An "action" is just a plain JS object that describes the action, 
 with a "type" and "payload".
-Here we export an action like: {type: "resources/updateList" } 
+All it does is tell Redux which reducer to run on which slice.
+Example: {type: "resources/updateList", payload: [] } 
+Note: Creating a thunk creates a related action.
 */
-export const { updateList } = resourcesSlice.actions;
+// export const { updateList } = resourcesSlice.actions;
 
 // Default export the reducers
 export default resourcesSlice.reducer;
