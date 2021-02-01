@@ -28,24 +28,14 @@ const model = {
   
   async getAllResources() {
     console.log("getAllResources");
-    try {
-      let res = await axios({
-        method: "get",
-        url: server + basePath + resourcePath + allPath,
-        headers: {
-          "x-api-key": apiKey
-        }
-      });
-      return {
-        resources: res.data.data, 
-        ok: true
-      };
-    } catch (err) {
-      console.error("Error fetching: "+ err);
-      return {
-        ok: false
-      };
-    }
+    let res = await axios({
+      method: "get",
+      url: server + basePath + resourcePath + allPath,
+      headers: {
+        "x-api-key": apiKey
+      }
+    });
+    return res.data.data;
   }
 };
 
