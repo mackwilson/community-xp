@@ -11,7 +11,7 @@ function Footer() {
           <FontAwesomeIcon icon={faCopyright} /> 2020 CommUnity XP
         </div>
         <div className="to-top">
-          <a href="#header"><FontAwesomeIcon icon={faArrowUp} /> Top </a>
+          <a href="#header"><FontAwesomeIcon icon={faArrowUp} /> Jump to Top </a>
         </div>
       </footer>
     </div>
