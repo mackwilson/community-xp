@@ -1,3 +1,15 @@
+create type resource_type_enum as enum(
+	'Helpline',
+	'Shelter',
+	'Support Centre',
+	'Counselling Services',
+	'Medical Centre',
+	'Resource Bank',
+	'Rehabilitation Centre',
+	'Other',
+	'Unknown'
+);
+
 create table resources (
 	id serial not null primary key,
 	created_at timestamp not null default now(),
