@@ -31,6 +31,11 @@ export default class PublicNavbar extends React.Component {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <NavItem>
+                  <a href="/">
+                    Home
+                  </a>
+                </NavItem>
+                <NavItem>
                   <a href="/about">
                     About
                   </a>
@@ -51,7 +56,7 @@ export default class PublicNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/login" className="btn pinkShadow blueFill darkText">
+                  <Link to="/login" className="btn blueShadow pinkFill whiteText">
                     Log In
                   </Link>
                 </NavItem>
