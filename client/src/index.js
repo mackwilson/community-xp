@@ -27,7 +27,6 @@ ReactDOM.render(
           <Route exact path="/" component={HomePage} />
           <Route path="/resources" component={ResourcePage} />
           <Route path="/xp" component={XpPage} />
-          <Route path="/sos" component={SosPage} />
           <Route path="/signup" component={SignUpPage} />
           <Route path="/login" component={LogInPage} />
           <Route path="/profile" component={ProfilePage} />
