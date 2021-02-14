@@ -17,7 +17,7 @@ a {
 }
 
 h1 {
-  font-size: 50pt !important;
+  font-size: 5vw !important;
   margin-bottom: 30px !important;
   font-family: 'Press Start 2P', monospace;
   font-weight: 700 !important;
@@ -36,12 +36,17 @@ h3 {
 }
 
 h4 {
-  font-size: 18pt !important;
-  font-weight: 700 !important;
+  font-size: 20pt !important;
+  font-weight: bold !important;
+  font-style: italic;
 }
 
 p {
   font-size: 16pt !important;
+}
+
+.italic {
+  font-style: italic !important;
 }
 
 :focus {
@@ -61,11 +66,11 @@ a:hover {
 }
 
 .width-80 {
-  margin: 0 10% 100px 10%;
+  margin: 0 10% 0 10%;
 }
 
 .centre-text {
-  text-align: center;
+  text-align: center !important;
   align-items: center;
   margin-top: 2rem;
 }
@@ -111,6 +116,10 @@ a:hover {
   border: 4px solid #FF009C !important;
 }
 
+.darkBorder {
+  border: 4px solid #000 !important;
+}
+
 .thinBorder {
   border-width: 1px !important;
 }
@@ -136,6 +145,10 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
+.greyFill-light {
+  background-color: #404A53 !important;
+}
+
 .noFill {
   background-color: rgba(0, 0, 0, 0) !important;
 }
@@ -144,8 +157,16 @@ a:hover {
   color: #FF009C !important;
 }
 
+.pinkText-light {
+  color: #F5B7DF !important;
+}
+
 .whiteText {
   color: #fff !important;
+}
+
+.blueText {
+  color: #00C7FF !important;
 }
 
 .darkText {
@@ -197,11 +218,19 @@ nav {
 }
 
 .login-box {
-  max-width: 45%;
-  min-width: 250px;
+  width: 45%;
+  max-width: 500px;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   padding: 2rem;
+}
+
+.login-box .btn {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .signup-box {
@@ -209,20 +238,22 @@ nav {
   min-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   padding: 2rem;
   border-radius: 0px;
 }
 
+.signup-box .btn {
+  max-width: 50%;
+  min-width: 12%;
+}
+
 .form-control {
-  border: 1px solid #00C7FF !important;
   border-radius: 50px !important;
-  background-color: #000 !important;
-  color: #fff !important;
 }
 
 .form-label {
-  margin-bottom: 0;
-  color: #FF009C;
+  margin-bottom: 0 !important;
 }
 
 .header {
@@ -249,6 +280,10 @@ nav {
 
 .spaceTop {
   margin-top: 1rem !important;
+}
+
+.spaceBottom {
+  margin-bottom: 1rem !important;
 }
 
 .modalImg {

@@ -26,10 +26,9 @@ class LogInPage extends React.Component {
     return (
       <div className="LogInPage">
         <CustomNav />
-        <h2 className="pinkText centre-text">Log In</h2>
-        <div className="login-box thinBorder pinkBorder darkFill whiteText">
+        <div className="login-box thinBorder greyFill pinkText-light">
           <Row className="justify-content-md-center">
-            <div className="h8">Welcome back!</div>
+            <h4>Welcome back!</h4>
           </Row>
           <Formik
             validationSchema={schema}
@@ -51,7 +50,7 @@ class LogInPage extends React.Component {
                 <Row className="justify-content-md-center fluid">
                   <Col>
                     <Form.Group controlId="formGroupUsername">
-                      <Form.Label>Username</Form.Label>
+                      <Form.Label><p>Username</p></Form.Label>
                       <Form.Control 
                         type="username" 
                         name="username"
@@ -59,6 +58,7 @@ class LogInPage extends React.Component {
                         onChange={handleChange}
                         isInvalid={!!errors.username}
                         placeholder="type anything for now"
+                        className="darkBorder thinBorder greyFill-light pinkText-light"
                       />
                       <Form.Control.Feedback type="invalid">
                         {errors.username}
@@ -69,7 +69,7 @@ class LogInPage extends React.Component {
                 <Row className="justify-content-md-center">
                   <Col>
                     <Form.Group controlId="formGroupPassword">
-                      <Form.Label>Password</Form.Label>
+                      <Form.Label><p>Password</p></Form.Label>
                       <Form.Control 
                         type="password" 
                         name="password"
@@ -77,6 +77,7 @@ class LogInPage extends React.Component {
                         onChange={handleChange}
                         isInvalid={!!errors.password}
                         placeholder="type anything for now"
+                        className="darkBorder thinBorder greyFill-light pinkText-light"
                       />
                       <Form.Control.Feedback type="invalid">
                         {errors.password}
@@ -84,7 +85,7 @@ class LogInPage extends React.Component {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Row className="justify-content-md-center">
+                <Row className="centre-text">
                   <Col>
                     <Button 
                       variant="dark" 
@@ -100,10 +101,10 @@ class LogInPage extends React.Component {
             )}
             </Formik>
         </div>
-        <div className="login-box darkFill centre-text pinkBorder thinBorder whiteText">
+        <div className="login-box greyFill centre-text">
           <Row className="justify-content-md-center">
             <Col>
-              Don't have an account? <Link to="/signup" className="whiteText">Sign up instead.</Link>
+              <p className="pinkText-light">Don't have an account? <Link to="/signup" className="blueText">Sign up instead.</Link></p>
             </Col>
           </Row>
         </div>

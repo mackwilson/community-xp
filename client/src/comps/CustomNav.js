@@ -33,7 +33,7 @@ export default function CustomNav(props) {
       </NavItem>
       <NavItem>
         <Link to="/login" className="btn blueFill pinkShadow darkText">
-          Log In
+          Sign In
         </Link>
       </NavItem>
     </>
@@ -75,8 +75,8 @@ export default function CustomNav(props) {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/blog">
-                Blog
+              <Link to="/xp">
+                UXP
               </Link>
             </NavItem>
             {userLoggedIn ? logOutBlock : logInBlock}

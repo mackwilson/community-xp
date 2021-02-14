@@ -11,7 +11,8 @@ function TeamIcons(props) {
     for (const [i, v] of icons.entries()) {
       cards.push(
         <Icon 
-          key={i} 
+          key={i}
+          id={i} 
           content={v} 
           showModal={props.showModal}
         />

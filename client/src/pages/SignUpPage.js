@@ -9,11 +9,31 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import '../css/App.css';
 
+const basicInfoState = {
+  showBasicInfo: true,
+  showPersonalInfo: false,
+  showSafetyInfo: false
+};
+
+const personalInfoState = {
+  showBasicInfo: false,
+  showPersonalInfo: true,
+  showSafetyInfo: false
+};
+
+const safetyInfoState = {
+  showBasicInfo: false,
+  showPersonalInfo: false,
+  showSafetyInfo: true
+}
+
 export default class SignUpPage extends React.Component {  
   constructor(props) {
     super(props);
     this.state = {
-      element: <BasicInfo handler={this.showPersonalInfo.bind(this)} />
+      showBasicInfo: true,
+      showPersonalInfo: false,
+      showSafetyInfo: false
     }
   }
   
@@ -22,39 +42,59 @@ export default class SignUpPage extends React.Component {
   }
   
   showPersonalInfo() {
-    this.setState({
-      element: <PersonalInfo back={this.showBasicInfo.bind(this)} handler={this.showSafetyInfo.bind(this)} />
-    });
+    this.setState(personalInfoState);
   }
   
   showBasicInfo() {
-    this.setState({
-      element: <BasicInfo handler={this.showPersonalInfo.bind(this)} />
-    });
+    this.setState(basicInfoState);
   }
   
   showSafetyInfo() {
-    this.setState({
-      element: <SafetyInfo back={this.showPersonalInfo.bind(this)} handler={this.signUp.bind(this)} />
-    });
+    this.setState(safetyInfoState);
   }
   
   render() {
+    const personalInfo = 
+    <PersonalInfo 
+      back={this.showBasicInfo.bind(this)} 
+      handler={this.showSafetyInfo.bind(this)} 
+    />;
+    
+    const basicInfo = 
+    <BasicInfo 
+      handler={this.showPersonalInfo.bind(this)} 
+    />;
+    
+    const safetyInfo = 
+    <SafetyInfo 
+    back={this.showPersonalInfo.bind(this)} 
+    handler={this.signUp.bind(this)} 
+    />;
+    
+    const logInLink = 
+    <div className="signup-box centre-text greyFill pinkText-light">
+      <Row className="justify-content-md-center">
+        <Col>
+          <p>Already have an account? <Link to="/login" className="blueText">Log in instead!</Link></p>
+        </Col>
+      </Row>
+    </div>;
+    
     return (
       <div className="SignUpPage">
+      
         <CustomNav />
-        <h2 className="centre-text pinkText">Sign Up</h2>
-        <div className="signup-box pinkBorder darkFill whiteText thinBorder">
-          {this.state.element}
+        
+        <div className="signup-box greyFill pinkText-light">
+          {this.state.showBasicInfo ? basicInfo : null}
+          {this.state.showPersonalInfo ? personalInfo : null}
+          {this.state.showSafetyInfo ? safetyInfo : null}
         </div>
-        <div className="signup-box centre-text darkFill pinkBorder whiteText thinBorder">
-          <Row className="justify-content-md-center">
-            <Col>
-              Already have an account? <Link to="/login" className="whiteText">Log in instead!</Link>
-            </Col>
-          </Row>
-        </div>
+        
+        {this.state.showBasicInfo ? logInLink : null}
+        
         <Footer />
+        
       </div>
     );
   }

@@ -8,7 +8,7 @@ export default class Profile extends React.Component {
     return (
       <div className="Profile">
         <CustomNav loggedIn={true} />
-        <h2 className="centre-text pinkText">My Profile</h2>
+        <h2 className="centre-text darkText">My Profile</h2>
         <Footer />
       </div>
     );
