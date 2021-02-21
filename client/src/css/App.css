@@ -56,12 +56,8 @@ p {
   border-radius: 120px;
 }
 
-.section a {
-  color: #FF009C;
-}
-
-.section a:hover {
-  color: #00CCF0;
+a:hover {
+  color: #FF009C !important;
 }
 
 .width-80 {

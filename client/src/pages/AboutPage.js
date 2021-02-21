@@ -1,6 +1,6 @@
 import React from 'react';
 import BigHeader from '../comps/BigHeader.js';
-import PublicNavbar from '../comps/PublicNavbar.js';
+import CustomNav from '../comps/CustomNav.js';
 
 import mack from '../assets/images/mack.jpg';
 import benny from '../assets/images/benny.jpg';
@@ -25,7 +25,7 @@ export default class AboutPage extends React.Component {
       
       return (
       <div className="AboutPage">
-        <PublicNavbar />
+        <CustomNav />
         <BigHeader title="ABOUT US"/>
         
         <div className="section">

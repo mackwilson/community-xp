@@ -1,6 +1,6 @@
 import React from 'react';
 import SmallHeader from '../comps/SmallHeader.js';
-import PublicNavbar from '../comps/PublicNavbar.js';
+import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 import BasicInfo from '../comps/BasicInfo.js';
 import PersonalInfo from '../comps/PersonalInfo.js';
@@ -43,19 +43,17 @@ export default class SignUpPage extends React.Component {
   render() {
     return (
       <div className="SignUpPage">
-        <PublicNavbar />
-        <div className="section greyFill whiteText">
-          <SmallHeader title="Sign Up"/>
-          <div className="signup-box pinkBorder darkFill thinBorder">
-            {this.state.element}
-          </div>
-          <div className="signup-box centre-text darkFill pinkBorder thinBorder">
-            <Row className="justify-content-md-center">
-              <Col>
-                Already have an account? <Link to="/login">Log in instead!</Link>
-              </Col>
-            </Row>
-          </div>
+        <CustomNav />
+        <h2 className="centre-text pinkText">Sign Up</h2>
+        <div className="signup-box pinkBorder darkFill whiteText thinBorder">
+          {this.state.element}
+        </div>
+        <div className="signup-box centre-text darkFill pinkBorder whiteText thinBorder">
+          <Row className="justify-content-md-center">
+            <Col>
+              Already have an account? <Link to="/login" className="whiteText">Log in instead!</Link>
+            </Col>
+          </Row>
         </div>
         <Footer />
       </div>

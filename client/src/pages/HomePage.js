@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 
-import PublicNavbar from '../comps/PublicNavbar.js';
+import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 import img1 from '../assets/images/carousel-1.jpg';
 import '../css/App.css';
@@ -19,7 +19,7 @@ export default function HomePage () {
 
     return (
     <div className="HomePage">
-      <PublicNavbar />
+      <CustomNav />
       <div className="section">
         <Carousel 
           fade={true}

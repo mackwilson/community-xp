@@ -8,14 +8,21 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 import logo from '../assets/logos/heart.png';
 
-export default function PublicNavbar(props) {  
+export default function CustomNav(props) {  
   const userLoggedIn = props.loggedIn || false;
   const logOutBlock = (
-    <NavItem>
-      <Link to="/" className="btn blueFill pinkShadow darkText">
-        Log Out
-      </Link>
-    </NavItem>
+    <>
+      <NavItem>
+        <Link to="/profile">
+          My Profile
+        </Link>
+      </NavItem>
+      <NavItem>
+        <Link to="/" className="btn blueFill pinkShadow darkText">
+          Log Out
+        </Link>
+      </NavItem>
+    </>
   );
   const logInBlock = (
     <>
