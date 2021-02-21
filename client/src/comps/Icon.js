@@ -93,7 +93,7 @@ function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
     
   const btn = (btnText && btnLink) 
     ? <div className="centre-text">
-        <Button href={btnLink} target="_blank" className="spaceTop darkText blueFill pinkShadow btn">
+        <Button href={btnLink} target="_blank" className="darkText blueFill pinkShadow btn">
           {btnText}
         </Button>
       </div>
