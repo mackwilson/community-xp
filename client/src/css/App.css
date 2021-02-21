@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Courier Prime', monospace !important;
+  font-family: 'Open Sans' !important;
   background-image: linear-gradient(#85e3fd, #e7a7c3);
   background-attachment: fixed;
 }
@@ -17,45 +17,27 @@ a {
 }
 
 h1 {
-  font-size: 60pt !important;
+  font-size: 50pt !important;
   margin-bottom: 30px !important;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 700 !important;
   word-break: break-word;
 }
 
 h2 {
-  font-size: 30pt !important;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 20pt !important;
+  font-family: 'Press Start 2P', monospace;
   margin-bottom: 20px !important;
 }
 
 h3 {
-  font-size: 50pt !important;
+  font-size: 18pt !important;
+  font-family: 'Press Start 2P', monospace;
+}
+
+h4 {
+  font-size: 18pt !important;
   font-weight: 700 !important;
-}
-
-h6 {
-  font-size: 34pt !important;
-  font-style: italic;
-  font-weight: 400;
-  text-align: center;
-}
-
-.h7 {
-  font-size: 26pt !important;
-}
-
-.h8 {
-  font-size: 16pt !important;
-  font-style: italic; /* design spec doesnt have this */
-}
-
-.h9 {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 20px;
-  margin-bottom: 10px !important;
-  font-size: 16pt !important;
 }
 
 p {
@@ -74,12 +56,8 @@ p {
   border-radius: 120px;
 }
 
-.section a {
-  color: #FF009C;
-}
-
-.section a:hover {
-  color: #00CCF0;
+a:hover {
+  color: #FF009C !important;
 }
 
 .width-80 {
@@ -88,6 +66,7 @@ p {
 
 .centre-text {
   text-align: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -190,7 +169,7 @@ nav {
 }
 
 .nav-item {
-  padding: 10px;
+  padding: 10px 20px;
   vertical-align: middle !important;
   line-height: 40px;
 }
@@ -213,7 +192,8 @@ nav {
 }
 
 .logo {
-  height: 100px;
+  height: 70px;
+  margin: 10px 10px;
 }
 
 .login-box {
@@ -245,40 +225,16 @@ nav {
   color: #FF009C;
 }
 
-#BigHeader {
-  align-items: center;
-  justify-content: center;
-}
-
-#SmallHeader {
-  font-size: 30pt;
-  padding-top: 0;
-}
-
 .header {
   display: flex;
   flex-direction: column;
 }
 
-.card-group {
-  justify-content: center !important;
-}
-
 .card {
-  min-width: 340px !important;
-  max-width: 380px !important;
-  min-height: 10rem;
-  margin: 1rem;
-  border-radius: 80px !important;
+  border: 0px #fff solid !important;
   padding: 2rem;
+  align-items: center;
 }
-
-/* .linkCard:hover {
-  top: 5px;
-  left: 5px;
-  box-shadow: 0px 0px #fff !important;
-  transition: none;
-} */
 
 .card-body .card-title {
   margin-top: 0;
@@ -286,11 +242,9 @@ nav {
 }
 
 .cardImg {
-  border-radius: 60px !important;
-}
-
-.card-subtitle {
-  
+  border-radius: 100px !important;
+  height: 200px !important;
+  width: 200px !important;
 }
 
 .spaceTop {
@@ -341,6 +295,22 @@ nav {
 
 .close:hover {
   color: #00C7FF !important;
+}
+
+.carousel-indicators li {
+  background-color: grey !important;
+  border: 1px solid #000 !important;
+  border-radius: 30px !important;
+  height: 20px !important;
+  width: 20px !important;
+  opacity: 1 !important;
+}
+
+.carousel-indicators .active {
+  background-color: #FF009C !important;
+  border: 1px solid #000 !important;
+  border-radius: 30px !important;
+  opacity: 1 !important;
 }
 
 .Footer {

@@ -17,15 +17,54 @@
   "sos": {
     "header": "Crisis management quicklinks."
   },
-  "splash": {
-    "header": "Striving for better mental health experiences for all.",
-    "tidbits": {
+  "home": {
+    "problem": {
+      
+    },
+    "solution": {
       "sos": "Crisis management quicklinks",
       "resources": "Find the right resources for you!",
       "about": "Meet the UXP team!",
       "blog": "Insights, experiences, and opinions",
       "signup": "Nice to meet you!",
       "login": "Welcome back!"
+    },
+    "uxp": {
+      "title": "INTRODUCING: COMMUNITY XP",
+      "sections": [
+        {
+          "title": "Frictionless Access",
+          "text": [
+            "The friction that we face trying to access mental health supports can be extremely discouraging. We wanted to provide a way to get all the necessary information with the least amount of friction as possible.",
+            "So, we built our own one-of-a-kind, curated database of mental wellness resources for the Kitchener-Waterloo Region. Each resource is categorized and tagged with critical information on its format, access, and services. For those who aren't even sure where to start, our Resource Matching quiz can help!"
+          ],
+          "button": "See the Resources"
+        },
+        {
+          "title": "Promoting Community",
+          "text": "Everyone talks about breaking down the stigma around mental illness, but we wanted to walk the walk. Our Blog and XP Page [Coming Soon] create a gamified anonymous online community centred around sharing experiences and making it clear that you're not alone.",
+          "button": [
+            "Read the Blog",
+            "Create Your XP Profile"
+          ]
+        },
+        {
+          "title": "Nonviolent Crisis Management",
+          "text": [
+            "The current systems in place to manage mental health crises are failing, especially when it comes to racialized or neuro-atypical members of our community. We recognize the countless lives stolen by police brutality and systemic racism, and we know we need a better solution than a disclaimer in the footer of our site saying 'Call 9-1-1 in case of emergency'.",
+            "Notice that cool-looking 'SOS' button hovering in the top right? It'll be there on every page for every user. Clicking it gives you the option to view Crisis resources near you in our Resources database - many of which are free and just a phone call away. If you are logged in, you will also see prompts for a customized crisis plan that YOU design."
+          ],
+          "button": [
+            "See SOS Resources",
+            "Create Your Crisis Plan"
+          ]
+        }
+      ]
+    },
+    "team": {
+      "title": "WHO ARE WE?",
+      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We work 100% remotely, but most of us are based out of Kitchener-Waterloo, ON, Canada. Click the button below to read our story or connect with us on the About page.",
+      "button": "Learn More About UXP"
     }
   }
 }

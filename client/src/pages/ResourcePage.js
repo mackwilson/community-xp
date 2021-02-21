@@ -7,8 +7,7 @@ import {
   getFetchStatus
 } from '../store/resourcesSlice.js';
 
-import PublicNavbar from '../comps/PublicNavbar.js';
-import BigHeader from '../comps/BigHeader.js';
+import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 
 import pageText from '../assets/text/pageText.json';
@@ -56,8 +55,7 @@ export default function ResourcePage() {
   
   return (
     <div className="ResourcePage">
-      <PublicNavbar />
-      <BigHeader title="Resources" subtitle={pageText.resources.header}/>
+      <CustomNav />
       <div className="left-text section">
         <p>{status === 'idle' || status === 'loading' ? 'Fetching resources...' : ''}</p>
         <p>{status === 'failed' ? 'Error fetching resources, please try again later.' : ''}</p>
