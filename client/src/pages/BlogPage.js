@@ -1,8 +1,7 @@
 import React from 'react';
 import CustomNav from '../comps/CustomNav.js';
-import BigHeader from '../comps/BigHeader.js';
 import Footer from '../comps/Footer.js';
-import pageText from '../assets/text/pageText.json';
+// import pageText from '../assets/text/pageText.json';
 import '../css/App.css';
 
 export default class BlogPage extends React.Component {
@@ -10,7 +9,9 @@ export default class BlogPage extends React.Component {
       return (
       <div className="BlogPage">
         <CustomNav />
-        <BigHeader title="XP Blog" subtitle={pageText.blog.header}/>
+        <div className="header section noFill">
+          <h1 className="centre-text">XP BLOG</h1>
+        </div>
         <Footer />
       </div>
     );

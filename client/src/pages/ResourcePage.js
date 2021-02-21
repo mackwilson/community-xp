@@ -8,7 +8,6 @@ import {
 } from '../store/resourcesSlice.js';
 
 import CustomNav from '../comps/CustomNav.js';
-import BigHeader from '../comps/BigHeader.js';
 import Footer from '../comps/Footer.js';
 
 import pageText from '../assets/text/pageText.json';
@@ -57,7 +56,6 @@ export default function ResourcePage() {
   return (
     <div className="ResourcePage">
       <CustomNav />
-      <BigHeader title="Resources" subtitle={pageText.resources.header}/>
       <div className="left-text section">
         <p>{status === 'idle' || status === 'loading' ? 'Fetching resources...' : ''}</p>
         <p>{status === 'failed' ? 'Error fetching resources, please try again later.' : ''}</p>

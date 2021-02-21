@@ -32,7 +32,7 @@ export default function CustomNav(props) {
         </Link>
       </NavItem>
       <NavItem>
-        <Link to="/login" className="btn blueShadow pinkFill whiteText">
+        <Link to="/login" className="btn blueFill pinkShadow darkText">
           Log In
         </Link>
       </NavItem>

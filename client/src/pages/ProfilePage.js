@@ -1,7 +1,6 @@
 import React from 'react';
 import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
-import SmallHeader from '../comps/SmallHeader.js';
 import '../css/App.css';
 
 export default class Profile extends React.Component {
@@ -9,7 +8,7 @@ export default class Profile extends React.Component {
     return (
       <div className="Profile">
         <CustomNav loggedIn={true} />
-        <SmallHeader title="My Profile" />
+        <h2 className="centre-text pinkText">My Profile</h2>
         <Footer />
       </div>
     );

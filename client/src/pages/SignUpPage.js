@@ -1,5 +1,4 @@
 import React from 'react';
-import SmallHeader from '../comps/SmallHeader.js';
 import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 import BasicInfo from '../comps/BasicInfo.js';

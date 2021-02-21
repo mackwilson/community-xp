@@ -2,7 +2,6 @@ import React from 'react';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import CustomNav from '../comps/CustomNav.js';
-import SmallHeader from '../comps/SmallHeader.js';
 import Footer from '../comps/Footer.js';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';

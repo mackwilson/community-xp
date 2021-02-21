@@ -7,7 +7,9 @@ import {Link} from 'react-router-dom';
 
 import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
+import TeamIcons from '../comps/TeamIcons.js';
 import img1 from '../assets/images/carousel-1.jpg';
+import text from '../assets/text/pageText.json';
 import '../css/App.css';
 
 export default function HomePage () {
@@ -149,17 +151,17 @@ export default function HomePage () {
       
       <div className="section">
         <Row>
-          <h2>INTRODUCING: COMMUNITY XP</h2>
+          <h2>{text.home.uxp.title}</h2>
         </Row>
         <Row className="spaceTop">
           <Col xs={4}>Image</Col>
           <Col>
-            <h4>Frictionless Access</h4>
-            <p>The friction that we face trying to access mental health supports can be extremely discouraging. We wanted to provide a way to get all the necessary information with the least amount of friction as possible.</p> 
-            <p>So, we built our own one-of-a-kind, curated database of mental wellness resources for the Kitchener-Waterloo Region. Each resource is categorized and tagged with critical information on its format, access, and services. For those who aren't even sure where to start, our Resource Matching quiz can help!</p>
+            <h4>{text.home.uxp.sections[0].title}</h4>
+            <p>{text.home.uxp.sections[0].text[0]}</p> 
+            <p>{text.home.uxp.sections[0].text[1]}</p>
             <Link to="/resources">
               <Button className="spaceTop darkText blueFill pinkShadow btn">
-                See the Resources
+                {text.home.uxp.sections[0].button}
               </Button>
             </Link>
           </Col>
@@ -168,19 +170,19 @@ export default function HomePage () {
         
         <Row className="spaceTop">
           <Col>
-            <h4>Promoting Community</h4>
-            <p>Everyone talks about breaking down the stigma around mental illness, but we wanted to walk the walk. Our Blog and XP Page [Coming Soon] is a gamified anonymous online community centred around sharing experiences and making it clear that you're not alone.</p>
+            <h4>{text.home.uxp.sections[1].title}</h4>
+            <p>{text.home.uxp.sections[1].text}</p>
             <div>
               <Link to="/blog">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
-                  Read the Blog
+                  {text.home.uxp.sections[1].button[0]}
                 </Button>
               </Link>
             </div>
             <div>
               <Link to="/signup">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
-                  Create Your XP Profile
+                  {text.home.uxp.sections[1].button[1]}
                 </Button>
               </Link>
             </div>
@@ -192,20 +194,20 @@ export default function HomePage () {
         <Row className="spaceTop">
           <Col xs={4}>Image</Col>
           <Col>
-            <h4>Nonviolent Crisis Management</h4>
-            <p>The current systems in place to manage mental health crises are failing, especially when it comes to racialized or neuro-atypical members of our community. We recognize the countless lives stolen by police brutality and systemic racism, and we know we need a better solution than a disclaimer in the footer of our site saying "Call 9-1-1 in case of emergency".</p> 
-            <p>Notice that cool-looking "SOS" button hovering in the top right? It'll be there on every page for every user. Clicking it gives you the option to view Crisis resources near you in our Resources database - many of which are free and just a phone call away. If you are logged in, you will also see prompts for a customized crisis plan that YOU design.</p>
+            <h4>{text.home.uxp.sections[2].title}</h4>
+            <p>{text.home.uxp.sections[2].text[0]}</p> 
+            <p>{text.home.uxp.sections[2].text[1]}</p>
             <div>
               <Link to="/resources">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
-                  See SOS Resources
+                  {text.home.uxp.sections[2].button[0]}
                 </Button>
               </Link>
             </div>
             <div>
               <Link to="/signup">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
-                  Create Your Crisis Plan
+                  {text.home.uxp.sections[2].button[1]}
                 </Button>
               </Link>
             </div>
@@ -216,24 +218,20 @@ export default function HomePage () {
       
       <div className="section">
         <Row>
-          <h2>WHO ARE WE?</h2>
+          <h2>{text.home.team.title}</h2>
         </Row>
-        <Row>
-          [8-bit headshots]
-        </Row>
+        <TeamIcons showModal={false} />
         <Row className="spaceTop">
-          <p>We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We work 100% remotely, but most of us are based out of Kitchener-Waterloo, ON, Canada. Click the button below to read our story or connect with us on the About page.</p>
+          <p>{text.home.team.text}</p>
           <Link to="/about">
             <Button className="spaceTop darkText blueFill pinkShadow btn">
-              Learn More About UXP
+              {text.home.team.button}
             </Button>
           </Link>
         </Row>
       </div>
       
-      
       <Footer />
-      
     </div>
   );
 }

@@ -66,6 +66,7 @@ a:hover {
 
 .centre-text {
   text-align: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -224,40 +225,16 @@ nav {
   color: #FF009C;
 }
 
-#BigHeader {
-  align-items: center;
-  justify-content: center;
-}
-
-#SmallHeader {
-  font-size: 30pt;
-  padding-top: 0;
-}
-
 .header {
   display: flex;
   flex-direction: column;
 }
 
-.card-group {
-  justify-content: center !important;
-}
-
 .card {
-  min-width: 340px !important;
-  max-width: 380px !important;
-  min-height: 10rem;
-  margin: 1rem;
-  border-radius: 80px !important;
+  border: 0px #fff solid !important;
   padding: 2rem;
+  align-items: center;
 }
-
-/* .linkCard:hover {
-  top: 5px;
-  left: 5px;
-  box-shadow: 0px 0px #fff !important;
-  transition: none;
-} */
 
 .card-body .card-title {
   margin-top: 0;
@@ -265,11 +242,9 @@ nav {
 }
 
 .cardImg {
-  border-radius: 60px !important;
-}
-
-.card-subtitle {
-  
+  border-radius: 100px !important;
+  height: 200px !important;
+  width: 200px !important;
 }
 
 .spaceTop {
