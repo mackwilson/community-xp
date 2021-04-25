@@ -1,12 +1,16 @@
 import React from 'react';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
+
 import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 import BasicInfo from '../comps/BasicInfo.js';
 import PersonalInfo from '../comps/PersonalInfo.js';
 import SafetyInfo from '../comps/SafetyInfo.js';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
+
 import '../css/App.css';
 
 const basicInfoState = {
@@ -84,14 +88,17 @@ export default class SignUpPage extends React.Component {
       <div className="SignUpPage">
       
         <CustomNav />
+        <Fade>
+          <div className="signup-box greyFill pinkText-light">
+            {this.state.showBasicInfo ? basicInfo : null}
+            {this.state.showPersonalInfo ? personalInfo : null}
+            {this.state.showSafetyInfo ? safetyInfo : null}
+          </div>
+        </Fade>
         
-        <div className="signup-box greyFill pinkText-light">
-          {this.state.showBasicInfo ? basicInfo : null}
-          {this.state.showPersonalInfo ? personalInfo : null}
-          {this.state.showSafetyInfo ? safetyInfo : null}
-        </div>
-        
-        {this.state.showBasicInfo ? logInLink : null}
+        <Fade>
+          {this.state.showBasicInfo ? logInLink : null}
+        </Fade>
         
         <Footer />
         

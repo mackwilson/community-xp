@@ -3,20 +3,21 @@
     "title": "About Us",
     "subtitle": "Get to know a bit more about CommUnity XP!",
     "project": {
-      "title": "THE PROJECT",
+      "title": "COMMUNITY XP",
       "text": [
-        "The platform, project, and team that is CommUnity XP began in early 2020 as Dani's brainchild.",
-        "Collaborating with Ben, the pair later presented the idea at the University of Waterloo's Social Impact Showcase, and began recruiting the rest of the team.",
-        "The team began researching the important role that mental health and wellness plays in our diverse student community’s ability to thrive. We strategized ways to embolden more students to actively participate in the maintenance of collective mental wellness and to hold institutions accountable for supporting health and wellness in the learning environment.",
-        "In mid 2021, we launched the CommUnity XP platform."
+        "The platform, project, and team that is CommUnity XP began in early 2020 as the brainchild of our Founder and then-student, Dani.",
+        "Collaborating with Ben, the pair later presented the idea at the University of Waterloo's Social Impact Showcase, and began recruiting the rest of the team throughout 2020.",
+        "The team began researching the important role that mental health and wellness plays in our diverse student community’s ability to thrive. We strategized ways to embolden more students to actively participate in the maintenance of collective mental wellness and to hold institutions accountable for supporting health and wellness in the learning environment. ",
+        "As 2020 turned into 2021, we were hard at work conducting literature reviews and reaching out to other non-profits, mental health experts, and university contacts in our collective networks to make sure we were building the right solution, and decide how to build it. We iterated on the actual site many times and our small but mighty team became increasingly more passionate.",
+        "In Fall 2021, we launched the CommUnity XP platform for beta testing."
       ]
     },
     "mission": {
-      "title": "MISSION STATEMENT",
+      "title": "MISSION",
       "text": "CommUnity XP will serve the diverse student population as an accessible navigation aid for on/off-campus mental health and wellness resources, as well as to offer a safe online mental health and wellness space and community."
     },
     "vision": {
-      "title": "OUR VISION",
+      "title": "VISION",
       "text": [
         "The socially equitable and sustainable deconstruction of systemic and institutional barriers that prevent equal access and opportunity for ALL students and their respective intersectional identities to benefit from and participate in a positive mental health and wellness culture at any given post-secondary institution. Yes, emotional skills are key to wellbeing, but so are systems and policies that actually produce positive outcomes for those most oppressed.",
         "We firmly believe that diversity and inclusion are key to assisting Universities around the world in progression towards a culture of wellness, ensuring greater resilience through the increased cultural awareness, understanding and acceptance of the intersectional realities of students. Providing the diverse student population with tools to confidently manage fluctuations in mental health will help them become the confident, compassionate, action oriented leaders our future so desperately needs."
@@ -24,7 +25,7 @@
       "summary": "Everyone has a role to play in wellness, and we can achieve this by taking care of ourselves, of each other and of our communities."
     },
     "values": {
-      "title": "OUR VALUES",
+      "title": "VALUES",
       "text": [
         "Love and Respect",
         "Harm Reduction and Prevention",
@@ -38,11 +39,25 @@
       ]
     },
     "team": {
-      "title": "THE TEAM",
-      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We are all connected in various ways, from rugby teammates, classmates, or childhood friends. Click the icons below to check out each member of our team!"
+      "title": "TEAM",
+      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We are all connected in various ways, whether as rugby teammates, classmates, or childhood friends. Click the icons below to check out each member of our team!"
     },
     "contact": {
-      "title": "CONNECT WITH US!"
+      "title": "CONNECT WITH US!",
+      "sections": [
+        {
+          "title": "Contact",
+          "button": "Email Us!",
+          "text": "Want more information? Interested in joining us? Shoot us an email and let us know!"
+        }, {
+          "title": "Donate",
+          "button": "View Kickstarter",
+          "text": "We are graciously accepting donations on our new Kickstarter page."
+        }, {
+          "title": "Locate",
+          "text": "We work 100% remotely across Canada, but we were founded in the Kitchener-Waterloo region in Ontario."
+        }
+      ]
     }
   },
   "uxp": {
