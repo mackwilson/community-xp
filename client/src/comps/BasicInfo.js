@@ -11,24 +11,25 @@ import '../css/App.css';
 
 const schema = Yup.object({
   password: Yup.string()
-    .required("* Required field")
-    .min(6, "Password must have at least 6 characters"),
+    .required("* Please enter a password.")
+    .min(6, "To keep things secure, your password must have at least 6 characters."),
   confirmPassword: Yup.string()
-    .required("* Required field")
-    .test('passwords-match', 'Passwords do not match', function(value) {
+    .required("* Please confirm your password.")
+    .test('passwords-match', 'Uh oh! Those passwords do not match. Please try again!', function(value) {
       return this.parent.password === value;
     }),
-  username: Yup.string().required("* Required field"),
-  firstName: Yup.string().required("* Required field"),
-  lastName: Yup.string().required("* Required field"),
+  username: Yup.string()
+    .required("* You need a unique username for your UXP account.")
+    .min(3, "Usernames have to be at least 3 characters long.")
+    .max(49, "Usernames must be under 50 characters long."),
   email: Yup.string()
-    .required("* Required field")
-    .email("Invalid email")
-    .matches(/^[A-Z0-9._%+-]+@uwaterloo.ca/i, "Invalid UWaterloo email"),
+    .required("* Please enter an email address so we can verify your account.")
+    .email("Uh oh! That doesn't look like a valid email. Try again!")
+    .matches(/^[A-Z0-9._%+-]+@[A-Z]+.[A-Z]+/i, "Uh oh! That doesn't look like a valid email. Try again!"),
   acceptTerms: Yup.bool()
-    .test("accept-terms", "* Please accept the terms", function(value) {
+    .test("accept-terms", "* Please accept the terms and conditions to create an account.", function(value) {
       return value === true;
-    }).required("Please accept the terms")
+    }).required("Please accept the terms and conditions")
 });
 
 export default class BasicInfo extends React.Component {  
@@ -42,16 +43,14 @@ export default class BasicInfo extends React.Component {
   render () {
     return (
       <div className="BasicInfo">
-        <Row className="justify-content-md-center">
-          <div className="h8">We're so excited to meet you! First, the boring details.</div>
+        <Row className="justify-content-md-center spaceBottom">
+          <h4>Create your CommUnity XP account!</h4>
         </Row>
         <Formik
           validateOnChange={false}
           validationSchema={schema} 
           onSubmit={this.state.handler}
           initialValues={{
-            firstName: '',
-            lastName: '',
             email: '',
             username: '',
             password: '',
@@ -70,52 +69,9 @@ export default class BasicInfo extends React.Component {
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
               <Form.Row>
-                <Form.Group as={Col} controlId="formFirstName">
-                  <Form.Label>* First Name</Form.Label>
-                  <Form.Control 
-                    type="firstName" 
-                    name="firstName" 
-                    value={values.firstName} 
-                    onChange={handleChange}
-                    isInvalid={!!errors.firstName}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    {errors.firstName}
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} controlId="formLastName">
-                  <Form.Label>* Last Name</Form.Label>
-                  <Form.Control 
-                    type="lastName" 
-                    name="lastName" 
-                    value={values.lastName} 
-                    onChange={handleChange}
-                    isInvalid={!!errors.lastName}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    {errors.lastName}
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-              <Form.Row>
-                <Form.Group as={Col} controlId="formEmail">
-                  <Form.Label>* Email</Form.Label>
-                  <Form.Control 
-                    type="email" 
-                    name="email"
-                    placeholder="UWaterloo Email" 
-                    value={values.email} 
-                    onChange={handleChange}
-                    isInvalid={!!errors.email}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    {errors.email}
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-              <Form.Row>
+              
                 <Form.Group as={Col} controlId="formUsername">
-                  <Form.Label>* Username</Form.Label>
+                  <Form.Label><p>Username *</p></Form.Label>
                   <Form.Control 
                     type="username" 
                     name="username"
@@ -123,15 +79,35 @@ export default class BasicInfo extends React.Component {
                     value={values.username} 
                     onChange={handleChange}
                     isInvalid={!!errors.username}
+                    className="darkBorder thinBorder greyFill-light pinkText-light"
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.username}
                   </Form.Control.Feedback>
                 </Form.Group>
+                
+                <Form.Group as={Col} controlId="formEmail">
+                  <Form.Label><p>Email *</p></Form.Label>
+                  <Form.Control 
+                    type="email" 
+                    name="email" 
+                    value={values.email} 
+                    onChange={handleChange}
+                    isInvalid={!!errors.email}
+                    className="darkBorder thinBorder greyFill-light pinkText-light"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {errors.email}
+                  </Form.Control.Feedback>
+                </Form.Group>
+                
               </Form.Row>
+              
+              
               <Form.Row>
+              
                 <Form.Group as={Col} controlId="formPassword">
-                  <Form.Label>* Password</Form.Label>
+                  <Form.Label><p>Password *</p></Form.Label>
                   <Form.Control 
                     type="Password" 
                     name="password" 
@@ -139,36 +115,42 @@ export default class BasicInfo extends React.Component {
                     value={values.password} 
                     onChange={handleChange}
                     isInvalid={!!errors.password}
+                    className="darkBorder thinBorder greyFill-light pinkText-light"
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.password}
                   </Form.Control.Feedback>
                 </Form.Group>
+                
                 <Form.Group as={Col} controlId="formConfirmPassword">
-                  <Form.Label>* Confirm Password</Form.Label>
+                  <Form.Label><p>Confirm Password *</p></Form.Label>
                   <Form.Control 
                     type="password" 
                     name="confirmPassword" 
                     value={values.confirmPassword} 
                     onChange={handleChange}
                     isInvalid={!!errors.confirmPassword}
+                    className="darkBorder thinBorder greyFill-light pinkText-light"
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.confirmPassword}
                   </Form.Control.Feedback>
                 </Form.Group>
+                
               </Form.Row>
+              
               <Form.Row>
                 <Form.Group id="formEmailCheckbox">
                   <Form.Check 
                     type="checkbox" 
-                    label="I would like to get email updates from CommUnity XP"
+                    label="Yes, add me to the CommUnity XP email newsletter!"
                     name="acceptTerms"
                     value={values.emailUpdates}
                     onChange={handleChange}
                   />
                 </Form.Group>
               </Form.Row>
+              
               <Form.Row>
                 <Form.Group id="formAgreeTerms">
                   <Form.Check 
@@ -177,13 +159,14 @@ export default class BasicInfo extends React.Component {
                     value={values.acceptTerms}
                     onChange={handleChange}
                     isInvalid={!!errors.acceptTerms}
-                    label="* I agree to CommUnity XP Terms and Conditions" 
+                    label="I agree to CommUnity XP Terms and Conditions *" 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.acceptTerms}
                   </Form.Control.Feedback>
                 </Form.Group>
               </Form.Row>
+              
               <Row className="justify-content-md-center right-text">
                 <Col>
                   <Button variant="dark" type="submit" className="btn darkText blueFill pinkShadow">

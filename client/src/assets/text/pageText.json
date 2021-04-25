@@ -1,58 +1,121 @@
 {
   "about": {
-    "header": "Who are we and how did we get here?",
-    "vision": "",
-    "team": [
-      "In early 2020, Dani developed the idea and enlisted Ben to help with outreach, design, and web development. Throughout Summer 2020, Lars, Mack and Cash all joined to work on the UX research, development, and content design.",
-      "This small but mighty team is extremely motivated, passionate, and talented. Mental health is a cause close to all of our hearts. Click the cards below to read more!"
-    ],
-    "contact": []
+    "title": "About Us",
+    "subtitle": "Get to know a bit more about CommUnity XP!",
+    "project": {
+      "title": "THE PROJECT",
+      "text": [
+        "The platform, project, and team that is CommUnity XP began in early 2020 as Dani's brainchild.",
+        "Collaborating with Ben, the pair later presented the idea at the University of Waterloo's Social Impact Showcase, and began recruiting the rest of the team.",
+        "The team began researching the important role that mental health and wellness plays in our diverse student community’s ability to thrive. We strategized ways to embolden more students to actively participate in the maintenance of collective mental wellness and to hold institutions accountable for supporting health and wellness in the learning environment.",
+        "In mid 2021, we launched the CommUnity XP platform."
+      ]
+    },
+    "mission": {
+      "title": "MISSION STATEMENT",
+      "text": "CommUnity XP will serve the diverse student population as an accessible navigation aid for on/off-campus mental health and wellness resources, as well as to offer a safe online mental health and wellness space and community."
+    },
+    "vision": {
+      "title": "OUR VISION",
+      "text": [
+        "The socially equitable and sustainable deconstruction of systemic and institutional barriers that prevent equal access and opportunity for ALL students and their respective intersectional identities to benefit from and participate in a positive mental health and wellness culture at any given post-secondary institution. Yes, emotional skills are key to wellbeing, but so are systems and policies that actually produce positive outcomes for those most oppressed.",
+        "We firmly believe that diversity and inclusion are key to assisting Universities around the world in progression towards a culture of wellness, ensuring greater resilience through the increased cultural awareness, understanding and acceptance of the intersectional realities of students. Providing the diverse student population with tools to confidently manage fluctuations in mental health will help them become the confident, compassionate, action oriented leaders our future so desperately needs."
+      ],
+      "summary": "Everyone has a role to play in wellness, and we can achieve this by taking care of ourselves, of each other and of our communities."
+    },
+    "values": {
+      "title": "OUR VALUES",
+      "text": [
+        "Love and Respect",
+        "Harm Reduction and Prevention",
+        "Non-Violent Crisis Management",
+        "Anti-Oppression",
+        "Equity and Inclusion",
+        "Diversity and Intersectionality",
+        "(Cultural) Safety",
+        "Collaboration",
+        "Honesty and Transparency"
+      ]
+    },
+    "team": {
+      "title": "THE TEAM",
+      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We are all connected in various ways, from rugby teammates, classmates, or childhood friends. Click the icons below to check out each member of our team!"
+    },
+    "contact": {
+      "title": "CONNECT WITH US!"
+    }
   },
-  "blog": {
-    "header": "Insights, experiences, and opinions."
+  "uxp": {
+    "title": "UXP",
+    "subtitle": "Insights, experiences, and opinions."
   },
   "resources": {
-    "header": "Browse by category or get recommendations!"
-  },
-  "sos": {
-    "header": "Crisis management quicklinks."
+    "title": "Resource Database",
+    "subtitle": "Browse by category or get recommendations!"
   },
   "home": {
+    "title": "CommUnity XP",
+    "subtitle": "Providing students with an accessible mental wellness hub and online mental health community.",
     "problem": {
-      
+      "title": "THE STUDENT MENTAL HEALTH CRISIS",
+      "problems": [
+        "Inequal mental health literacy, awareness and social understanding on campuses",
+        "Lack (or lack of promotion) of inclusive, equitable, culturally-relevant and student-accessible mental health support and wellness options on campuses"
+      ],
+      "impacts": [
+        "Perpetuation of stigma, myths and misconceptions surrounding mental health and wellness on campus.",
+        "Negative student experiences and epistemic injustices as a result of toxic campus cultures and learning environments.",
+        "Decreased use of available campus supports and self-help seeking behaviours amongst marginalized student subgroups."
+      ],
+      "summary": "The student population is generally high-risk."
     },
-    "solution": {
-      "sos": "Crisis management quicklinks",
-      "resources": "Find the right resources for you!",
-      "about": "Meet the UXP team!",
-      "blog": "Insights, experiences, and opinions",
-      "signup": "Nice to meet you!",
-      "login": "Welcome back!"
+    "needs": {
+      "title": "WHAT WE NEED FOR POSITIVE CHANGE",
+      "needs": [
+        {
+          "title": "A Dedicated Space",
+          "text": "A space committed to limiting hermeneutical disadvantages that hinder vulnerable subgroups of students to make sense of their ongoing mistreatment and to identify their needs."
+        },
+        {
+          "title": "Community Support",
+          "text": "A community that will encourage students to take advantage of appropriate mental health resources needed to flourish, and to form meaningful connections, on and off-campus."
+        },
+        {
+          "title": "More Accessibility",
+          "text": "An accessible tool that will aid in expanding the definition of mental health and wellness on campuses and will offer inclusive support to the existing and emerging mental health needs of the diverse student population."
+        }
+      ],
+      "summary": "Most people who are experiencing distressing emotions and thoughts want to feel safe and be listened to before being offered options and resources that may help them."
     },
     "uxp": {
       "title": "INTRODUCING: COMMUNITY XP",
+      "blurb": ["We’ve adopted an inclusive, ecological approach inspired by the Canadian Association of College & University Student Services (CACUSS) and Canadian Mental Health Association (CMHA) \"Post-Secondary Student Mental Health: Guide to A Systemic Approach\", coupled with intersectional feminist values. As a result, we’ve created the foundation for an accessible platform that prioritizes campus-wide discussion on mental health and wellness, intersectional identities, and their potential impacts on the student experience.","There are three pillars of our approach, all tying back to components of this site:"],
       "sections": [
         {
-          "title": "Frictionless Access",
+          "title": "Accessibility and Awareness",
           "text": [
-            "The friction that we face trying to access mental health supports can be extremely discouraging. We wanted to provide a way to get all the necessary information with the least amount of friction as possible.",
-            "So, we built our own one-of-a-kind, curated database of mental wellness resources for the Kitchener-Waterloo Region. Each resource is categorized and tagged with critical information on its format, access, and services. For those who aren't even sure where to start, our Resource Matching quiz can help!"
+            "We hope to equip our community members with necessary and relevant mental health information by making this information more available and understandable. Our aim is to reduce the friction faced by those seeking help.",
+            "So, we curated our own database of mental wellness resources for the Kitchener-Waterloo Region. Each resource is categorized and tagged with critical information on its format, access, and services. For those who aren't even sure where to start, our Resource Matching quiz can help!"
           ],
           "button": "See the Resources"
         },
         {
-          "title": "Promoting Community",
-          "text": "Everyone talks about breaking down the stigma around mental illness, but we wanted to walk the walk. Our Blog and XP Page [Coming Soon] create a gamified anonymous online community centred around sharing experiences and making it clear that you're not alone.",
+          "title": "Culture and CommUnity",
+          "text": [
+            "We are committed to respecting and promoting the intersectional identities of our community members and fostering a safe, inclusive and enduring online environment that supports the formation of meaningful connections within our community.",
+            "Our UXP page is a gamified, anonymous online community in the form of a digital garden to promote shared experiences and breaking down stigma."
+          ],
           "button": [
-            "Read the Blog",
+            "See the CommUnity",
             "Create Your XP Profile"
           ]
         },
         {
-          "title": "Nonviolent Crisis Management",
+          "title": "Crisis Service and Support",
           "text": [
-            "The current systems in place to manage mental health crises are failing, especially when it comes to racialized or neuro-atypical members of our community. We recognize the countless lives stolen by police brutality and systemic racism, and we know we need a better solution than a disclaimer in the footer of our site saying 'Call 9-1-1 in case of emergency'.",
-            "Notice that cool-looking 'SOS' button hovering in the top right? It'll be there on every page for every user. Clicking it gives you the option to view Crisis resources near you in our Resources database - many of which are free and just a phone call away. If you are logged in, you will also see prompts for a customized crisis plan that YOU design."
+            "We hope to encourage members of our community seeking self help, and to better coordinate safe initiatives of change in mental health culture and policy across countless institutions.",
+            "The current systems in place to manage mental health crises are failing the members of our community. We recognize the countless lives stolen by police brutality and systemic racism, and we know we need to work towards a better solution.",
+            "Notice that cool-looking 'SOS' button hovering in the top right? It'll be there on every page for every user, ready to take you to Crisis-specific resources or your personalized crisis plan."
           ],
           "button": [
             "See SOS Resources",
@@ -63,7 +126,7 @@
     },
     "team": {
       "title": "WHO ARE WE?",
-      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We work 100% remotely, but most of us are based out of Kitchener-Waterloo, ON, Canada. Click the button below to read our story or connect with us on the About page.",
+      "text": "We are an awesome team of bright young creators and leaders, each with our own mental wellness story. We work 100% remotely across Canada. Click the button below to read our story or connect with us on the About page.",
       "button": "Learn More About UXP"
     }
   }

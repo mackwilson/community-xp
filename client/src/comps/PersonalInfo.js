@@ -10,7 +10,16 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
 
 const schema = Yup.object({
-  
+  bio: Yup.string()
+    .max(280, "We love the enthusiasm, but please keep your bio under 280 characters!"),
+  uni: Yup.string()
+    .max(100, "We love the enthusiasm, but please keep it under 100 characters"),
+  location: Yup.string()
+    .max(100, "We love the enthusiasm, but please keep it under 100 characters"),
+  lastName: Yup.string()
+    .max(100, "We love the enthusiasm, but please keep it under 100 characters"),
+  firstName: Yup.string()
+    .max(100, "We love the enthusiasm, but please keep it under 100 characters"),
 });
 
 export default class PersonalInfo extends React.Component {  
@@ -23,17 +32,20 @@ export default class PersonalInfo extends React.Component {
   render () {
     return (
       <div className="PersonalInfo">
-        <Row className="justify-content-md-center">
-          <h5>Now (optionally) tell us a bit about yourself!</h5>
+        <Row className="justify-content-md-center centre-text">
+          <h4>Account created! Now you can personalize it a bit.</h4>
+          <p className="centre-text width-80 spaceBottom italic">This section is optional. Click Next to skip, or when you're done. If provided, this information will be displayed on your XP profile for other users to see. CommUnity XP does not use this information anywhere else.</p>
         </Row>
         <Formik
           validateOnChange={false} 
           validationSchema={schema}
           onSubmit={this.state.handler}
           initialValues={{
-            program: '',
-            year: '',
-            acceptTerms: false
+            firstName: '',
+            lastName: '',
+            uni: '',
+            location: '',
+            bio: ''
           }}
         >
           {({
@@ -46,60 +58,87 @@ export default class PersonalInfo extends React.Component {
             errors,
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
-            <Form.Row>
-              <Form.Group as={Col} controlId="formPassword">
-                <Form.Label>Program</Form.Label>
+            <Form.Row className="spaceTop">
+              <Form.Group as={Col} controlId="formFirstName">
+                <Form.Label><p>First Name</p></Form.Label>
                 <Form.Control 
-                  type="program" 
-                  name="program" 
-                  value={values.program} 
+                  type="firstName" 
+                  name="firstName" 
+                  value={values.firstName} 
                   onChange={handleChange}
-                  isInvalid={!!errors.program}
+                  isInvalid={!!errors.firstName}
+                  className="darkBorder thinBorder greyFill-light pinkText-light"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {errors.program}
+                  {errors.firstName}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group as={Col} controlId="formLastName">
+                <Form.Label><p>Last Name</p></Form.Label>
+                <Form.Control 
+                  type="lastName" 
+                  name="lastName" 
+                  value={values.lastName} 
+                  onChange={handleChange}
+                  isInvalid={!!errors.lastName}
+                  className="darkBorder thinBorder greyFill-light pinkText-light"
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.lastName}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Form.Row>
+            <Form.Row>
+              <Form.Group as={Col} controlId="formPassword">
+                <Form.Label><p>University</p></Form.Label>
+                <Form.Control 
+                  type="text" 
+                  name="uni" 
+                  value={values.uni} 
+                  isInvalid={!!errors.uni}
+                  onChange={handleChange}
+                  className="darkBorder thinBorder greyFill-light pinkText-light"
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.uni}
                 </Form.Control.Feedback>
               </Form.Group>
               <Form.Group as={Col} controlId="formPasswordConf">
-                <Form.Label>Year</Form.Label>
+                <Form.Label><p>Location</p></Form.Label>
                 <Form.Control 
-                  type="password" 
-                  name="passwordConf" 
+                  type="text" 
+                  name="location" 
+                  value={values.location} 
+                  isInvalid={!!errors.location}
+                  onChange={handleChange}
+                  className="darkBorder thinBorder greyFill-light pinkText-light"
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.location}
+                </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col} controlId="formHometown">
-                <Form.Label>Hometown</Form.Label>
+                <Form.Label><p>Bio</p></Form.Label>
                 <Form.Control 
-                  type="hometown" 
-                  name="hometown"
-                  value={values.hometown} 
+                  type="text" 
+                  name="bio"
+                  value={values.bio} 
                   onChange={handleChange}
-                  isInvalid={!!errors.hometown}
+                  isInvalid={!!errors.bio}
+                  placeholder="Introduce yourself in 280 characters or less!" 
+                  className="darkBorder thinBorder greyFill-light pinkText-light"
                 />
                 <Form.Control.Feedback type="invalid">
-                  {errors.hometown}
-                </Form.Control.Feedback>
-              </Form.Group>
-              <Form.Group as={Col} controlId="formCountry">
-                <Form.Label>Country</Form.Label>
-                <Form.Control 
-                  type="country" 
-                  name="country"
-                  value={values.country} 
-                  onChange={handleChange}
-                  isInvalid={!!errors.country}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {errors.country}
+                  {errors.bio}
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
 
             <Row className="justify-content-md-center right-text">
               <Col>
-                <Button variant="dark" type="submit" className="btn blueFill pinkShadow">
+                <Button variant="dark" type="submit" className="btn darkText blueFill pinkShadow">
                   <FontAwesomeIcon icon={faArrowRight} />
                   {" "}Next
                 </Button>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -8,7 +7,7 @@ import {Link} from 'react-router-dom';
 import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 import TeamIcons from '../comps/TeamIcons.js';
-import img1 from '../assets/images/carousel-1.jpg';
+import Header from '../comps/Header.js';
 import text from '../assets/text/pageText.json';
 import '../css/App.css';
 
@@ -18,140 +17,98 @@ export default function HomePage () {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  
+  const problemsBlock = <div className="spaceTop">
+    <p>{text.home.problem.problems[0]}</p>
+    <p>{text.home.problem.problems[1]}</p>
+  </div>
+  
+  const impactBlock = <div>
+    <p>{text.home.problem.impacts[0]}</p>
+    <p>{text.home.problem.impacts[1]}</p>
+    <p>{text.home.problem.impacts[2]}</p>
+  </div>
 
     return (
     <div className="HomePage">
       <CustomNav />
       <div className="section">
-        <Carousel 
-          fade={true}
-          controls={false}
-          interval={null}
-          activeIndex={index}
-          onSelect={handleSelect}
-        >
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h2>SECOND SLIDE</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-        </Carousel>
+        <Header 
+          title={text.home.title}
+          subtitle={text.home.subtitle}
+        />
       </div>
+      
+      <div className="section">[read more arrow + more space]</div>
       
       <div className="section">
         <Row>
-          <h2>WHAT'S GOING ON?</h2>
+          <h2>{text.home.problem.title}</h2>
         </Row>
         <Row>
           <Button 
             className="btn blueShadow greyFill whiteText"
             onClick={() => handleSelect(0)}
-          >Accessibility</Button>
+          ><h4>Problems</h4></Button>
+          [arrow]
           <Button 
             className="btn blueShadow greyFill whiteText"
             onClick={() => handleSelect(1)}
-          >Toxic Academic Culture</Button>
-          <Button 
-            className="btn blueShadow greyFill whiteText"
-            onClick={() => handleSelect(2)}
-          >Suicide Ideation</Button>
+          ><h4>Student Impact</h4></Button>
         </Row>
+        
+        {index === 0 ? problemsBlock : impactBlock}
+        
+        <Row className="spaceTop centre-text">
+          <h4 className="width-80 spaceTop">{text.home.problem.summary}</h4>
+        </Row>
+        
       </div>
-      <div className="section centre-text">
-        [Stats]
-      </div>
-      
-      <div className="section centre-text">
-        [Quotes]
-      </div>
-      <div className="section centre-text">
-        <h4>The Problem Is Blah blah adkljflsa;kjdf.</h4>
-      </div>
-      
+          
       <div className="section">
         <Row>
-          <h2>SO, WHAT CAN WE DO?</h2>
+          <h2>{text.home.needs.title}</h2>
         </Row>
-        <Carousel 
-          fade={true}
-        >
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h4>First Slide</h4>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h3>SECOND SLIDE</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={img1}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-        </Carousel>
-        <Row className="spaceTop">
-          <p>Something must be done blah blah blah </p>
+        
+        <Row>
+          <Row>
+            <Col xs={3}>
+              <h4>{text.home.needs.needs[0].title}</h4>
+            </Col>
+            <Col>
+              <p>{text.home.needs.needs[0].text}</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={3}>
+              <h4>{text.home.needs.needs[1].title}</h4>
+            </Col>
+            <Col>
+              <p>{text.home.needs.needs[1].text}</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={3}>
+              <h4>{text.home.needs.needs[2].title}</h4>
+            </Col>
+            <Col>
+              <p>{text.home.needs.needs[2].text}</p>
+            </Col>
+          </Row>
+        </Row>
+      
+        <Row className="spaceTop centre-text">
+          <h4 className="width-80 spaceTop">{text.home.needs.summary}</h4>
         </Row>
       </div>
       
       <div className="section">
         <Row>
           <h2>{text.home.uxp.title}</h2>
+        </Row>
+        <Row>
+          <p>{text.home.uxp.blurb[0]}</p>
+          <p>{text.home.uxp.blurb[1]}</p>
         </Row>
         <Row className="spaceTop">
           <Col xs={4}>Image</Col>
@@ -171,9 +128,10 @@ export default function HomePage () {
         <Row className="spaceTop">
           <Col>
             <h4>{text.home.uxp.sections[1].title}</h4>
-            <p>{text.home.uxp.sections[1].text}</p>
+            <p>{text.home.uxp.sections[1].text[0]}</p>
+            <p>{text.home.uxp.sections[1].text[1]}</p>
             <div>
-              <Link to="/blog">
+              <Link to="/xp">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
                   {text.home.uxp.sections[1].button[0]}
                 </Button>
@@ -197,6 +155,7 @@ export default function HomePage () {
             <h4>{text.home.uxp.sections[2].title}</h4>
             <p>{text.home.uxp.sections[2].text[0]}</p> 
             <p>{text.home.uxp.sections[2].text[1]}</p>
+            <p>{text.home.uxp.sections[2].text[2]}</p>
             <div>
               <Link to="/resources">
                 <Button className="spaceTop darkText blueFill pinkShadow btn">
@@ -229,6 +188,24 @@ export default function HomePage () {
             </Button>
           </Link>
         </Row>
+      </div>
+      
+      <div className="section centre-text">
+        <h2 className="centre-text">CHECK IT OUT!</h2>
+        <div>
+          <Link to="/resources">
+            <Button className="spaceTop darkText blueFill pinkShadow btn">
+              Resources
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/xp">
+            <Button className="spaceTop darkText blueFill pinkShadow btn">
+              UXP CommUnity
+            </Button>
+          </Link>
+        </div>
       </div>
       
       <Footer />

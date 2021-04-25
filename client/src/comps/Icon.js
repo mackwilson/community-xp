@@ -42,11 +42,12 @@ function Icon(props) {
   : null;
     
   let txt = makeModalContentBlock(
-    props.key, 
+    props.id, 
     "Email " + o.name, 
     o.email, 
     o.text, 
-    "Pronouns: " + o.pronouns);
+    "Pronouns: " + o.pronouns
+  );
   
   return (
     <div>
