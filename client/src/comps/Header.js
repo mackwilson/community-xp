@@ -8,11 +8,11 @@ export default function Header(props) {
   const userLoggedIn = props.loggedIn || false;
   
   return (
-    <div className="header">
+    <div className="header greyFill">
       <Row>
         <Col xs={8}>
-          <h1>{props.title}</h1>
-          <h4>{props.subtitle}</h4>
+          <h1 className="pinkText-light">{props.title}</h1>
+          <h4 className="pinkText-light">{props.subtitle}</h4>
         </Col>
         <Col>
           <UserHeaderBlock loggedIn={userLoggedIn} />
