@@ -15,6 +15,7 @@ import TeamIcons from '../comps/TeamIcons.js';
 import Header from '../comps/Header.js';
 import ReadMoreArrow from '../comps/ReadMoreArrow.js';
 import CheckItOut from '../comps/CheckItOut.js';
+import LandAckModal from '../comps/LandAckModal.js';
 
 import text from '../assets/text/pageText.json';
 
@@ -41,6 +42,9 @@ export default function HomePage () {
     return (
     <div className="HomePage">
       <CustomNav />
+      
+      <LandAckModal />
+      
       <Fade>
         <Header 
           title={text.home.title}
