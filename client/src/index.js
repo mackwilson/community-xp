@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
-import store from './store/store';
+import { PersistGate } from 'redux-persist/integration/react'
+import persistStore from './store/store';
 
 import ResourcePage from './pages/ResourcePage.js';
 import XpPage from './pages/XpPage.js';
@@ -17,22 +18,25 @@ import ScrollToTop from './comps/ScrollToTop.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
 
+const { store, persistor } = persistStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <ScrollToTop>
-        <div>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/resources" component={ResourcePage} />
-          <Route path="/xp" component={XpPage} />
-          <Route path="/signup" component={SignUpPage} />
-          <Route path="/login" component={LogInPage} />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/about" component={AboutPage} />
-        </div>
-      </ScrollToTop>
-    </Router>
+    <PersistGate loading={null} persistor={persistor} >
+      <Router>
+        <ScrollToTop>
+          <div>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/resources" component={ResourcePage} />
+            <Route path="/xp" component={XpPage} />
+            <Route path="/signup" component={SignUpPage} />
+            <Route path="/login" component={LogInPage} />
+            <Route path="/profile" component={ProfilePage} />
+            <Route path="/about" component={AboutPage} />
+          </div>
+        </ScrollToTop>
+      </Router>
+    </PersistGate>
   </Provider>,
   document.getElementById('root')
 );
