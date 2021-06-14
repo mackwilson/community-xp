@@ -9,6 +9,14 @@ const allPath = "/all";
 // const idPath = "/id";
 // const namePath = "/name";
 
+const http = axios.create({
+  headers: {
+    "x-api-key": apiKey
+  },
+  baseURL: server,
+  timeout: 1000
+})
+
 
 const model = {
   test(){
@@ -28,12 +36,9 @@ const model = {
   
   async getAllResources() {
     console.log("getAllResources");
-    let res = await axios({
+    let res = await http({
       method: "get",
-      url: server + basePath + resourcePath + allPath,
-      headers: {
-        "x-api-key": apiKey
-      }
+      url: basePath + resourcePath + allPath,
     });
     return res.data.data;
   }

@@ -84,7 +84,7 @@ All it does is tell Redux which reducer to run on which slice.
 Example: {type: "resources/updateList", payload: [] } 
 Note: Creating a thunk creates a related action.
 */
-// export const { updateList } = resourcesSlice.actions;
+// export const { setStatus } = resourcesSlice.actions;
 
 // Default export the reducers
 export default resourcesSlice.reducer;

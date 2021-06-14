@@ -1,0 +1,26 @@
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  padding: 20px 8vw;
+}
+
+.Footer .copyright {
+  display: block;
+  width: 70%;
+  float: left;
+  color: #fff;
+}
+
+.Footer .to-top {
+  display: block;
+  width: 30%;
+  float: right;
+  text-align: right;
+  color: #FFF;
+}
+
+.Footer .to-top:hover {
+  color: #FF009C;
+}

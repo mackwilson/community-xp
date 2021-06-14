@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import UserHeaderBlock from './UserHeaderBlock.js';
 import '../css/App.css';
+import '../css/Header.css';
 
 export default function Header(props) {  
   const userLoggedIn = props.loggedIn || false;

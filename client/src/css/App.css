@@ -1,15 +1,16 @@
 #root {
   position: relative;
   min-height: 100vh;
-  bottom: 0;
-  padding-bottom: 150px;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  left: 0;
 }
 
 body {
   font-family: 'Open Sans' !important;
   background-image: linear-gradient(#85e3fd, #e7a7c3);
   background-attachment: fixed;
+  width: 100%;
 }
 
 a {
@@ -36,13 +37,16 @@ h3 {
 }
 
 h4 {
+  font-family: 'Open Sans' !important;
   font-size: 20pt !important;
   font-weight: bold !important;
   font-style: italic;
+  margin-top: 1rem !important;
 }
 
 p {
   font-size: 16pt !important;
+  margin: 0 !important;
 }
 
 .italic {
@@ -66,6 +70,14 @@ a:hover {
 
 .width-80 {
   margin: 0 10% 0 10%;
+}
+
+.width-90 {
+  margin: 0 5% 0 5%;
+}
+
+.width-100 {
+  margin: 0 !important;
 }
 
 .centre-text {
@@ -144,8 +156,12 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
+.whiteFill {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
 .greyFill-light {
-  background-color: #404A53 !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .noFill {
@@ -176,96 +192,12 @@ a:hover {
   color: rgba(0, 0, 0, 0.4) !important;
 }
 
-.Menu a {
-  color: #FFF;
-  line-height: 40px;
-  vertical-align: middle;
-}
-
-.Menu a:hover {
-  color: #FF009C;
-}
-
-nav {
-  align-items: right;
-  text-align: right !important;
-  background-color: #000 !important;
-}
-
-.nav-item {
-  padding: 10px 20px;
-  vertical-align: middle !important;
-  line-height: 40px;
-}
-
-.nav-tabs .nav-link {
-  background-color: #000;
-}
-
-.navbar-toggler {
-  margin-left: auto;
-  border-color: #FF009C !important;
-  border-radius: 0 !important;
-  line-height: 40px;
-  padding: 7px 18px !important;
-  color: #FF009C !important;
-}
-
-.navbar-toggler:hover {
-  color: #00C7FF !important;
-}
-
-.logo {
-  height: 70px;
-  margin: 10px 10px;
-}
-
-.login-box {
-  width: 45%;
-  max-width: 500px;
-  min-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  padding: 2rem;
-}
-
-.login-box .btn {
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.signup-box {
-  max-width: 80%;
-  min-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  padding: 2rem;
-  border-radius: 0px;
-}
-
-.signup-box .btn {
-  max-width: 50%;
-  min-width: 12%;
-}
-
 .form-control {
   border-radius: 50px !important;
 }
 
 .form-label {
   margin-bottom: 0 !important;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  margin: 3rem 5% 3rem 5%;
-  padding: 30vh 5rem 5rem 5rem;
-  min-height: 65vh;
-  border-radius: 5rem;
 }
 
 .card {
@@ -337,49 +269,4 @@ nav {
 
 .close:hover {
   color: #00C7FF !important;
-}
-
-.carousel-indicators li {
-  background-color: grey !important;
-  border: 1px solid #000 !important;
-  border-radius: 30px !important;
-  height: 20px !important;
-  width: 20px !important;
-  opacity: 1 !important;
-}
-
-.carousel-indicators .active {
-  background-color: #FF009C !important;
-  border: 1px solid #000 !important;
-  border-radius: 30px !important;
-  opacity: 1 !important;
-}
-
-.Footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: block;
-  padding: 20px 8vw;
-}
-
-
-
-.Footer .copyright {
-  display: block;
-  width: 70%;
-  float: left;
-  color: #fff;
-}
-
-.Footer .to-top {
-  display: block;
-  width: 30%;
-  float: right;
-  text-align: right;
-  color: #FFF;
-}
-
-.Footer .to-top:hover {
-  color: #FF009C;
 }
