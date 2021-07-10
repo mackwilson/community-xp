@@ -24,6 +24,7 @@ export default function CheckItOut() {
           </Link>
         </div>
       </Fade>
+      <div className="gap-div spaceBottom"/>
     </div>
   );
 }

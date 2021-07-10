@@ -12,6 +12,7 @@ import PersonalInfo from '../comps/PersonalInfo.js';
 import SafetyInfo from '../comps/SafetyInfo.js';
 
 import '../css/App.css';
+import '../css/SignUp.css';
 
 const basicInfoState = {
   showBasicInfo: true,

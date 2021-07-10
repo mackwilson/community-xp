@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import '../css/App.css';
+import '../css/Footer.css';
 
 function Footer() {
   

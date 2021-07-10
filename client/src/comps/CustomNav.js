@@ -3,10 +3,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
 import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import '../css/App.css';
+
 import logo from '../assets/logos/heart.png';
+
+import '../css/App.css';
+import '../css/Navbar.css';
 
 export default function CustomNav(props) {  
   const userLoggedIn = props.loggedIn || false;

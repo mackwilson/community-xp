@@ -1,0 +1,14 @@
+.signup-box {
+  max-width: 80%;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 0px;
+}
+
+.signup-box .btn {
+  max-width: 50%;
+  min-width: 12%;
+}

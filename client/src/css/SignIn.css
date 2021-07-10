@@ -1,0 +1,15 @@
+.login-box {
+  width: 45%;
+  max-width: 500px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+
+.login-box .btn {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 6rem 5% 3rem 5%;
+  padding: 30vh 5rem 5rem 5rem;
+  min-height: 65vh;
+  border-radius: 5rem;
+}

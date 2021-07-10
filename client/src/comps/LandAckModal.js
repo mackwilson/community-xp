@@ -45,7 +45,7 @@ export default function LandAckModal(props) {
         
         <Modal.Body className="greyFill whiteText centre-text">
         
-          <Modal.Title centered className="pinkText centre-text spaceBottom">
+          <Modal.Title className="pinkText centre-text spaceBottom">
             <h3>{text.home.land.title}</h3>
           </Modal.Title>
           

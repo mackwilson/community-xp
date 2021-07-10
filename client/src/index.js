@@ -25,7 +25,7 @@ ReactDOM.render(
     <PersistGate loading={null} persistor={persistor} >
       <Router>
         <ScrollToTop>
-          <div>
+          <>
             <Route exact path="/" component={HomePage} />
             <Route path="/resources" component={ResourcePage} />
             <Route path="/xp" component={XpPage} />
@@ -33,7 +33,7 @@ ReactDOM.render(
             <Route path="/login" component={LogInPage} />
             <Route path="/profile" component={ProfilePage} />
             <Route path="/about" component={AboutPage} />
-          </div>
+          </>
         </ScrollToTop>
       </Router>
     </PersistGate>

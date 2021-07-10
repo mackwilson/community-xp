@@ -17,6 +17,7 @@ import CustomNav from '../comps/CustomNav.js';
 import Footer from '../comps/Footer.js';
 
 import '../css/App.css';
+import '../css/SignIn.css';
 
 const schema = Yup.object({
   password: Yup.string().required(),
