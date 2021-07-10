@@ -5,6 +5,27 @@
   height: 100%;
 }
 
+.single-resource {
+  min-height: 80vh;
+  padding: 2rem 4rem 8rem 4rem;
+  overflow-y: scroll;
+}
+
+.single-resource h2 {
+  margin-bottom: 1rem !important;
+  margin-top: 4rem !important;
+}
+
+.single-resource h4 {
+  margin-top: 2rem !important;
+}
+
+.title-box {
+  padding: 3rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
 .resource-list {
   overflow-y: scroll;
   height: 80vh;
