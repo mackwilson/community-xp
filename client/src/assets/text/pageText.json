@@ -66,14 +66,14 @@
   },
   "resources": {
     "title": "Resource Database",
-    "subtitle": "Browse by category or get recommendations!"
+    "missing": "We do not have any confirmed information about the this aspect of this resource's services. We only include information we are certain is accurate. Contact us to suggest improvements!"
   },
   "home": {
     "title": "CommUnity XP",
     "subtitle": "Providing students with an accessible mental wellness hub and online mental health community.",
     "land": {
       "title": "Land Acknowledgement",
-      "text": "I have thoughts on how to do this land acknowledgement. I was originally assuming we would write a standard land acknowledgement for the KW area, but our team is spread over many different areas of stolen land, and our users could be logging on from anywhere. The site linked in the button has an API we can query with latitude and longitude to get the list of treaties or territories that location exists in. I think that could be valuable for our users (although a sidenote, I'm not currently sure how capturing a user's lat/long works and what kind of security we have to have in place to do that - a good solution in the meantime is just providing the territories for our UXP HQ aka Kitchener as an example, and clearly state it is just an example). It would be challenging to phrase that in a legible and logical manner, though, and that makes me think we can actually do more - especially since a \"standard\" land acknowledgement is problematic in its own right and often performative. I think we should try to connect the idea of stolen land, colonialism, and racialization to mental health (our purpose), and then provide users with info about the land they occupy, and encourage them to go check it out themselves - give them \"homework\" so to speak.",
+      "text": "Foo bar",
       "button": {
         "text": "Read More",
         "link": "https://native-land.ca/"

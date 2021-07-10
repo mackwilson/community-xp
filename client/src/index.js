@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
@@ -14,6 +14,7 @@ import ProfilePage from './pages/ProfilePage.js';
 import HomePage from './pages/HomePage.js';
 import AboutPage from './pages/AboutPage.js';
 import ScrollToTop from './comps/ScrollToTop.js';
+import SingleResource from './comps/SingleResource.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
@@ -27,12 +28,15 @@ ReactDOM.render(
         <ScrollToTop>
           <>
             <Route exact path="/" component={HomePage} />
-            <Route path="/resources" component={ResourcePage} />
+            <Route exact path="/resources" component={ResourcePage} />
             <Route path="/xp" component={XpPage} />
             <Route path="/signup" component={SignUpPage} />
             <Route path="/login" component={LogInPage} />
             <Route path="/profile" component={ProfilePage} />
             <Route path="/about" component={AboutPage} />
+            <Switch>
+              <Route exact path="/resources/:id" component={SingleResource} />
+            </Switch>
           </>
         </ScrollToTop>
       </Router>
