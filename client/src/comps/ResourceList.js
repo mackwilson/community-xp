@@ -74,6 +74,16 @@ function getLink(text, url) {
   )
 }
 
+function linkToPage(id) {
+  return (
+    <Link to={`/resources/${id}`}>
+      <Button className="darkText blueFill pinkShadow btn">
+        More Info...
+      </Button>
+    </Link>
+  )
+}
+
 // Returns a resource formatted into the React/HTML object we want
 // TODO: Update to formatting we want, or separate component.
 // NOTE: These elements are all rendered as a list, so they all need a unique key.
@@ -84,13 +94,13 @@ const mapResourceToElement = (resource, idx) => {
   let address = resource.address_street ? resource.address_street + city : '';
   
   return (
-    <Fade>
-      <Row key={idx} className={baseClasses + classes}>
+    <Fade key={idx}>
+      <Row className={baseClasses + classes}>
         <Col xs={9}>
           <h5>{resource.resource_name}</h5>
           <p>{number ? number : ''}</p>
           <p>{address ? address : ''}</p>
-          <p>{resource.website ? getLink("Website", resource.website) : ''}  {resource.email ? getLink("Email", "mailto:"+resource.email) : ''}</p>
+          <p>{resource.website ? getLink("Website", resource.website) : ''}  {resource.email ? getLink("Email", "mailto:"+resource.email) : ''}  {linkToPage(resource.id)}</p>
         </Col>
         <Col className="right-text icon-box">
           {resource.open_247 ? open247 : ''}
@@ -147,7 +157,7 @@ export default function ResourceList() {
   
   return (
     <div>
-        { status == 'success' ? formatResources(resources) : getStatus(status)}
+        { status === 'success' ? formatResources(resources) : getStatus(status)}
     </div>
   )
 }
