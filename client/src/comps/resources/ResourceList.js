@@ -28,9 +28,9 @@ import {
   fetchResources,
   getAllResources,
   getFetchStatus
-} from '../store/resourcesSlice.js';
+} from '../../store/resourcesSlice.js';
 
-import '../css/App.css';
+import '../../css/App.css';
 
 // CONSTANTS
 const baseClasses = "entry darkText "
@@ -54,7 +54,7 @@ const appt = <FontAwesomeIcon icon={faCalendarCheck} />
 const queer = <FontAwesomeIcon icon={faRainbow} />
 const dropin = <FontAwesomeIcon icon={faDoorOpen} />
 
-// Returns a list of elements representing resources. 
+// Returns a list of elements representing resources.
 function formatResources(list) {
   const result = [];
   Object.values(list).forEach((resource, idx) => {
@@ -67,7 +67,7 @@ function formatResources(list) {
 function getLink(text, url) {
   return (
     <Link to={{ pathname: url }} target="_blank">
-      <Button className="darkText blueFill pinkShadow btn">
+      <Button className="darkText pinkFill-light pinkShadow btn thinBorder darkBorder">
         {text}
       </Button>
     </Link>
@@ -77,8 +77,8 @@ function getLink(text, url) {
 function linkToPage(id) {
   return (
     <Link to={`/resources/${id}`}>
-      <Button className="darkText blueFill pinkShadow btn">
-        More Info...
+      <Button className="darkText pinkFill-light pinkShadow btn thinBorder darkBorder">
+        <span className="bold">More Info...</span>
       </Button>
     </Link>
   )
@@ -92,7 +92,7 @@ const mapResourceToElement = (resource, idx) => {
   let number = resource.phone_support ? resource.phone_support : resource.phone_general;
   let city = resource.address_city ? ', ' + resource.address_city : '';
   let address = resource.address_street ? resource.address_street + city : '';
-  
+
   return (
     <Fade key={idx}>
       <Row className={baseClasses + classes}>
@@ -100,7 +100,7 @@ const mapResourceToElement = (resource, idx) => {
           <h5>{resource.resource_name}</h5>
           <p>{number ? number : ''}</p>
           <p>{address ? address : ''}</p>
-          <p>{resource.website ? getLink("Website", resource.website) : ''}  {resource.email ? getLink("Email", "mailto:"+resource.email) : ''}  {linkToPage(resource.id)}</p>
+          <p>{linkToPage(resource.id)}  {resource.website ? getLink("Website", resource.website) : ''}  {resource.email ? getLink("Email", "mailto:"+resource.email) : ''}</p>
         </Col>
         <Col className="right-text icon-box">
           {resource.open_247 ? open247 : ''}
@@ -144,17 +144,17 @@ function getStatus(status) {
 
 export default function ResourceList() {
   const resources = useSelector(getAllResources);
-  const status = useSelector(getFetchStatus);  
+  const status = useSelector(getFetchStatus);
 
   const dispatch = useDispatch();
-  
+
   // Only fetch resources if we haven't before
   useEffect(() => {
     if (resources === null || resources.length === 0) {
       dispatch(fetchResources())
     }
   }, [resources, dispatch])
-  
+
   return (
     <div>
         { status === 'success' ? formatResources(resources) : getStatus(status)}

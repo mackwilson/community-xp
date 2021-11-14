@@ -5,13 +5,13 @@ import UserHeaderBlock from './UserHeaderBlock.js';
 import '../css/App.css';
 import '../css/Header.css';
 
-export default function Header(props) {  
+export default function Header(props) {
   const userLoggedIn = props.loggedIn || false;
-  
+
   return (
     <div className="header greyFill">
       <Row>
-        <Col xs={8}>
+        <Col md={8}>
           <h1 className="pinkText-light">{props.title}</h1>
           <h4 className="pinkText-light">{props.subtitle}</h4>
         </Col>

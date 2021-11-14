@@ -11,14 +11,14 @@ export default function CheckItOut() {
         <h2 className="centre-text">CHECK IT OUT!</h2>
         <div>
           <Link to="/resources">
-            <Button className="spaceTop darkText blueFill pinkShadow btn">
+            <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
               Resources
             </Button>
           </Link>
         </div>
         <div>
           <Link to="/xp">
-            <Button className="spaceTop darkText blueFill pinkShadow btn">
+            <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
               UXP CommUnity
             </Button>
           </Link>

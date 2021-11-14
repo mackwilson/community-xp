@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import '../css/App.css';
+import '../../css/App.css';
 
 const schema = Yup.object({
   bio: Yup.string()
@@ -22,7 +22,7 @@ const schema = Yup.object({
     .max(100, "We love the enthusiasm, but please keep it under 100 characters"),
 });
 
-export default class PersonalInfo extends React.Component {  
+export default class PersonalInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +37,7 @@ export default class PersonalInfo extends React.Component {
           <p className="centre-text width-80 spaceBottom italic">This section is optional. Click Next to skip, or when you're done. If provided, this information will be displayed on your XP profile for other users to see. CommUnity XP does not use this information anywhere else.</p>
         </Row>
         <Formik
-          validateOnChange={false} 
+          validateOnChange={false}
           validationSchema={schema}
           onSubmit={this.state.handler}
           initialValues={{
@@ -61,10 +61,10 @@ export default class PersonalInfo extends React.Component {
             <Form.Row className="spaceTop">
               <Form.Group as={Col} controlId="formFirstName">
                 <Form.Label><p>First Name</p></Form.Label>
-                <Form.Control 
-                  type="firstName" 
-                  name="firstName" 
-                  value={values.firstName} 
+                <Form.Control
+                  type="firstName"
+                  name="firstName"
+                  value={values.firstName}
                   onChange={handleChange}
                   isInvalid={!!errors.firstName}
                   className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -75,10 +75,10 @@ export default class PersonalInfo extends React.Component {
               </Form.Group>
               <Form.Group as={Col} controlId="formLastName">
                 <Form.Label><p>Last Name</p></Form.Label>
-                <Form.Control 
-                  type="lastName" 
-                  name="lastName" 
-                  value={values.lastName} 
+                <Form.Control
+                  type="lastName"
+                  name="lastName"
+                  value={values.lastName}
                   onChange={handleChange}
                   isInvalid={!!errors.lastName}
                   className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -91,10 +91,10 @@ export default class PersonalInfo extends React.Component {
             <Form.Row>
               <Form.Group as={Col} controlId="formPassword">
                 <Form.Label><p>University</p></Form.Label>
-                <Form.Control 
-                  type="text" 
-                  name="uni" 
-                  value={values.uni} 
+                <Form.Control
+                  type="text"
+                  name="uni"
+                  value={values.uni}
                   isInvalid={!!errors.uni}
                   onChange={handleChange}
                   className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -105,10 +105,10 @@ export default class PersonalInfo extends React.Component {
               </Form.Group>
               <Form.Group as={Col} controlId="formPasswordConf">
                 <Form.Label><p>Location</p></Form.Label>
-                <Form.Control 
-                  type="text" 
-                  name="location" 
-                  value={values.location} 
+                <Form.Control
+                  type="text"
+                  name="location"
+                  value={values.location}
                   isInvalid={!!errors.location}
                   onChange={handleChange}
                   className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -121,13 +121,13 @@ export default class PersonalInfo extends React.Component {
             <Form.Row>
               <Form.Group as={Col} controlId="formHometown">
                 <Form.Label><p>Bio</p></Form.Label>
-                <Form.Control 
-                  type="text" 
+                <Form.Control
+                  type="text"
                   name="bio"
-                  value={values.bio} 
+                  value={values.bio}
                   onChange={handleChange}
                   isInvalid={!!errors.bio}
-                  placeholder="Introduce yourself in 280 characters or less!" 
+                  placeholder="Introduce yourself in 280 characters or less!"
                   className="darkBorder thinBorder greyFill-light pinkText-light"
                 />
                 <Form.Control.Feedback type="invalid">
@@ -147,7 +147,7 @@ export default class PersonalInfo extends React.Component {
           </Form>
           )}
         </Formik>
-      </div>          
+      </div>
     );
   }
 }

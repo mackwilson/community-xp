@@ -24,11 +24,11 @@ const schema = Yup.object({
   username: Yup.string().required(),
 });
 
-class LogInPage extends React.Component { 
+class LogInPage extends React.Component {
   logIn() {
     this.props.history.push('/profile');
   }
-  
+
   render () {
     return (
       <div className="LogInPage">
@@ -59,10 +59,10 @@ class LogInPage extends React.Component {
                     <Col>
                       <Form.Group controlId="formGroupUsername">
                         <Form.Label><p>Username</p></Form.Label>
-                        <Form.Control 
-                          type="username" 
+                        <Form.Control
+                          type="username"
                           name="username"
-                          value={values.username} 
+                          value={values.username}
                           onChange={handleChange}
                           isInvalid={!!errors.username}
                           placeholder="type anything for now"
@@ -78,10 +78,10 @@ class LogInPage extends React.Component {
                     <Col>
                       <Form.Group controlId="formGroupPassword">
                         <Form.Label><p>Password</p></Form.Label>
-                        <Form.Control 
-                          type="password" 
+                        <Form.Control
+                          type="password"
                           name="password"
-                          value={values.password} 
+                          value={values.password}
                           onChange={handleChange}
                           isInvalid={!!errors.password}
                           placeholder="type anything for now"
@@ -95,10 +95,10 @@ class LogInPage extends React.Component {
                   </Row>
                   <Row className="centre-text">
                     <Col>
-                      <Button 
-                        variant="dark" 
-                        type="submit" 
-                        className="btn-block btn darkText blueFill pinkShadow"
+                      <Button
+                        variant="dark"
+                        type="submit"
+                        className="btn-block btn darkText blueFill pinkShadow thinBorder darkBorder"
                       >
                         <FontAwesomeIcon icon={faCheck} />
                         {" "}Log In
@@ -110,7 +110,7 @@ class LogInPage extends React.Component {
               </Formik>
           </div>
         </Fade>
-        
+
         <Fade>
           <div className="login-box greyFill centre-text">
             <Row className="justify-content-md-center">
@@ -120,7 +120,7 @@ class LogInPage extends React.Component {
             </Row>
           </div>
         </Fade>
-        
+
         <Footer />
       </div>
     );

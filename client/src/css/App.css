@@ -53,6 +53,10 @@ p {
   font-style: italic !important;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
 :focus {
   outline: none !important;
 }
@@ -141,8 +145,12 @@ a:hover {
   padding: 10px;
 }
 
+.pinkFill-light {
+  background-color: #F5B7DF !important;
+  padding: 10px;
+}
+
 .blueFill {
-  border: 0px #00C7FF solid !important;
   background-color: #00C7FF !important;
   font-weight: 400 !important;
   padding: 10px;
@@ -153,7 +161,7 @@ a:hover {
 }
 
 .greyFill {
-  background-color: rgba(0, 0, 0, 0.7) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .whiteFill {
@@ -161,7 +169,7 @@ a:hover {
 }
 
 .greyFill-light {
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .noFill {
@@ -269,4 +277,14 @@ a:hover {
 
 .close:hover {
   color: #00C7FF !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 20pt !important;
+  }
 }

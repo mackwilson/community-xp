@@ -27,12 +27,12 @@ export default function HomePage () {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-  
+
   const problemsBlock = <Fade className="spaceTop">
     <p>{text.home.problem.problems[0]}</p>
     <p>{text.home.problem.problems[1]}</p>
   </Fade>
-  
+
   const impactBlock = <Fade className="spaceTop">
     <p>{text.home.problem.impacts[0]}</p>
     <p>{text.home.problem.impacts[1]}</p>
@@ -42,53 +42,53 @@ export default function HomePage () {
     return (
     <div className="HomePage">
       <CustomNav />
-      
+
       <LandAckModal />
-      
+
       <Fade>
-        <Header 
+        <Header
           title={text.home.title}
           subtitle={text.home.subtitle}
         />
       </Fade>
-      
+
       <ReadMoreArrow />
-      
+
       <Fade bottom>
         <div className="section">
           <Row>
             <h2>{text.home.problem.title}</h2>
           </Row>
           <Row className="spaceBottom">
-            <Button 
-              className="btn blueShadow greyFill pinkText-light"
+            <Button
+              className="btn blueShadow greyFill pinkText-light thinBorder darkBorder"
               onClick={() => handleSelect(0)}
             ><h4>Problems</h4></Button>
             <h4>{" "}<FontAwesomeIcon icon={faLongArrowAltRight} />{" "}</h4>
-            <Button 
-              className="btn blueShadow greyFill pinkText-light"
+            <Button
+              className="btn blueShadow greyFill pinkText-light thinBorder darkBorder"
               onClick={() => handleSelect(1)}
             ><h4>Student Impact</h4></Button>
           </Row>
-          
+
           {index === 0 ? problemsBlock : impactBlock}
-          
+
           <Row className="spaceTop centre-text">
             <h4 className="width-80 spaceTop">{text.home.problem.summary}</h4>
           </Row>
-          
+
         </div>
       </Fade>
-      
+
       <Fade bottom>
         <div className="section">
           <Row>
             <h2>{text.home.needs.title}</h2>
           </Row>
-          
+
           <Row>
             <Row>
-              <Col xs={3}>
+              <Col md={3}>
                 <h4>{text.home.needs.needs[0].title}</h4>
               </Col>
               <Col>
@@ -96,7 +96,7 @@ export default function HomePage () {
               </Col>
             </Row>
             <Row>
-              <Col xs={3}>
+              <Col md={3}>
                 <h4>{text.home.needs.needs[1].title}</h4>
               </Col>
               <Col>
@@ -104,7 +104,7 @@ export default function HomePage () {
               </Col>
             </Row>
             <Row>
-              <Col xs={3}>
+              <Col md={3}>
                 <h4>{text.home.needs.needs[2].title}</h4>
               </Col>
               <Col>
@@ -112,13 +112,13 @@ export default function HomePage () {
               </Col>
             </Row>
           </Row>
-        
+
           <Row className="spaceTop centre-text">
             <h4 className="width-80 spaceTop">{text.home.needs.summary}</h4>
           </Row>
         </div>
       </Fade>
-      
+
       <div className="section">
         <Fade bottom>
           <Row>
@@ -133,14 +133,14 @@ export default function HomePage () {
         <div className="gap-div" />
         <Fade bottom>
           <Row className="spaceTop">
-            <Col xs={4}>Image</Col>
+            <Col md={4}>Image</Col>
             <Col>
               <h4>{text.home.uxp.sections[0].title}</h4>
-              <p>{text.home.uxp.sections[0].text[0]}</p> 
+              <p>{text.home.uxp.sections[0].text[0]}</p>
               <p>{text.home.uxp.sections[0].text[1]}</p>
               <Row className="justify-content-md-center">
                 <Link to="/resources">
-                  <Button className="spaceTop darkText blueFill pinkShadow btn">
+                  <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                     {text.home.uxp.sections[0].button}
                   </Button>
                 </Link>
@@ -149,7 +149,7 @@ export default function HomePage () {
           </Row>
         </Fade>
         <div className="gap-div" />
-        
+
         <Fade bottom>
           <Row className="spaceTop">
             <Col>
@@ -158,42 +158,42 @@ export default function HomePage () {
               <p>{text.home.uxp.sections[1].text[1]}</p>
               <Row className="justify-content-md-center">
                 <Link to="/xp">
-                  <Button className="spaceTop darkText blueFill pinkShadow btn">
+                  <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                     {text.home.uxp.sections[1].button[0]}
                   </Button>
                 </Link>
               </Row>
               <Row className="justify-content-md-center">
                 <Link to="/signup">
-                  <Button className="spaceTop darkText blueFill pinkShadow btn">
+                  <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                     {text.home.uxp.sections[1].button[1]}
                   </Button>
                 </Link>
               </Row>
             </Col>
-            <Col xs={4}>Image</Col>
+            <Col md={4}>Image</Col>
           </Row>
         </Fade>
         <div className="gap-div" />
-        
+
         <Fade bottom>
           <Row className="spaceTop">
-            <Col xs={4}>Image</Col>
+            <Col md={4}>Image</Col>
             <Col>
               <h4>{text.home.uxp.sections[2].title}</h4>
-              <p>{text.home.uxp.sections[2].text[0]}</p> 
+              <p>{text.home.uxp.sections[2].text[0]}</p>
               <p>{text.home.uxp.sections[2].text[1]}</p>
               <p>{text.home.uxp.sections[2].text[2]}</p>
               <Row className="justify-content-md-center">
                 <Link to="/resources">
-                  <Button className="spaceTop darkText blueFill pinkShadow btn">
+                  <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                     {text.home.uxp.sections[2].button[0]}
                   </Button>
                 </Link>
               </Row>
               <Row className="justify-content-md-center">
                 <Link to="/signup">
-                  <Button className="spaceTop darkText blueFill pinkShadow btn">
+                  <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                     {text.home.uxp.sections[2].button[1]}
                   </Button>
                 </Link>
@@ -201,9 +201,9 @@ export default function HomePage () {
             </Col>
           </Row>
         </Fade>
-        
+
       </div>
-      
+
       <div className="section">
         <Fade bottom>
           <Row>
@@ -215,16 +215,16 @@ export default function HomePage () {
           </Row>
           <Row className="justify-content-md-center">
             <Link to="/about">
-              <Button className="spaceTop darkText blueFill pinkShadow btn">
+              <Button className="spaceTop darkText blueFill pinkShadow btn thinBorder darkBorder">
                 {text.home.team.button}
               </Button>
             </Link>
           </Row>
         </Fade>
       </div>
-      
+
       <CheckItOut />
-      
+
       <Footer />
     </div>
   );

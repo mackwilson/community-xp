@@ -1,16 +1,21 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import {Link, useParams} from "react-router-dom";
 import { useSelector } from 'react-redux'
 
-import CustomNav from '../comps/CustomNav.js';
-import Footer from '../comps/Footer.js';
+import CustomNav from '../../comps/CustomNav.js';
+import Footer from '../../comps/Footer.js';
 
-import pageText from '../assets/text/pageText.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-import '../css/App.css';
-import '../css/Resources.css';
+import pageText from '../../assets/text/pageText.json';
+
+import '../../css/App.css';
+import '../../css/Resources.css';
 
 const GOOGLE_MAPS_SEARCH_ENDPOINT = "https://www.google.com/maps/search/?api=1&query="
 
@@ -30,7 +35,7 @@ function parseHours(hours) {
   let result = []
   Object.keys(hours).forEach(k => {
     result.push(
-      <li key={k}>{k + ": " + hours[k]}</li>
+      <li key={k}><span className="bold">{k}:</span> {hours[k]}</li>
     )
   })
   return result
@@ -135,8 +140,8 @@ function parseStaffInfo(resource) {
 function getLink(text, url) {
   return (
     <Link to={{ pathname: url }} target="_blank" rel="noopener noreferrer">
-      <Button className="darkText blueFill pinkShadow btn">
-        {text}
+      <Button className="darkText pinkFill-light pinkShadow btn thinBorder darkBorder">
+        <p className="bold">{text}</p>
       </Button>
     </Link>
   )
@@ -168,37 +173,43 @@ function resourcePage(resource) {
         <p className="spaceTop">{resource.website ? getLink("Website", resource.website) : ''}  {resource.email ? getLink("Email", "mailto:"+resource.email) : ''} {address ? getLink("Google Maps", getGMapsQuery(address)) : ''}</p>
       </div>
       <div className="width-80">
-        <h4>Contact</h4>
-        <p>{address ? "Address: " + address : ""}</p>
-        <p>{resource.phone_general ? "Phone: " + resource.phone_general : ""}</p>
-        <p>{resource.phone_support ? "Support Line: " + resource.phone_support : ""}</p>
-        <p>{resource.hours ? "Hours: " : ""} {resource.open_247 ? "24/7" : ""}</p>
-        <ul>{resource.hours ? parseHours(resource.hours) : ""}</ul>
+        <Row>
+          <Col md={6}>
+            <h4>Contact</h4>
+            <p><span className="bold">{address ? "Address: ": ""}</span>{address ? address : ""}</p>
+            <p><span className="bold">{resource.phone_general ? "Phone: " : ""}</span>{resource.phone_general ? resource.phone_general : ""}</p>
+            <p><span className="bold">{resource.phone_support ? "Support Line: " : ""}</span>{resource.phone_support ? resource.phone_support : ""}</p>
+            <p><span className="bold">{resource.hours ? "Hours: " : ""}</span> {resource.open_247 ? "24/7" : ""}</p>
+            <ul>{resource.hours && !resource.open_247 ? parseHours(resource.hours) : ""}</ul>
 
-        <h4>Access</h4>
-        { access.length ? access : missingInfo }
+            <h4>Access</h4>
+            { access.length ? access : missingInfo }
 
-        <h4>Format</h4>
-        { format.length ? format : missingInfo }
+            <h4>Format</h4>
+            { format.length ? format : missingInfo }
 
-        <h4>Audience</h4>
-        { audience.length ? audience : missingInfo }
+            <h4>Audience</h4>
+            { audience.length ? audience : missingInfo }
+          </Col>
 
-        <h4>Inclusivity</h4>
-        { inclusion.length ? inclusion : missingInfo }
+          <Col xs ={12} md={6}>
+            <h4>Inclusivity</h4>
+            { inclusion.length ? inclusion : missingInfo }
 
-        <h4>Services</h4>
-        { services.length ? services : missingInfo }
+            <h4>Services</h4>
+            { services.length ? services : missingInfo }
 
-        <h4>Specializations</h4>
-        { specializations.length ? specializations : missingInfo }
+            <h4>Specializations</h4>
+            { specializations.length ? specializations : missingInfo }
 
-        <h4>Staff</h4>
-        { staff.length ? staff : missingInfo }
+            <h4>Staff</h4>
+            { staff.length ? staff : missingInfo }
 
-        <div>
-          <h4>See an error?</h4>
-          <p>If you'd like to suggest an update, send us an email at <a href="mailto:info@communityxp.ca" target="_blank" rel="noopener noreferrer">info@communityxp.ca</a>. Mention the resource number {resource.id} in the subject line, and describe the requested update.</p>
+          </Col>
+        </Row>
+        <div className="whiteFill title-box">
+            <h4>See an error?</h4>
+            <p>If you'd like to suggest an update, send us an email at <a href="mailto:info@communityxp.ca" target="_blank" rel="noopener noreferrer">info@communityxp.ca</a>. Mention the resource number {resource.id} in the subject line, and describe the requested update.</p>
         </div>
       </div>
     </div>
@@ -222,8 +233,9 @@ export default function SingleResource() {
       <Fade>
         <div className="single-resource">
           <Link to="/resources">
-            <Button className="darkText blueFill pinkShadow btn">
-              {"< Go Back"}
+            <Button className="darkText blueFill pinkShadow btn thinBorder darkBorder">
+              <FontAwesomeIcon icon={faArrowLeft} />
+              {" Go Back"}
             </Button>
           </Link>
 

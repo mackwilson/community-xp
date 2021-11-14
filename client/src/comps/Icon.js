@@ -12,43 +12,42 @@ function Icon(props) {
   const handleShow = () => setShow(true);
 
   const o = props.content;
-  
-  const modalImage = o && o.photo 
-    ? <img className="cardImg modalImg pinkBorder" src={o.photo} alt={o.imgAlt} /> 
+
+  const modalImage = o && o.photo
+    ? <img className="cardImg modalImg pinkBorder" src={o.photo} alt={o.imgAlt} />
     : null;
-    
-  const cardImage = o && o.photo 
+
+  const cardImage = o && o.photo
     ? <Card.Img variant="top" src={o.photo} alt={o.imgAlt} className="cardImg" />
     : null;
-    
-  const modalSubtitle = o && o.role 
+
+  const modalSubtitle = o && o.role
     ? <div className="centre-text whiteText spaceTop h9">
         {o.role}
-      </div> 
+      </div>
     : null;
-    
-  const cardSubtitle = o && o.role 
+
+  const cardSubtitle = o && o.role
     ? <Card.Subtitle className="mb-2 text-dark"><p>{o.role}</p></Card.Subtitle>
     : null;
-  
+
   const modalShowBtn = props.showModal === true
-  ? <Button 
-      variant="outline-light" 
-      onClick={handleShow} 
-      className="spaceTop blueFill btn darkText pinkShadow"
+  ? <Button
+      onClick={handleShow}
+      className="spaceTop blueFill btn darkText pinkShadow thinBorder darkBorder"
     >
       More...
     </Button>
   : null;
-    
+
   let txt = makeModalContentBlock(
-    props.id, 
-    "Email " + o.name, 
-    o.email, 
-    o.text, 
+    props.id,
+    "Email " + o.name,
+    o.email,
+    o.text,
     "Pronouns: " + o.pronouns
   );
-  
+
   return (
     <div>
       <Card className="card noFill">
@@ -74,7 +73,7 @@ function Icon(props) {
               </Row>
             </Modal.Body>
           </Modal>
-          
+
         </Card.Body>
       </Card>
     </div>
@@ -84,22 +83,22 @@ function Icon(props) {
 /*
   This function is a util that returns a block with:
   - subheading (if provided)
-  - one chunk of text 
-  - link button (if provided)  
+  - one chunk of text
+  - link button (if provided)
 */
 function makeModalContentBlock(key, btnText, btnLink, text, subHeading) {
-  const subhead = subHeading 
-    ? <p className="pinkText">{subHeading}</p> 
+  const subhead = subHeading
+    ? <p className="pinkText">{subHeading}</p>
     : null;
-    
-  const btn = (btnText && btnLink) 
+
+  const btn = (btnText && btnLink)
     ? <div className="centre-text">
-        <Button href={btnLink} target="_blank" className="darkText blueFill pinkShadow btn">
+        <Button href={btnLink} target="_blank" className="darkText blueFill pinkShadow btn thinBorder darkBorder">
           {btnText}
         </Button>
       </div>
     : null;
-    
+
   return(
     <div className="content" key={key}>
       {subhead}

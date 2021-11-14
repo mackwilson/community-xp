@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import '../css/App.css';
+import '../../css/App.css';
 
 const schema = Yup.object({
   password: Yup.string()
@@ -32,14 +32,14 @@ const schema = Yup.object({
     }).required("Please accept the terms and conditions")
 });
 
-export default class BasicInfo extends React.Component {  
+export default class BasicInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       handler: props.handler
     }
   }
-  
+
   render () {
     return (
       <div className="BasicInfo">
@@ -48,7 +48,7 @@ export default class BasicInfo extends React.Component {
         </Row>
         <Formik
           validateOnChange={false}
-          validationSchema={schema} 
+          validationSchema={schema}
           onSubmit={this.state.handler}
           initialValues={{
             email: '',
@@ -69,14 +69,14 @@ export default class BasicInfo extends React.Component {
           }) => (
             <Form noValidate onSubmit={handleSubmit}>
               <Form.Row>
-              
+
                 <Form.Group as={Col} controlId="formUsername">
                   <Form.Label><p>Username *</p></Form.Label>
-                  <Form.Control 
-                    type="username" 
+                  <Form.Control
+                    type="username"
                     name="username"
-                    placeholder="Pick a Username" 
-                    value={values.username} 
+                    placeholder="Pick a Username"
+                    value={values.username}
                     onChange={handleChange}
                     isInvalid={!!errors.username}
                     className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -85,13 +85,13 @@ export default class BasicInfo extends React.Component {
                     {errors.username}
                   </Form.Control.Feedback>
                 </Form.Group>
-                
+
                 <Form.Group as={Col} controlId="formEmail">
                   <Form.Label><p>Email *</p></Form.Label>
-                  <Form.Control 
-                    type="email" 
-                    name="email" 
-                    value={values.email} 
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    value={values.email}
                     onChange={handleChange}
                     isInvalid={!!errors.email}
                     className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -100,19 +100,19 @@ export default class BasicInfo extends React.Component {
                     {errors.email}
                   </Form.Control.Feedback>
                 </Form.Group>
-                
+
               </Form.Row>
-              
-              
+
+
               <Form.Row>
-              
+
                 <Form.Group as={Col} controlId="formPassword">
                   <Form.Label><p>Password *</p></Form.Label>
-                  <Form.Control 
-                    type="Password" 
-                    name="password" 
-                    placeholder="At least 6 characters" 
-                    value={values.password} 
+                  <Form.Control
+                    type="Password"
+                    name="password"
+                    placeholder="At least 6 characters"
+                    value={values.password}
                     onChange={handleChange}
                     isInvalid={!!errors.password}
                     className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -121,13 +121,13 @@ export default class BasicInfo extends React.Component {
                     {errors.password}
                   </Form.Control.Feedback>
                 </Form.Group>
-                
+
                 <Form.Group as={Col} controlId="formConfirmPassword">
                   <Form.Label><p>Confirm Password *</p></Form.Label>
-                  <Form.Control 
-                    type="password" 
-                    name="confirmPassword" 
-                    value={values.confirmPassword} 
+                  <Form.Control
+                    type="password"
+                    name="confirmPassword"
+                    value={values.confirmPassword}
                     onChange={handleChange}
                     isInvalid={!!errors.confirmPassword}
                     className="darkBorder thinBorder greyFill-light pinkText-light"
@@ -136,13 +136,13 @@ export default class BasicInfo extends React.Component {
                     {errors.confirmPassword}
                   </Form.Control.Feedback>
                 </Form.Group>
-                
+
               </Form.Row>
-              
+
               <Form.Row>
                 <Form.Group id="formEmailCheckbox">
-                  <Form.Check 
-                    type="checkbox" 
+                  <Form.Check
+                    type="checkbox"
                     label="Yes, add me to the CommUnity XP email newsletter!"
                     name="acceptTerms"
                     value={values.emailUpdates}
@@ -150,23 +150,23 @@ export default class BasicInfo extends React.Component {
                   />
                 </Form.Group>
               </Form.Row>
-              
+
               <Form.Row>
                 <Form.Group id="formAgreeTerms">
-                  <Form.Check 
-                    type="checkbox" 
+                  <Form.Check
+                    type="checkbox"
                     name="acceptTerms"
                     value={values.acceptTerms}
                     onChange={handleChange}
                     isInvalid={!!errors.acceptTerms}
-                    label="I agree to CommUnity XP Terms and Conditions *" 
+                    label="I agree to CommUnity XP Terms and Conditions *"
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.acceptTerms}
                   </Form.Control.Feedback>
                 </Form.Group>
               </Form.Row>
-              
+
               <Row className="justify-content-md-center right-text">
                 <Col>
                   <Button variant="dark" type="submit" className="btn darkText blueFill pinkShadow">
@@ -178,7 +178,7 @@ export default class BasicInfo extends React.Component {
             </Form>
           )}
           </Formik>
-      </div>          
+      </div>
     );
   }
 }

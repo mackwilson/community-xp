@@ -14,7 +14,7 @@ import ProfilePage from './pages/ProfilePage.js';
 import HomePage from './pages/HomePage.js';
 import AboutPage from './pages/AboutPage.js';
 import ScrollToTop from './comps/ScrollToTop.js';
-import SingleResource from './comps/SingleResource.js';
+import SingleResource from './comps/resources/SingleResource.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
